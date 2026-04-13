@@ -28,3 +28,6 @@ build/
 dist/
 tmp/
 *.log
+
+# VTR specific
+temp/
