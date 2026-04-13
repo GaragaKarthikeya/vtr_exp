@@ -30,4 +30,5 @@ tmp/
 *.log
 
 # VTR specific
-temp/
+runs/
+

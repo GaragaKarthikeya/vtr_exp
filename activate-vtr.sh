@@ -1,5 +1,12 @@
+#!/usr/bin/env bash
+
 # Source this file from your shell to activate the VTR virtual environment.
 # Example: source /home/karthikeya/vtr_exp/activate-vtr.sh
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  echo "Please source this file instead of executing it: source ./activate-vtr.sh" >&2
+  exit 1
+fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ENV_FILE="$SCRIPT_DIR/.env"
