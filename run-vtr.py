@@ -31,6 +31,13 @@ def validate_inputs(arch_file: Path, circuit_file: Path) -> None:
         )
 
 
+def has_option(args: list[str], option: str) -> bool:
+    for arg in args:
+        if arg == option or arg.startswith(f"{option}="):
+            return True
+    return False
+
+
 def main(argv: list[str]) -> int:
     script_dir = Path(__file__).resolve().parent
     env_file = script_dir / ".env"
@@ -44,6 +51,7 @@ def main(argv: list[str]) -> int:
     vtr_root = Path(os.environ.get("VTR_ROOT", "/home/karthikeya/vtr-verilog-to-routing"))
     vtr_venv_path = Path(os.environ.get("VTR_VENV_PATH", str(vtr_root / ".venv")))
     vtr_flow_script = Path(os.environ.get("VTR_FLOW_SCRIPT", ""))
+    power_tech_env = os.environ.get("VTR_POWER_TECH_FILE") or os.environ.get("VTR_CMOS_TECH_FILE")
 
     if not vtr_flow_script.is_file():
         print("VTR_FLOW_SCRIPT is missing or invalid in .env", file=sys.stderr)
@@ -99,8 +107,25 @@ def main(argv: list[str]) -> int:
         str(arch_file),
         "-temp_dir",
         str(output_dir),
-        *extra_args,
     ]
+
+    user_set_power_tech = has_option(extra_args, "-cmos_tech") or has_option(extra_args, "-power_tech")
+    if not user_set_power_tech:
+        power_tech_file = (
+            Path(power_tech_env).expanduser()
+            if power_tech_env
+            else vtr_root / "vtr_flow" / "tech" / "PTM_45nm" / "45nm.xml"
+        )
+        if power_tech_file.is_file():
+            cmd.extend(["-cmos_tech", str(power_tech_file)])
+        else:
+            print(
+                "Power analysis not enabled: set VTR_POWER_TECH_FILE (or VTR_CMOS_TECH_FILE) to a valid file, "
+                "or pass -cmos_tech <POWER_TECH_FILE>.",
+                file=sys.stderr,
+            )
+
+    cmd.extend(extra_args)
 
     return subprocess.run(cmd, check=False).returncode
 
