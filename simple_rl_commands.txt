@@ -1,0 +1,8 @@
+# Fresh run
+/home/karthikeya/vtr-verilog-to-routing/.venv/bin/python tools/simple_rl_layout_search.py --arch vtr_arch/power/k6_N10_I40_Fi6_L4_frac0_ff1_C5_45nm.xml --circuit vtr_tests/verilog/diffeq1.v --iterations 10 --population 8 --runs-root runs/simple_rl_diffeq1
+
+# Resume after interruption
+/home/karthikeya/vtr-verilog-to-routing/.venv/bin/python tools/simple_rl_layout_search.py --arch vtr_arch/power/k6_N10_I40_Fi6_L4_frac0_ff1_C5_45nm.xml --circuit vtr_tests/verilog/diffeq1.v --iterations 10 --population 8 --runs-root runs/simple_rl_diffeq1 --resume
+
+# Resume with timeout and retries
+/home/karthikeya/vtr-verilog-to-routing/.venv/bin/python tools/simple_rl_layout_search.py --arch vtr_arch/power/k6_N10_I40_Fi6_L4_frac0_ff1_C5_45nm.xml --circuit vtr_tests/verilog/diffeq1.v --iterations 10 --population 8 --runs-root runs/simple_rl_diffeq1 --resume --timeout-sec 1800 --max-retries 2
