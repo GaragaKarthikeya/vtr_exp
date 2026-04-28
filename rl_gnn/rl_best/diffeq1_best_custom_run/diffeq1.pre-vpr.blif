@@ -1,0 +1,3279 @@
+# Benchmark "diffeq_paj_convert" written by ABC on Mon Apr 27 07:33:34 2026
+.model diffeq_paj_convert
+.inputs Xinport~8 Aport~2 Aport~1 Yinport~16 Yinport~30 Xinport~22 \
+ Xinport~9 Yinport~29 Yinport~25 Uinport~31 Xinport~10 Uinport~0 Yinport~17 \
+ Yinport~28 Yinport~22 Yinport~18 Xinport~11 Yinport~31 Yinport~24 \
+ Uinport~2 Uinport~30 Uinport~1 Yinport~27 Uinport~29 Xinport~0 Uinport~28 \
+ Yinport~9 Uinport~3 Yinport~19 Uinport~27 Xinport~12 Uinport~16 Yinport~26 \
+ Xinport~2 Uinport~26 Uinport~17 Yinport~8 Uinport~25 Uinport~14 Uinport~24 \
+ Uinport~5 Yinport~23 Uinport~23 Uinport~15 Xinport~31 Uinport~22 \
+ Uinport~13 Uinport~4 Uinport~21 Uinport~18 Yinport~7 Uinport~20 Yinport~6 \
+ Xinport~1 Uinport~19 Aport~29 Aport~28 Aport~27 Aport~26 Aport~25 Aport~24 \
+ Aport~23 Aport~22 Aport~21 Aport~20 Aport~19 Aport~18 Aport~17 Aport~16 \
+ DXport~1 Aport~15 Aport~14 Aport~13 Aport~12 Aport~11 Aport~10 Aport~9 \
+ Aport~31 Aport~8 DXport~0 Aport~7 Yinport~3 Yinport~0 Yinport~1 Yinport~2 \
+ Yinport~4 Yinport~5 Aport~30 Aport~0 Xinport~18 Xinport~20 Xinport~16 \
+ Xinport~14 Xinport~15 Xinport~24 Xinport~19 Xinport~21 Xinport~17 \
+ Xinport~27 Xinport~28 Xinport~26 Xinport~25 Xinport~23 Yinport~11 Aport~6 \
+ Uinport~7 Uinport~8 Uinport~6 Uinport~11 Uinport~12 Uinport~10 Uinport~9 \
+ Aport~3 Aport~4 Aport~5 Yinport~10 Xinport~3 Yinport~12 Xinport~4 \
+ Yinport~13 Xinport~5 Yinport~20 Xinport~13 Yinport~14 Xinport~6 Yinport~15 \
+ Xinport~7 Yinport~21 Xinport~29 Xinport~30 DXport~2 DXport~3 DXport~4 \
+ DXport~5 DXport~6 DXport~7 DXport~8 DXport~9 DXport~10 DXport~11 DXport~12 \
+ DXport~13 DXport~14 DXport~15 DXport~16 DXport~17 DXport~18 DXport~19 \
+ DXport~20 DXport~21 DXport~22 DXport~23 DXport~24 DXport~25 DXport~26 \
+ DXport~27 DXport~28 DXport~29 DXport~30 DXport~31 clk reset
+.outputs Xoutport~0 Xoutport~1 Xoutport~2 Xoutport~3 Xoutport~4 Xoutport~5 Xoutport~6 Xoutport~7 Xoutport~8 Xoutport~9 Xoutport~10 Xoutport~11 Xoutport~12 Xoutport~13 Xoutport~14 Xoutport~15 Xoutport~16 Xoutport~17 Xoutport~18 Xoutport~19 Xoutport~20 Xoutport~21 Xoutport~22 Xoutport~23 Xoutport~24 Xoutport~25 Xoutport~26 Xoutport~27 Xoutport~28 Xoutport~29 Xoutport~30 Xoutport~31 Youtport~0 Youtport~1 Youtport~2 Youtport~3 Youtport~4 Youtport~5 Youtport~6 Youtport~7 Youtport~8 Youtport~9 Youtport~10 Youtport~11 Youtport~12 Youtport~13 Youtport~14 Youtport~15 Youtport~16 Youtport~17 Youtport~18 Youtport~19 Youtport~20 Youtport~21 Youtport~22 Youtport~23 Youtport~24 Youtport~25 Youtport~26 Youtport~27 Youtport~28 Youtport~29 Youtport~30 Youtport~31 Uoutport~0 Uoutport~1 Uoutport~2 Uoutport~3 Uoutport~4 Uoutport~5 Uoutport~6 Uoutport~7 Uoutport~8 Uoutport~9 Uoutport~10 Uoutport~11 Uoutport~12 Uoutport~13 Uoutport~14 Uoutport~15 Uoutport~16 Uoutport~17 Uoutport~18 Uoutport~19 Uoutport~20 Uoutport~21 Uoutport~22 Uoutport~23 Uoutport~24 Uoutport~25 Uoutport~26 Uoutport~27 Uoutport~28 Uoutport~29 Uoutport~30 Uoutport~31
+.latch n782_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] re clk 2
+.latch n787_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] re clk 2
+.latch n792_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] re clk 2
+.latch n797_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] re clk 2
+.latch n802_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] re clk 2
+.latch n807_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] re clk 2
+.latch n812_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] re clk 2
+.latch n817_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] re clk 2
+.latch n822_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] re clk 2
+.latch n827_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] re clk 2
+.latch n832_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] re clk 2
+.latch n837_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] re clk 2
+.latch n842_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] re clk 2
+.latch n847_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] re clk 2
+.latch n852_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] re clk 2
+.latch n857_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] re clk 2
+.latch n862_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] re clk 2
+.latch n867_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] re clk 2
+.latch n872_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] re clk 2
+.latch n877_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] re clk 2
+.latch n882_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] re clk 2
+.latch n887_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] re clk 2
+.latch n892_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] re clk 2
+.latch n897_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] re clk 2
+.latch n902_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] re clk 2
+.latch n907_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] re clk 2
+.latch n912_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] re clk 2
+.latch n917_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] re clk 2
+.latch n922_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] re clk 2
+.latch n927_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] re clk 2
+.latch n932_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] re clk 2
+.latch n937_1 $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] re clk 2
+.latch n942_1 Xoutport~0 re clk 2
+.latch n946_1 Xoutport~1 re clk 2
+.latch n950_1 Xoutport~2 re clk 2
+.latch n954_1 Xoutport~3 re clk 2
+.latch n958_1 Xoutport~4 re clk 2
+.latch n962_1 Xoutport~5 re clk 2
+.latch n966_1 Xoutport~6 re clk 2
+.latch n970_1 Xoutport~7 re clk 2
+.latch n974_1 Xoutport~8 re clk 2
+.latch n978_1 Xoutport~9 re clk 2
+.latch n982_1 Xoutport~10 re clk 2
+.latch n986_1 Xoutport~11 re clk 2
+.latch n990_1 Xoutport~12 re clk 2
+.latch n994_1 Xoutport~13 re clk 2
+.latch n998_1 Xoutport~14 re clk 2
+.latch n1002_1 Xoutport~15 re clk 2
+.latch n1006_1 Xoutport~16 re clk 2
+.latch n1010_1 Xoutport~17 re clk 2
+.latch n1014_1 Xoutport~18 re clk 2
+.latch n1018_1 Xoutport~19 re clk 2
+.latch n1022_1 Xoutport~20 re clk 2
+.latch n1026_1 Xoutport~21 re clk 2
+.latch n1030_1 Xoutport~22 re clk 2
+.latch n1034_1 Xoutport~23 re clk 2
+.latch n1038_1 Xoutport~24 re clk 2
+.latch n1042_1 Xoutport~25 re clk 2
+.latch n1046_1 Xoutport~26 re clk 2
+.latch n1050_1 Xoutport~27 re clk 2
+.latch n1054_1 Xoutport~28 re clk 2
+.latch n1058_1 Xoutport~29 re clk 2
+.latch n1062_1 Xoutport~30 re clk 2
+.latch n1066_1 Xoutport~31 re clk 2
+.latch n1070_1 $sdff~2^Q~0 re clk 2
+.latch n1075_1 $sdffe~3^Q~0 re clk 2
+.latch n1080_1 $sdffe~3^Q~1 re clk 2
+.latch n1085_1 $sdffe~3^Q~2 re clk 2
+.latch n1090_1 $sdffe~3^Q~3 re clk 2
+.latch n1095_1 $sdffe~3^Q~4 re clk 2
+.latch n1100_1 $sdffe~3^Q~5 re clk 2
+.latch n1105_1 $sdffe~3^Q~6 re clk 2
+.latch n1110_1 $sdffe~3^Q~7 re clk 2
+.latch n1115_1 $sdffe~3^Q~8 re clk 2
+.latch n1120_1 $sdffe~3^Q~9 re clk 2
+.latch n1125_1 $sdffe~3^Q~10 re clk 2
+.latch n1130_1 $sdffe~3^Q~11 re clk 2
+.latch n1135_1 $sdffe~3^Q~12 re clk 2
+.latch n1140_1 $sdffe~3^Q~13 re clk 2
+.latch n1145_1 $sdffe~3^Q~14 re clk 2
+.latch n1150_1 $sdffe~3^Q~15 re clk 2
+.latch n1155_1 $sdffe~3^Q~16 re clk 2
+.latch n1160_1 $sdffe~3^Q~17 re clk 2
+.latch n1165_1 $sdffe~3^Q~18 re clk 2
+.latch n1170_1 $sdffe~3^Q~19 re clk 2
+.latch n1175_1 $sdffe~3^Q~20 re clk 2
+.latch n1180_1 $sdffe~3^Q~21 re clk 2
+.latch n1185_1 $sdffe~3^Q~22 re clk 2
+.latch n1190_1 $sdffe~3^Q~23 re clk 2
+.latch n1195_1 $sdffe~3^Q~24 re clk 2
+.latch n1200_1 $sdffe~3^Q~25 re clk 2
+.latch n1205_1 $sdffe~3^Q~26 re clk 2
+.latch n1210_1 $sdffe~3^Q~27 re clk 2
+.latch n1215_1 $sdffe~3^Q~28 re clk 2
+.latch n1220_1 $sdffe~3^Q~29 re clk 2
+.latch n1225_1 $sdffe~3^Q~30 re clk 2
+.latch n1230_1 $sdffe~3^Q~31 re clk 2
+.latch n1235_1 Uoutport~0 re clk 2
+.latch n1239_1 Uoutport~1 re clk 2
+.latch n1243_1 Uoutport~2 re clk 2
+.latch n1247_1 Uoutport~3 re clk 2
+.latch n1251_1 Uoutport~4 re clk 2
+.latch n1255_1 Uoutport~5 re clk 2
+.latch n1259_1 Uoutport~6 re clk 2
+.latch n1263_1 Uoutport~7 re clk 2
+.latch n1267_1 Uoutport~8 re clk 2
+.latch n1271_1 Uoutport~9 re clk 2
+.latch n1275_1 Uoutport~10 re clk 2
+.latch n1279_1 Uoutport~11 re clk 2
+.latch n1283_1 Uoutport~12 re clk 2
+.latch n1287_1 Uoutport~13 re clk 2
+.latch n1291_1 Uoutport~14 re clk 2
+.latch n1295_1 Uoutport~15 re clk 2
+.latch n1299_1 Uoutport~16 re clk 2
+.latch n1303_1 Uoutport~17 re clk 2
+.latch n1307_1 Uoutport~18 re clk 2
+.latch n1311_1 Uoutport~19 re clk 2
+.latch n1315_1 Uoutport~20 re clk 2
+.latch n1319_1 Uoutport~21 re clk 2
+.latch n1323_1 Uoutport~22 re clk 2
+.latch n1327_1 Uoutport~23 re clk 2
+.latch n1331_1 Uoutport~24 re clk 2
+.latch n1335_1 Uoutport~25 re clk 2
+.latch n1339_1 Uoutport~26 re clk 2
+.latch n1343_1 Uoutport~27 re clk 2
+.latch n1347_1 Uoutport~28 re clk 2
+.latch n1351_1 Uoutport~29 re clk 2
+.latch n1355_1 Uoutport~30 re clk 2
+.latch n1359_1 Uoutport~31 re clk 2
+.latch n1363_1 $sdffe~4^Q~0 re clk 2
+.latch n1368_1 $sdffe~4^Q~1 re clk 2
+.latch n1373_1 $sdffe~4^Q~2 re clk 2
+.latch n1378_1 $sdffe~4^Q~3 re clk 2
+.latch n1383_1 $sdffe~4^Q~4 re clk 2
+.latch n1388_1 $sdffe~4^Q~5 re clk 2
+.latch n1393_1 $sdffe~4^Q~6 re clk 2
+.latch n1398_1 $sdffe~4^Q~7 re clk 2
+.latch n1403_1 $sdffe~4^Q~8 re clk 2
+.latch n1408_1 $sdffe~4^Q~9 re clk 2
+.latch n1413_1 $sdffe~4^Q~10 re clk 2
+.latch n1418_1 $sdffe~4^Q~11 re clk 2
+.latch n1423_1 $sdffe~4^Q~12 re clk 2
+.latch n1428_1 $sdffe~4^Q~13 re clk 2
+.latch n1433_1 $sdffe~4^Q~14 re clk 2
+.latch n1438_1 $sdffe~4^Q~15 re clk 2
+.latch n1443_1 $sdffe~4^Q~16 re clk 2
+.latch n1448_1 $sdffe~4^Q~17 re clk 2
+.latch n1453_1 $sdffe~4^Q~18 re clk 2
+.latch n1458_1 $sdffe~4^Q~19 re clk 2
+.latch n1463_1 $sdffe~4^Q~20 re clk 2
+.latch n1468_1 $sdffe~4^Q~21 re clk 2
+.latch n1473_1 $sdffe~4^Q~22 re clk 2
+.latch n1478_1 $sdffe~4^Q~23 re clk 2
+.latch n1483_1 $sdffe~4^Q~24 re clk 2
+.latch n1488_1 $sdffe~4^Q~25 re clk 2
+.latch n1493_1 $sdffe~4^Q~26 re clk 2
+.latch n1498_1 $sdffe~4^Q~27 re clk 2
+.latch n1503_1 $sdffe~4^Q~28 re clk 2
+.latch n1508_1 $sdffe~4^Q~29 re clk 2
+.latch n1513_1 $sdffe~4^Q~30 re clk 2
+.latch n1518_1 $sdffe~4^Q~31 re clk 2
+.latch n1523_1 Youtport~0 re clk 2
+.latch n1527_1 Youtport~1 re clk 2
+.latch n1531_1 Youtport~2 re clk 2
+.latch n1535_1 Youtport~3 re clk 2
+.latch n1539_1 Youtport~4 re clk 2
+.latch n1543_1 Youtport~5 re clk 2
+.latch n1547_1 Youtport~6 re clk 2
+.latch n1551_1 Youtport~7 re clk 2
+.latch n1555_1 Youtport~8 re clk 2
+.latch n1559_1 Youtport~9 re clk 2
+.latch n1563_1 Youtport~10 re clk 2
+.latch n1567_1 Youtport~11 re clk 2
+.latch n1571_1 Youtport~12 re clk 2
+.latch n1575_1 Youtport~13 re clk 2
+.latch n1579_1 Youtport~14 re clk 2
+.latch n1583_1 Youtport~15 re clk 2
+.latch n1587_1 Youtport~16 re clk 2
+.latch n1591_1 Youtport~17 re clk 2
+.latch n1595_1 Youtport~18 re clk 2
+.latch n1599_1 Youtport~19 re clk 2
+.latch n1603_1 Youtport~20 re clk 2
+.latch n1607_1 Youtport~21 re clk 2
+.latch n1611_1 Youtport~22 re clk 2
+.latch n1615_1 Youtport~23 re clk 2
+.latch n1619_1 Youtport~24 re clk 2
+.latch n1623_1 Youtport~25 re clk 2
+.latch n1627_1 Youtport~26 re clk 2
+.latch n1631_1 Youtport~27 re clk 2
+.latch n1635_1 Youtport~28 re clk 2
+.latch n1639_1 Youtport~29 re clk 2
+.latch n1643_1 Youtport~30 re clk 2
+.latch n1647_1 Youtport~31 re clk 2
+
+
+.subckt multiply a[0]=$sdffe~3^Q~0 a[1]=$sdffe~3^Q~1 a[2]=$sdffe~3^Q~2 a[3]=$sdffe~3^Q~3 a[4]=$sdffe~3^Q~4 a[5]=$sdffe~3^Q~5 a[6]=$sdffe~3^Q~6 a[7]=$sdffe~3^Q~7 a[8]=$sdffe~3^Q~8 a[9]=$sdffe~3^Q~9 a[10]=$sdffe~3^Q~10 a[11]=$sdffe~3^Q~11 a[12]=$sdffe~3^Q~12 a[13]=$sdffe~3^Q~13 a[14]=$sdffe~3^Q~14 a[15]=$sdffe~3^Q~15 a[16]=$sdffe~3^Q~16 a[17]=$sdffe~3^Q~17 a[18]=$sdffe~3^Q~18 a[19]=$sdffe~3^Q~19 a[20]=$sdffe~3^Q~20 a[21]=$sdffe~3^Q~21 a[22]=$sdffe~3^Q~22 a[23]=$sdffe~3^Q~23 a[24]=$sdffe~3^Q~24 a[25]=$sdffe~3^Q~25 a[26]=$sdffe~3^Q~26 a[27]=$sdffe~3^Q~27 a[28]=$sdffe~3^Q~28 a[29]=$sdffe~3^Q~29 a[30]=$sdffe~3^Q~30 a[31]=$sdffe~3^Q~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=DXport~0 b[1]=DXport~1 b[2]=DXport~2 b[3]=DXport~3 b[4]=DXport~4 b[5]=DXport~5 b[6]=DXport~6 b[7]=DXport~7 b[8]=DXport~8 b[9]=DXport~9 b[10]=DXport~10 b[11]=DXport~11 b[12]=DXport~12 b[13]=DXport~13 b[14]=DXport~14 b[15]=DXport~15 b[16]=DXport~16 b[17]=DXport~17 b[18]=DXport~18 b[19]=DXport~19 b[20]=DXport~20 b[21]=DXport~21 b[22]=DXport~22 b[23]=DXport~23 b[24]=DXport~24 b[25]=DXport~25 b[26]=DXport~26 b[27]=DXport~27 b[28]=DXport~28 b[29]=DXport~29 b[30]=DXport~30 b[31]=DXport~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~14[0] out[1]=$mul~14[1] out[2]=$mul~14[2] out[3]=$mul~14[3] out[4]=$mul~14[4] out[5]=$mul~14[5] out[6]=$mul~14[6] out[7]=$mul~14[7] out[8]=$mul~14[8] out[9]=$mul~14[9] out[10]=$mul~14[10] out[11]=$mul~14[11] out[12]=$mul~14[12] out[13]=$mul~14[13] out[14]=$mul~14[14] out[15]=$mul~14[15] out[16]=$mul~14[16] out[17]=$mul~14[17] out[18]=$mul~14[18] out[19]=$mul~14[19] out[20]=$mul~14[20] out[21]=$mul~14[21] out[22]=$mul~14[22] out[23]=$mul~14[23] out[24]=$mul~14[24] out[25]=$mul~14[25] out[26]=$mul~14[26] out[27]=$mul~14[27] out[28]=$mul~14[28] out[29]=$mul~14[29] out[30]=$mul~14[30] out[31]=$mul~14[31] out[32]=$mul~14[32] out[33]=$mul~14[33] out[34]=$mul~14[34] out[35]=$mul~14[35] out[36]=$mul~14[36] out[37]=$mul~14[37] out[38]=$mul~14[38] out[39]=$mul~14[39] out[40]=$mul~14[40] out[41]=$mul~14[41] out[42]=$mul~14[42] out[43]=$mul~14[43] out[44]=$mul~14[44] out[45]=$mul~14[45] out[46]=$mul~14[46] out[47]=$mul~14[47] out[48]=$mul~14[48] out[49]=$mul~14[49] out[50]=$mul~14[50] out[51]=$mul~14[51] out[52]=$mul~14[52] out[53]=$mul~14[53] out[54]=$mul~14[54] out[55]=$mul~14[55] out[56]=$mul~14[56] out[57]=$mul~14[57] out[58]=$mul~14[58] out[59]=$mul~14[59] out[60]=$mul~14[60] out[61]=$mul~14[61] out[62]=$mul~14[62] out[63]=$mul~14[63] out[64]=$mul~14[64] out[65]=$mul~14[65] out[66]=$mul~14[66] out[67]=$mul~14[67] out[68]=$mul~14[68] out[69]=$mul~14[69] out[70]=$mul~14[70] out[71]=$mul~14[71]
+.subckt multiply a[0]=$mul~17[0] a[1]=$mul~17[1] a[2]=$mul~17[2] a[3]=$mul~17[3] a[4]=$mul~17[4] a[5]=$mul~17[5] a[6]=$mul~17[6] a[7]=$mul~17[7] a[8]=$mul~17[8] a[9]=$mul~17[9] a[10]=$mul~17[10] a[11]=$mul~17[11] a[12]=$mul~17[12] a[13]=$mul~17[13] a[14]=$mul~17[14] a[15]=$mul~17[15] a[16]=$mul~17[16] a[17]=$mul~17[17] a[18]=$mul~17[18] a[19]=$mul~17[19] a[20]=$mul~17[20] a[21]=$mul~17[21] a[22]=$mul~17[22] a[23]=$mul~17[23] a[24]=$mul~17[24] a[25]=$mul~17[25] a[26]=$mul~17[26] a[27]=$mul~17[27] a[28]=$mul~17[28] a[29]=$mul~17[29] a[30]=$mul~17[30] a[31]=$mul~17[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$sdffe~4^Q~0 b[1]=$sdffe~4^Q~1 b[2]=$sdffe~4^Q~2 b[3]=$sdffe~4^Q~3 b[4]=$sdffe~4^Q~4 b[5]=$sdffe~4^Q~5 b[6]=$sdffe~4^Q~6 b[7]=$sdffe~4^Q~7 b[8]=$sdffe~4^Q~8 b[9]=$sdffe~4^Q~9 b[10]=$sdffe~4^Q~10 b[11]=$sdffe~4^Q~11 b[12]=$sdffe~4^Q~12 b[13]=$sdffe~4^Q~13 b[14]=$sdffe~4^Q~14 b[15]=$sdffe~4^Q~15 b[16]=$sdffe~4^Q~16 b[17]=$sdffe~4^Q~17 b[18]=$sdffe~4^Q~18 b[19]=$sdffe~4^Q~19 b[20]=$sdffe~4^Q~20 b[21]=$sdffe~4^Q~21 b[22]=$sdffe~4^Q~22 b[23]=$sdffe~4^Q~23 b[24]=$sdffe~4^Q~24 b[25]=$sdffe~4^Q~25 b[26]=$sdffe~4^Q~26 b[27]=$sdffe~4^Q~27 b[28]=$sdffe~4^Q~28 b[29]=$sdffe~4^Q~29 b[30]=$sdffe~4^Q~30 b[31]=$sdffe~4^Q~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~18[0] out[1]=$mul~18[1] out[2]=$mul~18[2] out[3]=$mul~18[3] out[4]=$mul~18[4] out[5]=$mul~18[5] out[6]=$mul~18[6] out[7]=$mul~18[7] out[8]=$mul~18[8] out[9]=$mul~18[9] out[10]=$mul~18[10] out[11]=$mul~18[11] out[12]=$mul~18[12] out[13]=$mul~18[13] out[14]=$mul~18[14] out[15]=$mul~18[15] out[16]=$mul~18[16] out[17]=$mul~18[17] out[18]=$mul~18[18] out[19]=$mul~18[19] out[20]=$mul~18[20] out[21]=$mul~18[21] out[22]=$mul~18[22] out[23]=$mul~18[23] out[24]=$mul~18[24] out[25]=$mul~18[25] out[26]=$mul~18[26] out[27]=$mul~18[27] out[28]=$mul~18[28] out[29]=$mul~18[29] out[30]=$mul~18[30] out[31]=$mul~18[31] out[32]=$mul~18[32] out[33]=$mul~18[33] out[34]=$mul~18[34] out[35]=$mul~18[35] out[36]=$mul~18[36] out[37]=$mul~18[37] out[38]=$mul~18[38] out[39]=$mul~18[39] out[40]=$mul~18[40] out[41]=$mul~18[41] out[42]=$mul~18[42] out[43]=$mul~18[43] out[44]=$mul~18[44] out[45]=$mul~18[45] out[46]=$mul~18[46] out[47]=$mul~18[47] out[48]=$mul~18[48] out[49]=$mul~18[49] out[50]=$mul~18[50] out[51]=$mul~18[51] out[52]=$mul~18[52] out[53]=$mul~18[53] out[54]=$mul~18[54] out[55]=$mul~18[55] out[56]=$mul~18[56] out[57]=$mul~18[57] out[58]=$mul~18[58] out[59]=$mul~18[59] out[60]=$mul~18[60] out[61]=$mul~18[61] out[62]=$mul~18[62] out[63]=$mul~18[63] out[64]=$mul~18[64] out[65]=$mul~18[65] out[66]=$mul~18[66] out[67]=$mul~18[67] out[68]=$mul~18[68] out[69]=$mul~18[69] out[70]=$mul~18[70] out[71]=$mul~18[71]
+.subckt multiply a[0]=$mul~14[0] a[1]=$mul~14[1] a[2]=$mul~14[2] a[3]=$mul~14[3] a[4]=$mul~14[4] a[5]=$mul~14[5] a[6]=$mul~14[6] a[7]=$mul~14[7] a[8]=$mul~14[8] a[9]=$mul~14[9] a[10]=$mul~14[10] a[11]=$mul~14[11] a[12]=$mul~14[12] a[13]=$mul~14[13] a[14]=$mul~14[14] a[15]=$mul~14[15] a[16]=$mul~14[16] a[17]=$mul~14[17] a[18]=$mul~14[18] a[19]=$mul~14[19] a[20]=$mul~14[20] a[21]=$mul~14[21] a[22]=$mul~14[22] a[23]=$mul~14[23] a[24]=$mul~14[24] a[25]=$mul~14[25] a[26]=$mul~14[26] a[27]=$mul~14[27] a[28]=$mul~14[28] a[29]=$mul~14[29] a[30]=$mul~14[30] a[31]=$mul~14[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=vcc b[1]=vcc b[2]=unconn b[3]=unconn b[4]=unconn b[5]=unconn b[6]=unconn b[7]=unconn b[8]=unconn b[9]=unconn b[10]=unconn b[11]=unconn b[12]=unconn b[13]=unconn b[14]=unconn b[15]=unconn b[16]=unconn b[17]=unconn b[18]=unconn b[19]=unconn b[20]=unconn b[21]=unconn b[22]=unconn b[23]=unconn b[24]=unconn b[25]=unconn b[26]=unconn b[27]=unconn b[28]=unconn b[29]=unconn b[30]=unconn b[31]=unconn b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~15[0] out[1]=$mul~15[1] out[2]=$mul~15[2] out[3]=$mul~15[3] out[4]=$mul~15[4] out[5]=$mul~15[5] out[6]=$mul~15[6] out[7]=$mul~15[7] out[8]=$mul~15[8] out[9]=$mul~15[9] out[10]=$mul~15[10] out[11]=$mul~15[11] out[12]=$mul~15[12] out[13]=$mul~15[13] out[14]=$mul~15[14] out[15]=$mul~15[15] out[16]=$mul~15[16] out[17]=$mul~15[17] out[18]=$mul~15[18] out[19]=$mul~15[19] out[20]=$mul~15[20] out[21]=$mul~15[21] out[22]=$mul~15[22] out[23]=$mul~15[23] out[24]=$mul~15[24] out[25]=$mul~15[25] out[26]=$mul~15[26] out[27]=$mul~15[27] out[28]=$mul~15[28] out[29]=$mul~15[29] out[30]=$mul~15[30] out[31]=$mul~15[31] out[32]=$mul~15[32] out[33]=$mul~15[33] out[34]=$mul~15[34] out[35]=$mul~15[35] out[36]=$mul~15[36] out[37]=$mul~15[37] out[38]=$mul~15[38] out[39]=$mul~15[39] out[40]=$mul~15[40] out[41]=$mul~15[41] out[42]=$mul~15[42] out[43]=$mul~15[43] out[44]=$mul~15[44] out[45]=$mul~15[45] out[46]=$mul~15[46] out[47]=$mul~15[47] out[48]=$mul~15[48] out[49]=$mul~15[49] out[50]=$mul~15[50] out[51]=$mul~15[51] out[52]=$mul~15[52] out[53]=$mul~15[53] out[54]=$mul~15[54] out[55]=$mul~15[55] out[56]=$mul~15[56] out[57]=$mul~15[57] out[58]=$mul~15[58] out[59]=$mul~15[59] out[60]=$mul~15[60] out[61]=$mul~15[61] out[62]=$mul~15[62] out[63]=$mul~15[63] out[64]=$mul~15[64] out[65]=$mul~15[65] out[66]=$mul~15[66] out[67]=$mul~15[67] out[68]=$mul~15[68] out[69]=$mul~15[69] out[70]=$mul~15[70] out[71]=$mul~15[71]
+.subckt multiply a[0]=$mul~15[0] a[1]=$mul~15[1] a[2]=$mul~15[2] a[3]=$mul~15[3] a[4]=$mul~15[4] a[5]=$mul~15[5] a[6]=$mul~15[6] a[7]=$mul~15[7] a[8]=$mul~15[8] a[9]=$mul~15[9] a[10]=$mul~15[10] a[11]=$mul~15[11] a[12]=$mul~15[12] a[13]=$mul~15[13] a[14]=$mul~15[14] a[15]=$mul~15[15] a[16]=$mul~15[16] a[17]=$mul~15[17] a[18]=$mul~15[18] a[19]=$mul~15[19] a[20]=$mul~15[20] a[21]=$mul~15[21] a[22]=$mul~15[22] a[23]=$mul~15[23] a[24]=$mul~15[24] a[25]=$mul~15[25] a[26]=$mul~15[26] a[27]=$mul~15[27] a[28]=$mul~15[28] a[29]=$mul~15[29] a[30]=$mul~15[30] a[31]=$mul~15[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] b[1]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] b[2]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] b[3]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] b[4]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] b[5]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] b[6]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] b[7]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] b[8]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] b[9]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] b[10]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] b[11]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] b[12]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] b[13]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] b[14]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] b[15]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] b[16]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] b[17]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] b[18]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] b[19]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] b[20]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] b[21]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] b[22]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] b[23]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] b[24]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] b[25]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] b[26]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] b[27]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] b[28]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] b[29]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] b[30]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] b[31]=$techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~16[0] out[1]=$mul~16[1] out[2]=$mul~16[2] out[3]=$mul~16[3] out[4]=$mul~16[4] out[5]=$mul~16[5] out[6]=$mul~16[6] out[7]=$mul~16[7] out[8]=$mul~16[8] out[9]=$mul~16[9] out[10]=$mul~16[10] out[11]=$mul~16[11] out[12]=$mul~16[12] out[13]=$mul~16[13] out[14]=$mul~16[14] out[15]=$mul~16[15] out[16]=$mul~16[16] out[17]=$mul~16[17] out[18]=$mul~16[18] out[19]=$mul~16[19] out[20]=$mul~16[20] out[21]=$mul~16[21] out[22]=$mul~16[22] out[23]=$mul~16[23] out[24]=$mul~16[24] out[25]=$mul~16[25] out[26]=$mul~16[26] out[27]=$mul~16[27] out[28]=$mul~16[28] out[29]=$mul~16[29] out[30]=$mul~16[30] out[31]=$mul~16[31] out[32]=$mul~16[32] out[33]=$mul~16[33] out[34]=$mul~16[34] out[35]=$mul~16[35] out[36]=$mul~16[36] out[37]=$mul~16[37] out[38]=$mul~16[38] out[39]=$mul~16[39] out[40]=$mul~16[40] out[41]=$mul~16[41] out[42]=$mul~16[42] out[43]=$mul~16[43] out[44]=$mul~16[44] out[45]=$mul~16[45] out[46]=$mul~16[46] out[47]=$mul~16[47] out[48]=$mul~16[48] out[49]=$mul~16[49] out[50]=$mul~16[50] out[51]=$mul~16[51] out[52]=$mul~16[52] out[53]=$mul~16[53] out[54]=$mul~16[54] out[55]=$mul~16[55] out[56]=$mul~16[56] out[57]=$mul~16[57] out[58]=$mul~16[58] out[59]=$mul~16[59] out[60]=$mul~16[60] out[61]=$mul~16[61] out[62]=$mul~16[62] out[63]=$mul~16[63] out[64]=$mul~16[64] out[65]=$mul~16[65] out[66]=$mul~16[66] out[67]=$mul~16[67] out[68]=$mul~16[68] out[69]=$mul~16[69] out[70]=$mul~16[70] out[71]=$mul~16[71]
+.subckt multiply a[0]=DXport~0 a[1]=DXport~1 a[2]=DXport~2 a[3]=DXport~3 a[4]=DXport~4 a[5]=DXport~5 a[6]=DXport~6 a[7]=DXport~7 a[8]=DXport~8 a[9]=DXport~9 a[10]=DXport~10 a[11]=DXport~11 a[12]=DXport~12 a[13]=DXport~13 a[14]=DXport~14 a[15]=DXport~15 a[16]=DXport~16 a[17]=DXport~17 a[18]=DXport~18 a[19]=DXport~19 a[20]=DXport~20 a[21]=DXport~21 a[22]=DXport~22 a[23]=DXport~23 a[24]=DXport~24 a[25]=DXport~25 a[26]=DXport~26 a[27]=DXport~27 a[28]=DXport~28 a[29]=DXport~29 a[30]=DXport~30 a[31]=DXport~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=vcc b[1]=vcc b[2]=unconn b[3]=unconn b[4]=unconn b[5]=unconn b[6]=unconn b[7]=unconn b[8]=unconn b[9]=unconn b[10]=unconn b[11]=unconn b[12]=unconn b[13]=unconn b[14]=unconn b[15]=unconn b[16]=unconn b[17]=unconn b[18]=unconn b[19]=unconn b[20]=unconn b[21]=unconn b[22]=unconn b[23]=unconn b[24]=unconn b[25]=unconn b[26]=unconn b[27]=unconn b[28]=unconn b[29]=unconn b[30]=unconn b[31]=unconn b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~17[0] out[1]=$mul~17[1] out[2]=$mul~17[2] out[3]=$mul~17[3] out[4]=$mul~17[4] out[5]=$mul~17[5] out[6]=$mul~17[6] out[7]=$mul~17[7] out[8]=$mul~17[8] out[9]=$mul~17[9] out[10]=$mul~17[10] out[11]=$mul~17[11] out[12]=$mul~17[12] out[13]=$mul~17[13] out[14]=$mul~17[14] out[15]=$mul~17[15] out[16]=$mul~17[16] out[17]=$mul~17[17] out[18]=$mul~17[18] out[19]=$mul~17[19] out[20]=$mul~17[20] out[21]=$mul~17[21] out[22]=$mul~17[22] out[23]=$mul~17[23] out[24]=$mul~17[24] out[25]=$mul~17[25] out[26]=$mul~17[26] out[27]=$mul~17[27] out[28]=$mul~17[28] out[29]=$mul~17[29] out[30]=$mul~17[30] out[31]=$mul~17[31] out[32]=$mul~17[32] out[33]=$mul~17[33] out[34]=$mul~17[34] out[35]=$mul~17[35] out[36]=$mul~17[36] out[37]=$mul~17[37] out[38]=$mul~17[38] out[39]=$mul~17[39] out[40]=$mul~17[40] out[41]=$mul~17[41] out[42]=$mul~17[42] out[43]=$mul~17[43] out[44]=$mul~17[44] out[45]=$mul~17[45] out[46]=$mul~17[46] out[47]=$mul~17[47] out[48]=$mul~17[48] out[49]=$mul~17[49] out[50]=$mul~17[50] out[51]=$mul~17[51] out[52]=$mul~17[52] out[53]=$mul~17[53] out[54]=$mul~17[54] out[55]=$mul~17[55] out[56]=$mul~17[56] out[57]=$mul~17[57] out[58]=$mul~17[58] out[59]=$mul~17[59] out[60]=$mul~17[60] out[61]=$mul~17[61] out[62]=$mul~17[62] out[63]=$mul~17[63] out[64]=$mul~17[64] out[65]=$mul~17[65] out[66]=$mul~17[66] out[67]=$mul~17[67] out[68]=$mul~17[68] out[69]=$mul~17[69] out[70]=$mul~17[70] out[71]=$mul~17[71]
+
+
+.names Xinport~0 DXport~0 new_new_n1427 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ $sdff~2^Q~0 reset n782_1
+--11-0 1
+-0-110 1
+-10010 1
+1-0-00 1
+.names new_new_n1448_1 new_new_n1441 $sdff~2^Q~0 new_new_n1452 \
+ new_new_n1428_1 new_new_n1454_1 new_new_n1427
+--0--- 0
+-0-001 0
+1--001 0
+.names new_new_n1429_1 Aport~15 Aport~14 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ new_new_n1440 new_new_n1428_1
+--0111 1
+-0-1-1 1
+-00-11 1
+0----1 1
+.names new_new_n1430 Aport~13 Aport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ new_new_n1439_1 new_new_n1429_1
+--0111 0
+-0-1-1 0
+-00-11 0
+0--111 0
+0-01-1 0
+00--11 0
+000--1 0
+.names new_new_n1438_1 Aport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ Aport~10 new_new_n1431 new_new_n1430
+--0010 1
+-1-010 1
+-10--0 1
+0-0-10 1
+0-00-0 1
+01--10 1
+01-0-0 1
+.names Aport~7 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ new_new_n1432 Aport~6 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] \
+ new_new_n1436 new_new_n1431
+---011 1
+--1-11 1
+--10-1 1
+01---1 1
+.names Aport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ Aport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ new_new_n1433_1 new_new_n1432
+--01- 1
+-1-10 1
+-10-0 1
+0--10 1
+0-0-0 1
+.names new_new_n1434_1 Aport~3 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] \
+ Aport~2 new_new_n1435 new_new_n1433_1
+--0010 1
+-1-010 1
+-10--0 1
+0-0-10 1
+0-00-0 1
+01--10 1
+01-0-0 1
+.names Aport~1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ Aport~0 new_new_n1434_1
+-001 0
+1-01 0
+10-- 0
+.names Aport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ new_new_n1435
+01 1
+.names Aport~9 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ Aport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ new_new_n1437 new_new_n1436
+00001 1
+00111 1
+11001 1
+11111 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ Aport~7 Aport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ Aport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ new_new_n1437
+----01 0
+----10 0
+--01-- 0
+--10-- 0
+01---- 0
+.names Aport~9 Aport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ new_new_n1438_1
+-011 1
+0-1- 1
+00-1 1
+.names Aport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ Aport~14 new_new_n1439_1
+0000 1
+0011 1
+1100 1
+1111 1
+.names Aport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ Aport~16 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ new_new_n1441 new_new_n1445 new_new_n1440
+000011 1
+001111 1
+110011 1
+111111 1
+.names Aport~27 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ Aport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ new_new_n1442 new_new_n1441
+00001 1
+00111 1
+11001 1
+11111 1
+.names Aport~25 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ Aport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ new_new_n1443_1 new_new_n1442
+00001 1
+00111 1
+11001 1
+11111 1
+.names Aport~29 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ Aport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ new_new_n1444_1 new_new_n1443_1
+00001 1
+00111 1
+11001 1
+11111 1
+.names Aport~31 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ Aport~30 new_new_n1444_1
+0000 1
+0011 1
+1100 1
+1111 1
+.names Aport~19 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ Aport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ new_new_n1446 new_new_n1445
+00001 1
+00111 1
+11001 1
+11111 1
+.names Aport~21 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ Aport~20 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ new_new_n1447 new_new_n1446
+00001 1
+00111 1
+11001 1
+11111 1
+.names Aport~23 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ Aport~22 new_new_n1447
+0000 1
+0011 1
+1100 1
+1111 1
+.names new_new_n1449_1 Aport~17 Aport~16 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ new_new_n1445 new_new_n1448_1
+--0111 0
+-0-1-1 0
+-00-11 0
+0----- 0
+.names new_new_n1450 Aport~19 Aport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ new_new_n1446 new_new_n1449_1
+--0111 0
+-0-1-1 0
+-00-11 0
+0----- 0
+.names new_new_n1451 Aport~23 Aport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ new_new_n1450
+--011 0
+-0-1- 0
+-00-1 0
+1---- 0
+.names Aport~21 Aport~20 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ new_new_n1447 new_new_n1451
+-0111 1
+0-1-1 1
+00-11 1
+.names new_new_n1453_1 Aport~27 Aport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ new_new_n1443_1 new_new_n1452
+--0111 1
+-0-1-1 1
+-00-11 1
+1--111 1
+1-01-1 1
+10--11 1
+100--1 1
+.names Aport~25 Aport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ new_new_n1453_1
+-011 1
+0-1- 1
+00-1 1
+.names new_new_n1455 Aport~31 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ Aport~30 new_new_n1454_1
+--001 1
+-1-01 1
+-10-- 1
+0-0-1 1
+0-00- 1
+01--1 1
+01-0- 1
+.names Aport~29 Aport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ new_new_n1455
+-011 1
+0-1- 1
+00-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ new_new_n1457 reset new_new_n1427 n787_1
+-100 1
+1-01 1
+.names Xinport~1 DXport~0 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ DXport~1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ $sdff~2^Q~0 new_new_n1457
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names new_new_n1459_1 Xinport~2 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] \
+ $sdff~2^Q~0 reset new_new_n1427 n792_1
+--1-01 1
+-1-000 1
+0--100 1
+.names DXport~0 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ DXport~1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ DXport~2 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] \
+ new_new_n1459_1
+--0000 1
+--0011 1
+--1101 1
+--1110 1
+-0-000 1
+-0-011 1
+-00-00 1
+-00-11 1
+0--000 1
+0--011 1
+0-0-00 1
+0-0-11 1
+11-101 1
+11-110 1
+111-01 1
+111-10 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ new_new_n1464_1 new_new_n1461 n797_1
+--1 1
+11- 1
+.names Xinport~3 new_new_n1463_1 DXport~3 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ $sdff~2^Q~0 n1070_1 new_new_n1461
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1427 reset n1070_1
+00 1
+.names DXport~1 DXport~2 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ DXport~0 new_new_n1463_1
+--1111 1
+-1-111 1
+-11--- 1
+1-1-11 1
+1-11-- 1
+11--11 1
+11-1-- 1
+.names reset new_new_n1427 new_new_n1464_1
+01 1
+.names new_new_n1466 Xinport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ $sdff~2^Q~0 reset new_new_n1427 n802_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1463_1 DXport~3 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ DXport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ new_new_n1466
+-0000 1
+-0011 1
+-1101 1
+-1110 1
+0-000 1
+0-011 1
+00-00 1
+00-11 1
+1-101 1
+1-110 1
+11-01 1
+11-10 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ new_new_n1464_1 new_new_n1468_1 n807_1
+--1 1
+11- 1
+.names Xinport~5 new_new_n1469_1 DXport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ $sdff~2^Q~0 n1070_1 new_new_n1468_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1463_1 DXport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ DXport~3 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ new_new_n1469_1
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1471 Xinport~6 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] \
+ $sdff~2^Q~0 reset new_new_n1427 n812_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1469_1 DXport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ DXport~6 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] \
+ new_new_n1471
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-001 1
+0-010 1
+00-01 1
+00-10 1
+1-100 1
+1-111 1
+11-00 1
+11-11 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ new_new_n1464_1 new_new_n1473_1 n817_1
+--1 1
+11- 1
+.names Xinport~7 new_new_n1474_1 DXport~7 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ $sdff~2^Q~0 n1070_1 new_new_n1473_1
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1469_1 DXport~6 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] \
+ DXport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ new_new_n1474_1
+--000 1
+-0-00 1
+-00-- 1
+0-0-0 1
+0-00- 1
+00--0 1
+00-0- 1
+.names new_new_n1476 Xinport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ $sdff~2^Q~0 reset new_new_n1427 n822_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1474_1 DXport~7 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ DXport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ new_new_n1476
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-100 1
+0-111 1
+01-00 1
+01-11 1
+1-001 1
+1-010 1
+10-01 1
+10-10 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ new_new_n1464_1 new_new_n1478_1 n827_1
+--1 1
+11- 1
+.names Xinport~9 new_new_n1479_1 DXport~9 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ $sdff~2^Q~0 n1070_1 new_new_n1478_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1474_1 DXport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ DXport~7 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ new_new_n1479_1
+--111 1
+-1-11 1
+-11-- 1
+0-1-1 1
+0-11- 1
+01--1 1
+01-1- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ new_new_n1464_1 new_new_n1481 n832_1
+--1 1
+11- 1
+.names Xinport~10 new_new_n1482 DXport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ $sdff~2^Q~0 n1070_1 new_new_n1481
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1479_1 DXport~9 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ new_new_n1482
+-11 1
+1-1 1
+11- 1
+.names new_new_n1484_1 Xinport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ $sdff~2^Q~0 reset new_new_n1427 n837_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1482 DXport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ DXport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ new_new_n1484_1
+-0000 1
+-0011 1
+-1101 1
+-1110 1
+0-000 1
+0-011 1
+00-00 1
+00-11 1
+1-101 1
+1-110 1
+11-01 1
+11-10 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ new_new_n1464_1 new_new_n1486 n842_1
+--1 1
+11- 1
+.names Xinport~12 new_new_n1487 DXport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ $sdff~2^Q~0 n1070_1 new_new_n1486
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1482 DXport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ DXport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ new_new_n1487
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1489_1 Xinport~13 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ $sdff~2^Q~0 reset new_new_n1427 n847_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1490 new_new_n1492 DXport~13 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ new_new_n1489_1
+-100 1
+-111 1
+0001 1
+0010 1
+1-00 1
+1-11 1
+.names new_new_n1482 DXport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ DXport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ new_new_n1491 new_new_n1490
+--0000 1
+-0-000 1
+-00--0 1
+0-0-00 1
+0-00-0 1
+00--00 1
+00-0-0 1
+.names DXport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ new_new_n1491
+11 1
+.names DXport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ new_new_n1492
+00 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ new_new_n1464_1 new_new_n1494_1 n852_1
+--1 1
+11- 1
+.names Xinport~14 new_new_n1495 DXport~14 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ $sdff~2^Q~0 n1070_1 new_new_n1494_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names DXport~13 new_new_n1492 new_new_n1490 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ new_new_n1495
+-001 1
+1--1 1
+100- 1
+.names new_new_n1497 Xinport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ $sdff~2^Q~0 reset new_new_n1427 n857_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1498_1 DXport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ new_new_n1497
+001 1
+010 1
+100 1
+111 1
+.names DXport~13 DXport~14 new_new_n1490 new_new_n1492 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ new_new_n1498_1
+--0011 1
+-1--1- 1
+-100-1 1
+1---11 1
+1-001- 1
+11---1 1
+1100-- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ new_new_n1464_1 new_new_n1500 n862_1
+--1 1
+11- 1
+.names Xinport~16 new_new_n1501 DXport~16 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ $sdff~2^Q~0 n1070_1 new_new_n1500
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1498_1 DXport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ new_new_n1501
+-11 1
+1-1 1
+11- 1
+.names new_new_n1503_1 Xinport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ $sdff~2^Q~0 reset new_new_n1427 n867_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1504_1 DXport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ new_new_n1503_1
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1498_1 DXport~16 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ DXport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ new_new_n1504_1
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ new_new_n1464_1 new_new_n1506 n872_1
+--1 1
+11- 1
+.names Xinport~18 new_new_n1507 DXport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ $sdff~2^Q~0 n1070_1 new_new_n1506
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1504_1 DXport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ new_new_n1507
+-11 1
+1-1 1
+11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ new_new_n1464_1 new_new_n1509_1 n877_1
+--1 1
+11- 1
+.names Xinport~19 new_new_n1510 DXport~19 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ $sdff~2^Q~0 n1070_1 new_new_n1509_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1507 DXport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ new_new_n1510
+-11 1
+1-1 1
+11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ new_new_n1464_1 new_new_n1512 n882_1
+--1 1
+11- 1
+.names Xinport~20 new_new_n1513_1 DXport~20 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ $sdff~2^Q~0 n1070_1 new_new_n1512
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1514_1 new_new_n1516 new_new_n1513_1
+00 1
+.names new_new_n1504_1 DXport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ DXport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ new_new_n1515 new_new_n1514_1
+--0000 1
+-0-000 1
+-00--0 1
+0-0-00 1
+0-00-0 1
+00--00 1
+00-0-0 1
+.names DXport~19 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ new_new_n1515
+11 1
+.names DXport~19 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ new_new_n1516
+00 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ new_new_n1464_1 new_new_n1518_1 n887_1
+--1 1
+11- 1
+.names Xinport~21 new_new_n1519_1 DXport~21 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ $sdff~2^Q~0 n1070_1 new_new_n1518_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1513_1 DXport~20 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ new_new_n1519_1
+-11 1
+1-1 1
+11- 1
+.names new_new_n1521 Xinport~22 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ $sdff~2^Q~0 n1070_1 n892_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1522 DXport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ new_new_n1521
+001 1
+010 1
+100 1
+111 1
+.names DXport~20 DXport~21 new_new_n1514_1 new_new_n1516 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ new_new_n1522
+--0011 1
+-1--1- 1
+-100-1 1
+1---11 1
+1-001- 1
+11---1 1
+1100-- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ new_new_n1464_1 new_new_n1524_1 n897_1
+--1 1
+11- 1
+.names Xinport~23 new_new_n1525 DXport~23 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ $sdff~2^Q~0 n1070_1 new_new_n1524_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1522 DXport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ new_new_n1525
+-11 1
+1-1 1
+11- 1
+.names new_new_n1527_1 Xinport~24 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ $sdff~2^Q~0 n1070_1 n902_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1528_1 DXport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ new_new_n1527_1
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1522 DXport~23 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ DXport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ new_new_n1528_1
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1530 Xinport~25 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ $sdff~2^Q~0 n1070_1 n907_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1528_1 DXport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ DXport~25 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ new_new_n1530
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-001 1
+0-010 1
+00-01 1
+00-10 1
+1-100 1
+1-111 1
+11-00 1
+11-11 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ new_new_n1464_1 new_new_n1532_1 n912_1
+--1 1
+11- 1
+.names Xinport~26 new_new_n1533 DXport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ $sdff~2^Q~0 n1070_1 new_new_n1532_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1528_1 DXport~25 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ DXport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ new_new_n1533
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1535_1 Xinport~27 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ $sdff~2^Q~0 n1070_1 n917_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1536_1 new_new_n1538 DXport~27 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ new_new_n1535_1
+-101 1
+-110 1
+0000 1
+0011 1
+1-01 1
+1-10 1
+.names new_new_n1528_1 DXport~25 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ DXport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ new_new_n1537 new_new_n1536_1
+--0000 1
+-0-000 1
+-00--0 1
+0-0-00 1
+0-00-0 1
+00--00 1
+00-0-0 1
+.names DXport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ new_new_n1537
+11 1
+.names DXport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ new_new_n1538
+00 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ new_new_n1464_1 new_new_n1540_1 n922_1
+--1 1
+11- 1
+.names Xinport~28 new_new_n1541 DXport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ $sdff~2^Q~0 n1070_1 new_new_n1540_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names DXport~27 new_new_n1538 new_new_n1536_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ new_new_n1541
+-001 1
+1--1 1
+100- 1
+.names new_new_n1543_1 Xinport~29 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ $sdff~2^Q~0 n1070_1 n927_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1544_1 DXport~29 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ new_new_n1543_1
+001 1
+010 1
+100 1
+111 1
+.names DXport~27 DXport~28 new_new_n1536_1 new_new_n1538 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ new_new_n1544_1
+--0011 1
+-1--1- 1
+-100-1 1
+1---11 1
+1-001- 1
+11---1 1
+1100-- 1
+.names Xinport~30 $sdff~2^Q~0 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ new_new_n1546 n1070_1 n932_1
+--11-- 1
+-1--01 1
+1---01 1
+.names new_new_n1544_1 DXport~29 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ DXport~30 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ $sdff~2^Q~0 new_new_n1546
+-00001 1
+-00111 1
+-11011 1
+-11101 1
+0-0001 1
+0-0111 1
+00-001 1
+00-111 1
+1-1011 1
+1-1101 1
+11-011 1
+11-101 1
+.names new_new_n1548_1 Xinport~31 new_new_n1464_1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] \
+ $sdff~2^Q~0 n1070_1 n937_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1544_1 DXport~30 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ DXport~29 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ new_new_n1549 new_new_n1548_1
+--0000 1
+--1111 1
+-0-000 1
+-00--0 1
+-1-111 1
+-11--1 1
+0-0-00 1
+0-00-0 1
+00--00 1
+00-0-0 1
+1-1-11 1
+1-11-1 1
+11--11 1
+11-1-1 1
+.names DXport~31 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] \
+ new_new_n1549
+01 1
+10 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[0] \
+ Xoutport~0 new_new_n1464_1 n942_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[1] \
+ Xoutport~1 new_new_n1464_1 n946_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[2] \
+ Xoutport~2 new_new_n1464_1 n950_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[3] \
+ Xoutport~3 new_new_n1464_1 n954_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[4] \
+ Xoutport~4 new_new_n1464_1 n958_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[5] \
+ Xoutport~5 new_new_n1464_1 n962_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[6] \
+ Xoutport~6 new_new_n1464_1 n966_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[7] \
+ Xoutport~7 new_new_n1464_1 n970_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[8] \
+ Xoutport~8 new_new_n1464_1 n974_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[9] \
+ Xoutport~9 new_new_n1464_1 n978_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[10] \
+ Xoutport~10 new_new_n1464_1 n982_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[11] \
+ Xoutport~11 new_new_n1464_1 n986_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[12] \
+ Xoutport~12 new_new_n1464_1 n990_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[13] \
+ Xoutport~13 new_new_n1464_1 n994_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[14] \
+ Xoutport~14 new_new_n1464_1 n998_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[15] \
+ Xoutport~15 new_new_n1464_1 n1002_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[16] \
+ Xoutport~16 new_new_n1464_1 n1006_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[17] \
+ Xoutport~17 new_new_n1464_1 n1010_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[18] \
+ Xoutport~18 new_new_n1464_1 n1014_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[19] \
+ Xoutport~19 new_new_n1464_1 n1018_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[20] \
+ Xoutport~20 new_new_n1464_1 n1022_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[21] \
+ Xoutport~21 new_new_n1464_1 n1026_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[22] \
+ Xoutport~22 new_new_n1464_1 n1030_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[23] \
+ Xoutport~23 new_new_n1464_1 n1034_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[24] \
+ Xoutport~24 new_new_n1464_1 n1038_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[25] \
+ Xoutport~25 new_new_n1464_1 n1042_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[26] \
+ Xoutport~26 new_new_n1464_1 n1046_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[27] \
+ Xoutport~27 new_new_n1464_1 n1050_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[28] \
+ Xoutport~28 new_new_n1464_1 n1054_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[29] \
+ Xoutport~29 new_new_n1464_1 n1058_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[30] \
+ Xoutport~30 new_new_n1464_1 n1062_1
+-10 1
+1-1 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$437.$auto$alumacc.cc:495:replace_alu$2233.A[31] \
+ Xoutport~31 new_new_n1464_1 n1066_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~0 new_new_n1464_1 new_new_n1583_1 n1075_1
+--1 1
+11- 1
+.names Uinport~0 $mul~18[0] $mul~16[0] $sdffe~3^Q~0 $sdff~2^Q~0 n1070_1 \
+ new_new_n1583_1
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1585 Uinport~1 $sdffe~3^Q~1 $sdff~2^Q~0 reset new_new_n1427 \
+ n1080_1
+--1-01 1
+-1-000 1
+1--100 1
+.names $mul~18[0] $mul~16[0] $sdffe~3^Q~0 $mul~18[1] $mul~16[1] \
+ $sdffe~3^Q~1 new_new_n1585
+-01001 1
+-01010 1
+-01100 1
+-01111 1
+-10000 1
+-10011 1
+-10101 1
+-10110 1
+0-1001 1
+0-1010 1
+0-1100 1
+0-1111 1
+00-001 1
+00-010 1
+00-100 1
+00-111 1
+1-0000 1
+1-0011 1
+1-0101 1
+1-0110 1
+11-000 1
+11-011 1
+11-101 1
+11-110 1
+.names new_new_n1587_1 Uinport~2 $sdffe~3^Q~2 $sdff~2^Q~0 reset \
+ new_new_n1427 n1085_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1588_1 new_new_n1589 $mul~18[2] new_new_n1587_1
+000 1
+011 1
+101 1
+110 1
+.names $sdffe~3^Q~0 $mul~16[0] $mul~16[1] $sdffe~3^Q~1 $mul~16[2] \
+ $sdffe~3^Q~2 new_new_n1588_1
+--0100 1
+--0111 1
+--1001 1
+--1010 1
+-0-100 1
+-0-111 1
+-00-00 1
+-00-11 1
+01-001 1
+01-010 1
+011-01 1
+011-10 1
+1--100 1
+1--111 1
+1-0-00 1
+1-0-11 1
+.names $mul~18[1] $mul~18[0] $mul~16[0] $sdffe~3^Q~0 $mul~16[1] \
+ $sdffe~3^Q~1 new_new_n1589
+--0101 0
+--0110 0
+--1000 0
+--1011 0
+-0-101 0
+-0-110 0
+-00-01 0
+-00-10 0
+0---01 0
+0---10 0
+0-01-- 0
+00---- 0
+.names new_new_n1591_1 Uinport~3 $sdffe~3^Q~3 $sdff~2^Q~0 reset \
+ new_new_n1427 n1090_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1588_1 new_new_n1589 $mul~18[2] new_new_n1592_1 \
+ new_new_n1593 $mul~18[3] new_new_n1591_1
+-00000 1
+-00011 1
+-00101 1
+-00110 1
+-11001 1
+-11010 1
+-11100 1
+-11111 1
+0-0000 1
+0-0011 1
+0-0101 1
+0-0110 1
+00-000 1
+00-011 1
+00-101 1
+00-110 1
+1-1001 1
+1-1010 1
+1-1100 1
+1-1111 1
+11-001 1
+11-010 1
+11-100 1
+11-111 1
+.names $mul~16[3] $sdffe~3^Q~3 new_new_n1592_1
+00 1
+11 1
+.names $mul~16[1] $mul~16[2] $sdffe~3^Q~2 $sdffe~3^Q~1 $sdffe~3^Q~0 \
+ $mul~16[0] new_new_n1593
+--0001 1
+-1-001 1
+-10--- 1
+1-0-01 1
+1-00-- 1
+11--01 1
+11-0-- 1
+.names new_new_n1595_1 Uinport~4 $sdffe~3^Q~4 $sdff~2^Q~0 reset \
+ new_new_n1427 n1095_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1596_1 new_new_n1597 $mul~18[4] new_new_n1595_1
+000 1
+011 1
+101 1
+110 1
+.names $mul~18[3] new_new_n1588_1 new_new_n1589 $mul~18[2] new_new_n1592_1 \
+ new_new_n1593 new_new_n1596_1
+--1101 1
+--1110 1
+-1-101 1
+-1-110 1
+-11-01 1
+-11-10 1
+1---01 1
+1---10 1
+1-11-- 1
+11-1-- 1
+111--- 1
+.names new_new_n1593 $mul~16[3] $sdffe~3^Q~3 $mul~16[4] $sdffe~3^Q~4 \
+ new_new_n1597
+-0100 1
+-0111 1
+-1001 1
+-1010 1
+0-100 1
+0-111 1
+00-00 1
+00-11 1
+1-001 1
+1-010 1
+11-01 1
+11-10 1
+.names new_new_n1599_1 Uinport~5 $sdffe~3^Q~5 $sdff~2^Q~0 reset \
+ new_new_n1427 n1100_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1596_1 new_new_n1597 $mul~18[4] new_new_n1600_1 \
+ new_new_n1601 $mul~18[5] new_new_n1599_1
+-00000 1
+-00011 1
+-00101 1
+-00110 1
+-11001 1
+-11010 1
+-11100 1
+-11111 1
+0-0000 1
+0-0011 1
+0-0101 1
+0-0110 1
+00-000 1
+00-011 1
+00-101 1
+00-110 1
+1-1001 1
+1-1010 1
+1-1100 1
+1-1111 1
+11-001 1
+11-010 1
+11-100 1
+11-111 1
+.names new_new_n1593 $mul~16[4] $sdffe~3^Q~4 $sdffe~3^Q~3 $mul~16[3] \
+ new_new_n1600_1
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~16[5] $sdffe~3^Q~5 new_new_n1601
+00 1
+11 1
+.names new_new_n1603_1 Uinport~6 $sdffe~3^Q~6 $sdff~2^Q~0 reset \
+ new_new_n1427 n1105_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1604_1 new_new_n1605 $mul~18[6] new_new_n1603_1
+001 1
+010 1
+100 1
+111 1
+.names $mul~18[5] new_new_n1596_1 new_new_n1597 $mul~18[4] new_new_n1600_1 \
+ new_new_n1601 new_new_n1604_1
+--1101 1
+--1110 1
+-1-101 1
+-1-110 1
+-11-01 1
+-11-10 1
+1---01 1
+1---10 1
+1-11-- 1
+11-1-- 1
+111--- 1
+.names new_new_n1606 new_new_n1608_1 $mul~16[6] $sdffe~3^Q~6 new_new_n1605
+-101 1
+-110 1
+0000 1
+0011 1
+1-01 1
+1-10 1
+.names new_new_n1593 $mul~16[4] $mul~16[3] $sdffe~3^Q~4 $sdffe~3^Q~3 \
+ new_new_n1601 new_new_n1606
+--0111 1
+-0-1-1 1
+-00-11 1
+0--111 1
+0-01-1 1
+00--11 1
+000--1 1
+.names $mul~16[5] $sdffe~3^Q~5 new_new_n1608_1
+01 1
+.names $sdffe~3^Q~7 new_new_n1610 reset new_new_n1427 n1110_1
+-100 1
+1-01 1
+.names Uinport~7 new_new_n1611_1 new_new_n1612_1 new_new_n1613 $mul~18[7] \
+ $sdff~2^Q~0 new_new_n1610
+-00011 1
+-00101 1
+-01001 1
+-01111 1
+-10001 1
+-10111 1
+-11011 1
+-11101 1
+1----0 1
+.names new_new_n1604_1 $mul~18[6] new_new_n1605 new_new_n1611_1
+-01 1
+0-1 1
+00- 1
+.names $mul~16[6] $sdffe~3^Q~6 new_new_n1606 new_new_n1608_1 \
+ new_new_n1612_1
+-000 1
+1-00 1
+10-- 1
+.names $mul~16[7] $sdffe~3^Q~7 new_new_n1613
+00 1
+11 1
+.names $sdffe~3^Q~8 new_new_n1464_1 new_new_n1615_1 n1115_1
+--1 1
+11- 1
+.names Uinport~8 new_new_n1616_1 new_new_n1618 $mul~18[8] $sdff~2^Q~0 \
+ n1070_1 new_new_n1615_1
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1617 $mul~16[8] $sdffe~3^Q~8 new_new_n1616_1
+001 1
+010 1
+100 1
+111 1
+.names $mul~16[6] $mul~16[7] $sdffe~3^Q~7 $sdffe~3^Q~6 new_new_n1608_1 \
+ new_new_n1606 new_new_n1617
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~18[7] new_new_n1604_1 $mul~18[6] new_new_n1605 new_new_n1612_1 \
+ new_new_n1613 new_new_n1618
+--0100 1
+--0111 1
+-0-100 1
+-0-111 1
+-00-00 1
+-00-11 1
+0---00 1
+0---11 1
+0-01-- 1
+00-1-- 1
+000--- 1
+.names new_new_n1620_1 Uinport~9 $sdffe~3^Q~9 $sdff~2^Q~0 reset \
+ new_new_n1427 n1120_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1616_1 new_new_n1618 $mul~18[8] new_new_n1621 $mul~18[9] \
+ new_new_n1620_1
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names new_new_n1617 $mul~16[8] $sdffe~3^Q~8 $mul~16[9] $sdffe~3^Q~9 \
+ new_new_n1621
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names new_new_n1623_1 Uinport~10 $sdffe~3^Q~10 $sdff~2^Q~0 reset \
+ new_new_n1427 n1125_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1624_1 new_new_n1627_1 new_new_n1626 new_new_n1623_1
+-10 1
+001 1
+1-0 1
+.names new_new_n1625 $mul~16[10] $sdffe~3^Q~10 $mul~18[10] new_new_n1624_1
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1617 $mul~16[9] $sdffe~3^Q~9 $sdffe~3^Q~8 $mul~16[8] \
+ new_new_n1625
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1616_1 new_new_n1621 $mul~18[9] $mul~18[8] new_new_n1618 \
+ new_new_n1626
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~18[10] new_new_n1625 $mul~16[10] $sdffe~3^Q~10 new_new_n1627_1
+0001 1
+0010 1
+0100 1
+0111 1
+.names new_new_n1629 Uinport~11 $sdffe~3^Q~11 $sdff~2^Q~0 reset \
+ new_new_n1427 n1130_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1630 new_new_n1631_1 $mul~18[11] new_new_n1629
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1626 new_new_n1627_1 new_new_n1624_1 new_new_n1630
+-10 1
+1-0 1
+.names new_new_n1632_1 new_new_n1634 $mul~16[11] $sdffe~3^Q~11 \
+ new_new_n1631_1
+-101 1
+-110 1
+0000 1
+0011 1
+1-01 1
+1-10 1
+.names new_new_n1617 $mul~16[9] $mul~16[8] $sdffe~3^Q~9 $sdffe~3^Q~8 \
+ new_new_n1633 new_new_n1632_1
+--0110 1
+-0-1-0 1
+-00-10 1
+0--110 1
+0-01-0 1
+00--10 1
+000--0 1
+.names $sdffe~3^Q~10 $mul~16[10] new_new_n1633
+01 1
+.names $mul~16[10] $sdffe~3^Q~10 new_new_n1634
+01 1
+.names new_new_n1636_1 Uinport~12 $sdffe~3^Q~12 $sdff~2^Q~0 reset \
+ new_new_n1427 n1135_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1630 $mul~18[11] new_new_n1637 new_new_n1639_1 \
+ new_new_n1631_1 new_new_n1636_1
+-0001 1
+-1-10 1
+-11-0 1
+0--10 1
+0-1-0 1
+01-1- 1
+011-- 1
+1-001 1
+1000- 1
+.names new_new_n1632_1 new_new_n1634 $mul~16[11] $sdffe~3^Q~11 \
+ new_new_n1638 $mul~18[12] new_new_n1637
+--0111 1
+--1001 1
+-1-111 1
+-10-11 1
+00-001 1
+001-01 1
+1--111 1
+1-0-11 1
+.names $mul~16[12] $sdffe~3^Q~12 new_new_n1638
+00 1
+11 1
+.names new_new_n1632_1 new_new_n1634 $mul~16[11] $sdffe~3^Q~11 $mul~18[12] \
+ new_new_n1638 new_new_n1639_1
+--0100 1
+--1001 1
+-1-100 1
+-10-00 1
+00-001 1
+001-01 1
+1--100 1
+1-0-00 1
+.names new_new_n1641 Uinport~13 $sdffe~3^Q~13 $sdff~2^Q~0 reset \
+ new_new_n1427 n1140_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1644_1 new_new_n1647_1 new_new_n1642 new_new_n1641
+-10 1
+001 1
+1-0 1
+.names new_new_n1643_1 new_new_n1637 new_new_n1642
+00 1
+.names new_new_n1624_1 new_new_n1626 new_new_n1627_1 new_new_n1631_1 \
+ $mul~18[11] new_new_n1639_1 new_new_n1643_1
+---010 1
+-00-10 1
+-000-0 1
+1---10 1
+1--0-0 1
+.names new_new_n1645 new_new_n1646 $mul~18[13] new_new_n1644_1
+011 1
+101 1
+.names $mul~16[11] $mul~16[12] $sdffe~3^Q~12 $sdffe~3^Q~11 new_new_n1634 \
+ new_new_n1632_1 new_new_n1645
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~16[13] $sdffe~3^Q~13 new_new_n1646
+00 1
+11 1
+.names $mul~18[13] new_new_n1646 new_new_n1645 new_new_n1647_1
+000 1
+011 1
+.names new_new_n1649 Uinport~14 $sdffe~3^Q~14 $sdff~2^Q~0 reset \
+ new_new_n1427 n1145_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1642 new_new_n1647_1 new_new_n1644_1 new_new_n1650 \
+ new_new_n1651 new_new_n1649
+--1-1 1
+--11- 1
+-1000 1
+00--1 1
+00-1- 1
+1-000 1
+.names new_new_n1645 $mul~16[13] $sdffe~3^Q~13 $mul~16[14] $sdffe~3^Q~14 \
+ $mul~18[14] new_new_n1650
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1645 $mul~16[13] $sdffe~3^Q~13 $mul~18[14] $mul~16[14] \
+ $sdffe~3^Q~14 new_new_n1651
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names new_new_n1653 Uinport~15 $sdffe~3^Q~15 $sdff~2^Q~0 reset \
+ new_new_n1427 n1150_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1654 new_new_n1657 new_new_n1656 new_new_n1653
+-10 1
+001 1
+1-0 1
+.names new_new_n1655 $mul~16[15] $sdffe~3^Q~15 $mul~18[15] new_new_n1654
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1645 $mul~16[14] $sdffe~3^Q~14 $sdffe~3^Q~13 $mul~16[13] \
+ new_new_n1655
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1637 new_new_n1643_1 new_new_n1647_1 new_new_n1651 \
+ new_new_n1644_1 new_new_n1650 new_new_n1656
+---1-0 1
+--1-00 1
+00--00 1
+.names $mul~18[15] new_new_n1655 $mul~16[15] $sdffe~3^Q~15 new_new_n1657
+0001 1
+0010 1
+0100 1
+0111 1
+.names new_new_n1659 Uinport~16 $sdffe~3^Q~16 $sdff~2^Q~0 reset \
+ new_new_n1427 n1155_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1660 new_new_n1661 $mul~18[16] new_new_n1659
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1656 new_new_n1657 new_new_n1654 new_new_n1660
+-10 1
+1-0 1
+.names new_new_n1662 new_new_n1664 $mul~16[16] $sdffe~3^Q~16 new_new_n1661
+-101 1
+-110 1
+0000 1
+0011 1
+1-01 1
+1-10 1
+.names new_new_n1645 $mul~16[14] $mul~16[13] $sdffe~3^Q~14 $sdffe~3^Q~13 \
+ new_new_n1663 new_new_n1662
+--0110 1
+-0-1-0 1
+-00-10 1
+0--110 1
+0-01-0 1
+00--10 1
+000--0 1
+.names $sdffe~3^Q~15 $mul~16[15] new_new_n1663
+01 1
+.names $mul~16[15] $sdffe~3^Q~15 new_new_n1664
+01 1
+.names new_new_n1666 Uinport~17 new_new_n1464_1 $sdffe~3^Q~17 $sdff~2^Q~0 \
+ n1070_1 n1160_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1660 $mul~18[16] new_new_n1667 new_new_n1669 new_new_n1661 \
+ new_new_n1666
+-0001 1
+-1-10 1
+-11-0 1
+0--10 1
+0-1-0 1
+01-1- 1
+011-- 1
+1-001 1
+1000- 1
+.names new_new_n1662 new_new_n1664 $mul~16[16] $sdffe~3^Q~16 new_new_n1668 \
+ $mul~18[17] new_new_n1667
+--0111 1
+--1001 1
+-1-111 1
+-10-11 1
+00-001 1
+001-01 1
+1--111 1
+1-0-11 1
+.names $mul~16[17] $sdffe~3^Q~17 new_new_n1668
+00 1
+11 1
+.names new_new_n1662 new_new_n1664 $mul~16[16] $sdffe~3^Q~16 $mul~18[17] \
+ new_new_n1668 new_new_n1669
+--0100 1
+--1001 1
+-1-100 1
+-10-00 1
+00-001 1
+001-01 1
+1--100 1
+1-0-00 1
+.names $sdffe~3^Q~18 new_new_n1464_1 new_new_n1671 n1165_1
+--1 1
+11- 1
+.names Uinport~18 new_new_n1674 new_new_n1676 new_new_n1672 $sdff~2^Q~0 \
+ n1070_1 new_new_n1671
+--1111 1
+-00011 1
+-1-111 1
+1---01 1
+.names new_new_n1673 new_new_n1667 new_new_n1672
+00 1
+.names new_new_n1654 new_new_n1656 new_new_n1657 new_new_n1661 $mul~18[16] \
+ new_new_n1669 new_new_n1673
+---010 1
+-00-10 1
+-000-0 1
+1---10 1
+1--0-0 1
+.names new_new_n1675 $mul~16[18] $sdffe~3^Q~18 $mul~18[18] new_new_n1674
+0001 1
+0111 1
+1011 1
+1101 1
+.names $mul~16[16] $mul~16[17] $sdffe~3^Q~17 $sdffe~3^Q~16 new_new_n1664 \
+ new_new_n1662 new_new_n1675
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~18[18] new_new_n1675 $mul~16[18] $sdffe~3^Q~18 new_new_n1676
+0001 1
+0010 1
+0100 1
+0111 1
+.names $sdffe~3^Q~19 new_new_n1464_1 new_new_n1678 n1170_1
+--1 1
+11- 1
+.names Uinport~19 new_new_n1680 new_new_n1681 new_new_n1679 $sdff~2^Q~0 \
+ n1070_1 new_new_n1678
+--1111 1
+-00011 1
+-1-111 1
+1---01 1
+.names new_new_n1672 new_new_n1676 new_new_n1674 new_new_n1679
+-10 1
+1-0 1
+.names new_new_n1675 $mul~16[18] $sdffe~3^Q~18 $mul~16[19] $sdffe~3^Q~19 \
+ $mul~18[19] new_new_n1680
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1675 $mul~16[18] $sdffe~3^Q~18 $mul~18[19] $mul~16[19] \
+ $sdffe~3^Q~19 new_new_n1681
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names $sdffe~3^Q~20 new_new_n1464_1 new_new_n1683 n1175_1
+--1 1
+11- 1
+.names Uinport~20 new_new_n1684 new_new_n1687 new_new_n1686 $sdff~2^Q~0 \
+ n1070_1 new_new_n1683
+--1111 1
+-00011 1
+-1-111 1
+1---01 1
+.names new_new_n1685 $mul~16[20] $sdffe~3^Q~20 $mul~18[20] new_new_n1684
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1675 $mul~16[19] $sdffe~3^Q~19 $sdffe~3^Q~18 $mul~16[18] \
+ new_new_n1685
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1667 new_new_n1673 new_new_n1676 new_new_n1681 \
+ new_new_n1674 new_new_n1680 new_new_n1686
+---1-0 1
+--1-00 1
+00--00 1
+.names $mul~18[20] new_new_n1685 $mul~16[20] $sdffe~3^Q~20 new_new_n1687
+0001 1
+0010 1
+0100 1
+0111 1
+.names new_new_n1689 Uinport~21 new_new_n1464_1 $sdffe~3^Q~21 $sdff~2^Q~0 \
+ n1070_1 n1180_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1686 new_new_n1687 new_new_n1684 new_new_n1690 $mul~18[21] \
+ new_new_n1689
+--101 1
+--110 1
+-1000 1
+-1011 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+.names new_new_n1691 new_new_n1693 $mul~16[21] $sdffe~3^Q~21 new_new_n1690
+-101 1
+-110 1
+0000 1
+0011 1
+1-01 1
+1-10 1
+.names new_new_n1675 $mul~16[19] $mul~16[18] $sdffe~3^Q~19 $sdffe~3^Q~18 \
+ new_new_n1692 new_new_n1691
+--0110 1
+-0-1-0 1
+-00-10 1
+0--110 1
+0-01-0 1
+00--10 1
+000--0 1
+.names $sdffe~3^Q~20 $mul~16[20] new_new_n1692
+01 1
+.names $mul~16[20] $sdffe~3^Q~20 new_new_n1693
+01 1
+.names new_new_n1695 Uinport~22 new_new_n1464_1 $sdffe~3^Q~22 $sdff~2^Q~0 \
+ n1070_1 n1185_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1697 new_new_n1699 new_new_n1696 new_new_n1695
+-10 1
+001 1
+1-0 1
+.names new_new_n1686 new_new_n1687 new_new_n1690 $mul~18[21] new_new_n1684 \
+ new_new_n1696
+--10- 1
+-1-00 1
+-11-0 1
+1--00 1
+1-1-0 1
+.names new_new_n1691 new_new_n1693 $mul~16[21] $sdffe~3^Q~21 new_new_n1698 \
+ $mul~18[22] new_new_n1697
+--0111 1
+--1001 1
+-1-111 1
+-10-11 1
+00-001 1
+001-01 1
+1--111 1
+1-0-11 1
+.names $mul~16[22] $sdffe~3^Q~22 new_new_n1698
+00 1
+11 1
+.names new_new_n1691 new_new_n1693 $mul~16[21] $sdffe~3^Q~21 $mul~18[22] \
+ new_new_n1698 new_new_n1699
+--0100 1
+--1001 1
+-1-100 1
+-10-00 1
+00-001 1
+001-01 1
+1--100 1
+1-0-00 1
+.names new_new_n1701 Uinport~23 new_new_n1464_1 $sdffe~3^Q~23 $sdff~2^Q~0 \
+ n1070_1 n1190_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1704 new_new_n1707 new_new_n1702 new_new_n1701
+-10 1
+001 1
+1-0 1
+.names new_new_n1703 new_new_n1697 new_new_n1702
+00 1
+.names new_new_n1684 new_new_n1686 new_new_n1687 new_new_n1690 $mul~18[21] \
+ new_new_n1699 new_new_n1703
+---010 1
+-00-10 1
+-000-0 1
+1---10 1
+1--0-0 1
+.names new_new_n1705 new_new_n1706 $mul~18[23] new_new_n1704
+011 1
+101 1
+.names $mul~16[21] $mul~16[22] $sdffe~3^Q~22 $sdffe~3^Q~21 new_new_n1693 \
+ new_new_n1691 new_new_n1705
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~16[23] $sdffe~3^Q~23 new_new_n1706
+00 1
+11 1
+.names $mul~18[23] new_new_n1706 new_new_n1705 new_new_n1707
+000 1
+011 1
+.names new_new_n1709 Uinport~24 new_new_n1464_1 $sdffe~3^Q~24 $sdff~2^Q~0 \
+ n1070_1 n1195_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1702 new_new_n1707 new_new_n1704 new_new_n1710 \
+ new_new_n1711 new_new_n1709
+--1-1 1
+--11- 1
+-1000 1
+00--1 1
+00-1- 1
+1-000 1
+.names new_new_n1705 $mul~16[23] $sdffe~3^Q~23 $mul~16[24] $sdffe~3^Q~24 \
+ $mul~18[24] new_new_n1710
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1705 $mul~16[23] $sdffe~3^Q~23 $mul~18[24] $mul~16[24] \
+ $sdffe~3^Q~24 new_new_n1711
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names new_new_n1713 Uinport~25 new_new_n1464_1 $sdffe~3^Q~25 $sdff~2^Q~0 \
+ n1070_1 n1200_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1714 new_new_n1718 new_new_n1717 new_new_n1713
+-10 1
+001 1
+1-0 1
+.names new_new_n1715 new_new_n1716 $mul~18[25] new_new_n1714
+011 1
+101 1
+.names new_new_n1705 $mul~16[24] $sdffe~3^Q~24 $sdffe~3^Q~23 $mul~16[23] \
+ new_new_n1715
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~16[25] $sdffe~3^Q~25 new_new_n1716
+00 1
+11 1
+.names new_new_n1697 new_new_n1703 new_new_n1707 new_new_n1711 \
+ new_new_n1704 new_new_n1710 new_new_n1717
+---1-0 1
+--1-00 1
+00--00 1
+.names $mul~18[25] new_new_n1716 new_new_n1715 new_new_n1718
+000 1
+011 1
+.names $sdffe~3^Q~26 new_new_n1464_1 new_new_n1720 n1205_1
+--1 1
+11- 1
+.names Uinport~26 new_new_n1722 new_new_n1726 new_new_n1721 $sdff~2^Q~0 \
+ n1070_1 new_new_n1720
+--1111 1
+-00011 1
+-1-111 1
+1---01 1
+.names new_new_n1717 new_new_n1718 new_new_n1714 new_new_n1721
+-10 1
+1-0 1
+.names new_new_n1723 new_new_n1725 $mul~16[26] $sdffe~3^Q~26 $mul~18[26] \
+ new_new_n1722
+-1001 1
+-1111 1
+00011 1
+00101 1
+1-001 1
+1-111 1
+.names new_new_n1705 $mul~16[24] $mul~16[23] $sdffe~3^Q~24 $sdffe~3^Q~23 \
+ new_new_n1716 new_new_n1723
+--0111 1
+-0-1-1 1
+-00-11 1
+0--111 1
+0-01-1 1
+00--11 1
+000--1 1
+.names $mul~16[25] $sdffe~3^Q~25 new_new_n1725
+01 1
+.names new_new_n1723 new_new_n1725 $mul~18[26] $mul~16[26] $sdffe~3^Q~26 \
+ new_new_n1726
+-1001 1
+-1010 1
+00000 1
+00011 1
+1-001 1
+1-010 1
+.names new_new_n1728 Uinport~27 new_new_n1464_1 $sdffe~3^Q~27 $sdff~2^Q~0 \
+ n1070_1 n1210_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1721 new_new_n1726 new_new_n1722 new_new_n1729 \
+ new_new_n1731 new_new_n1728
+--1-1 1
+--11- 1
+-1000 1
+00--1 1
+00-1- 1
+1-000 1
+.names new_new_n1723 new_new_n1725 $mul~16[26] $sdffe~3^Q~26 new_new_n1730 \
+ $mul~18[27] new_new_n1729
+--0111 1
+--1001 1
+-1-111 1
+-10-11 1
+00-001 1
+001-01 1
+1--111 1
+1-0-11 1
+.names $mul~16[27] $sdffe~3^Q~27 new_new_n1730
+00 1
+11 1
+.names new_new_n1723 new_new_n1725 $mul~16[26] $sdffe~3^Q~26 $mul~18[27] \
+ new_new_n1730 new_new_n1731
+--0100 1
+--1001 1
+-1-100 1
+-10-00 1
+00-001 1
+001-01 1
+1--100 1
+1-0-00 1
+.names $sdffe~3^Q~28 new_new_n1464_1 new_new_n1733 n1215_1
+--1 1
+11- 1
+.names Uinport~28 new_new_n1736 new_new_n1738 new_new_n1734 $sdff~2^Q~0 \
+ n1070_1 new_new_n1733
+--1111 1
+-00011 1
+-1-111 1
+1---01 1
+.names new_new_n1735 new_new_n1729 new_new_n1734
+00 1
+.names new_new_n1717 new_new_n1718 new_new_n1714 new_new_n1722 \
+ new_new_n1726 new_new_n1731 new_new_n1735
+---1-0 1
+--1-00 1
+00--00 1
+.names new_new_n1737 $mul~16[28] $sdffe~3^Q~28 $mul~18[28] new_new_n1736
+0001 1
+0111 1
+1011 1
+1101 1
+.names $mul~16[26] $mul~16[27] $sdffe~3^Q~27 $sdffe~3^Q~26 new_new_n1725 \
+ new_new_n1723 new_new_n1737
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~18[28] new_new_n1737 $mul~16[28] $sdffe~3^Q~28 new_new_n1738
+0001 1
+0010 1
+0100 1
+0111 1
+.names Uinport~29 new_new_n1744 new_new_n1740 new_new_n1741 $sdff~2^Q~0 \
+ n1070_1 n1220_1
+--0111 1
+--1011 1
+-1---- 1
+1---01 1
+.names new_new_n1734 new_new_n1738 new_new_n1736 new_new_n1740
+-10 1
+1-0 1
+.names new_new_n1742 new_new_n1743 new_new_n1741
+00 1
+.names new_new_n1737 $mul~16[28] $sdffe~3^Q~28 $mul~16[29] $sdffe~3^Q~29 \
+ $mul~18[29] new_new_n1742
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1737 $mul~16[28] $sdffe~3^Q~28 $mul~18[29] $mul~16[29] \
+ $sdffe~3^Q~29 new_new_n1743
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names new_new_n1464_1 $sdffe~3^Q~29 new_new_n1744
+11 1
+.names $sdffe~3^Q~30 new_new_n1464_1 new_new_n1746 n1225_1
+--1 1
+11- 1
+.names Uinport~30 new_new_n1747 new_new_n1748 $sdff~2^Q~0 n1070_1 \
+ new_new_n1746
+-0111 1
+-1011 1
+1--01 1
+.names new_new_n1729 new_new_n1735 new_new_n1738 new_new_n1743 \
+ new_new_n1736 new_new_n1742 new_new_n1747
+---1-0 1
+--1-00 1
+00--00 1
+.names new_new_n1749 $mul~18[30] $mul~16[30] $sdffe~3^Q~30 new_new_n1748
+0000 1
+0011 1
+0101 1
+0110 1
+1001 1
+1010 1
+1100 1
+1111 1
+.names new_new_n1737 $mul~16[29] $sdffe~3^Q~29 $sdffe~3^Q~28 $mul~16[28] \
+ new_new_n1749
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1751 Uinport~31 new_new_n1464_1 $sdffe~3^Q~31 $sdff~2^Q~0 \
+ n1070_1 n1230_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1747 new_new_n1749 $mul~18[30] $mul~16[30] $sdffe~3^Q~30 \
+ new_new_n1752 new_new_n1751
+-00010 1
+-00101 1
+-01001 1
+-01111 1
+-10001 1
+-10111 1
+-11011 1
+-11100 1
+0-0001 1
+0-0111 1
+0-1011 1
+0-1100 1
+01-011 1
+01-100 1
+011-00 1
+0111-0 1
+1-0010 1
+1-0101 1
+1-1001 1
+1-1111 1
+10-010 1
+10-101 1
+100-10 1
+1000-0 1
+.names $mul~18[31] $mul~16[31] $sdffe~3^Q~31 new_new_n1752
+001 1
+010 1
+100 1
+111 1
+.names $sdffe~3^Q~0 Uoutport~0 new_new_n1464_1 n1235_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~1 Uoutport~1 new_new_n1464_1 n1239_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~2 Uoutport~2 new_new_n1464_1 n1243_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~3 Uoutport~3 new_new_n1464_1 n1247_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~4 Uoutport~4 new_new_n1464_1 n1251_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~5 Uoutport~5 new_new_n1464_1 n1255_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~6 Uoutport~6 new_new_n1464_1 n1259_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~7 Uoutport~7 new_new_n1464_1 n1263_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~8 Uoutport~8 new_new_n1464_1 n1267_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~9 Uoutport~9 new_new_n1464_1 n1271_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~10 Uoutport~10 new_new_n1464_1 n1275_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~11 Uoutport~11 new_new_n1464_1 n1279_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~12 Uoutport~12 new_new_n1464_1 n1283_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~13 Uoutport~13 new_new_n1464_1 n1287_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~14 Uoutport~14 new_new_n1464_1 n1291_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~15 Uoutport~15 new_new_n1464_1 n1295_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~16 Uoutport~16 new_new_n1464_1 n1299_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~17 Uoutport~17 new_new_n1464_1 n1303_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~18 Uoutport~18 new_new_n1464_1 n1307_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~19 Uoutport~19 new_new_n1464_1 n1311_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~20 Uoutport~20 new_new_n1464_1 n1315_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~21 Uoutport~21 new_new_n1464_1 n1319_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~22 Uoutport~22 new_new_n1464_1 n1323_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~23 Uoutport~23 new_new_n1464_1 n1327_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~24 Uoutport~24 new_new_n1464_1 n1331_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~25 Uoutport~25 new_new_n1464_1 n1335_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~26 Uoutport~26 new_new_n1464_1 n1339_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~27 Uoutport~27 new_new_n1464_1 n1343_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~28 Uoutport~28 new_new_n1464_1 n1347_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~29 Uoutport~29 new_new_n1464_1 n1351_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~30 Uoutport~30 new_new_n1464_1 n1355_1
+-10 1
+1-1 1
+.names $sdffe~3^Q~31 Uoutport~31 new_new_n1464_1 n1359_1
+-10 1
+1-1 1
+.names Yinport~0 $mul~14[0] new_new_n1427 $sdffe~4^Q~0 $sdff~2^Q~0 reset \
+ n1363_1
+--11-0 1
+-0-110 1
+-10010 1
+1-0-00 1
+.names $sdffe~4^Q~1 new_new_n1787 reset new_new_n1427 n1368_1
+-100 1
+1-01 1
+.names Yinport~1 $mul~14[0] $sdffe~4^Q~0 $mul~14[1] $sdffe~4^Q~1 \
+ $sdff~2^Q~0 new_new_n1787
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names new_new_n1789 Yinport~2 $sdffe~4^Q~2 $sdff~2^Q~0 reset new_new_n1427 \
+ n1373_1
+--1-01 1
+-1-000 1
+0--100 1
+.names $mul~14[0] $sdffe~4^Q~0 $mul~14[1] $sdffe~4^Q~1 $mul~14[2] \
+ $sdffe~4^Q~2 new_new_n1789
+--0000 1
+--0011 1
+--1101 1
+--1110 1
+-0-000 1
+-0-011 1
+-00-00 1
+-00-11 1
+0--000 1
+0--011 1
+0-0-00 1
+0-0-11 1
+11-101 1
+11-110 1
+111-01 1
+111-10 1
+.names $sdffe~4^Q~3 new_new_n1464_1 new_new_n1791 n1378_1
+--1 1
+11- 1
+.names Yinport~3 new_new_n1792 $mul~14[3] $sdffe~4^Q~3 $sdff~2^Q~0 n1070_1 \
+ new_new_n1791
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names $mul~14[1] $mul~14[2] $sdffe~4^Q~2 $sdffe~4^Q~1 $sdffe~4^Q~0 \
+ $mul~14[0] new_new_n1792
+--1111 1
+-1-111 1
+-11--- 1
+1-1-11 1
+1-11-- 1
+11--11 1
+11-1-- 1
+.names new_new_n1794 Yinport~4 $sdffe~4^Q~4 $sdff~2^Q~0 reset new_new_n1427 \
+ n1383_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1792 $mul~14[3] $sdffe~4^Q~3 $mul~14[4] $sdffe~4^Q~4 \
+ new_new_n1794
+-0000 1
+-0011 1
+-1101 1
+-1110 1
+0-000 1
+0-011 1
+00-00 1
+00-11 1
+1-101 1
+1-110 1
+11-01 1
+11-10 1
+.names $sdffe~4^Q~5 new_new_n1464_1 new_new_n1796 n1388_1
+--1 1
+11- 1
+.names Yinport~5 new_new_n1797 $mul~14[5] $sdffe~4^Q~5 $sdff~2^Q~0 n1070_1 \
+ new_new_n1796
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1792 $mul~14[4] $sdffe~4^Q~4 $mul~14[3] $sdffe~4^Q~3 \
+ new_new_n1797
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1799 Yinport~6 $sdffe~4^Q~6 $sdff~2^Q~0 reset new_new_n1427 \
+ n1393_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1797 $mul~14[5] $sdffe~4^Q~5 $mul~14[6] $sdffe~4^Q~6 \
+ new_new_n1799
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-001 1
+0-010 1
+00-01 1
+00-10 1
+1-100 1
+1-111 1
+11-00 1
+11-11 1
+.names $sdffe~4^Q~7 new_new_n1464_1 new_new_n1801 n1398_1
+--1 1
+11- 1
+.names Yinport~7 new_new_n1802 $mul~14[7] $sdffe~4^Q~7 $sdff~2^Q~0 n1070_1 \
+ new_new_n1801
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1797 $mul~14[6] $sdffe~4^Q~6 $mul~14[5] $sdffe~4^Q~5 \
+ new_new_n1802
+--000 1
+-0-00 1
+-00-- 1
+0-0-0 1
+0-00- 1
+00--0 1
+00-0- 1
+.names new_new_n1804 Yinport~8 $sdffe~4^Q~8 $sdff~2^Q~0 reset new_new_n1427 \
+ n1403_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1802 $mul~14[7] $sdffe~4^Q~7 $mul~14[8] $sdffe~4^Q~8 \
+ new_new_n1804
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-100 1
+0-111 1
+01-00 1
+01-11 1
+1-001 1
+1-010 1
+10-01 1
+10-10 1
+.names $sdffe~4^Q~9 new_new_n1464_1 new_new_n1806 n1408_1
+--1 1
+11- 1
+.names Yinport~9 new_new_n1807 $mul~14[9] $sdffe~4^Q~9 $sdff~2^Q~0 n1070_1 \
+ new_new_n1806
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1802 $mul~14[8] $sdffe~4^Q~8 $mul~14[7] $sdffe~4^Q~7 \
+ new_new_n1807
+--111 1
+-1-11 1
+-11-- 1
+0-1-1 1
+0-11- 1
+01--1 1
+01-1- 1
+.names $sdffe~4^Q~10 new_new_n1464_1 new_new_n1809 n1413_1
+--1 1
+11- 1
+.names Yinport~10 new_new_n1810 $mul~14[10] $sdffe~4^Q~10 $sdff~2^Q~0 \
+ n1070_1 new_new_n1809
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1807 $mul~14[9] $sdffe~4^Q~9 new_new_n1810
+-11 1
+1-1 1
+11- 1
+.names new_new_n1812 Yinport~11 $sdffe~4^Q~11 $sdff~2^Q~0 reset \
+ new_new_n1427 n1418_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1810 $mul~14[10] $sdffe~4^Q~10 $mul~14[11] $sdffe~4^Q~11 \
+ new_new_n1812
+-0000 1
+-0011 1
+-1101 1
+-1110 1
+0-000 1
+0-011 1
+00-00 1
+00-11 1
+1-101 1
+1-110 1
+11-01 1
+11-10 1
+.names $sdffe~4^Q~12 new_new_n1464_1 new_new_n1814 n1423_1
+--1 1
+11- 1
+.names Yinport~12 new_new_n1815 $mul~14[12] $sdffe~4^Q~12 $sdff~2^Q~0 \
+ n1070_1 new_new_n1814
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1810 $mul~14[11] $sdffe~4^Q~11 $mul~14[10] $sdffe~4^Q~10 \
+ new_new_n1815
+--000 1
+-0-00 1
+-00-- 1
+0-0-0 1
+0-00- 1
+00--0 1
+00-0- 1
+.names new_new_n1817 Yinport~13 $sdffe~4^Q~13 $sdff~2^Q~0 reset \
+ new_new_n1427 n1428_1
+--1-01 1
+-1-000 1
+0--100 1
+.names new_new_n1818 new_new_n1820 $mul~14[13] $sdffe~4^Q~13 new_new_n1817
+-100 1
+-111 1
+0001 1
+0010 1
+1-00 1
+1-11 1
+.names new_new_n1810 $mul~14[11] $sdffe~4^Q~11 $mul~14[10] $sdffe~4^Q~10 \
+ new_new_n1819 new_new_n1818
+--0000 1
+-0-000 1
+-00--0 1
+0-0-00 1
+0-00-0 1
+00--00 1
+00-0-0 1
+.names $mul~14[12] $sdffe~4^Q~12 new_new_n1819
+11 1
+.names $mul~14[12] $sdffe~4^Q~12 new_new_n1820
+00 1
+.names $sdffe~4^Q~14 new_new_n1464_1 new_new_n1822 n1433_1
+--1 1
+11- 1
+.names Yinport~14 new_new_n1823 $mul~14[14] $sdffe~4^Q~14 $sdff~2^Q~0 \
+ n1070_1 new_new_n1822
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names $mul~14[13] new_new_n1820 new_new_n1818 $sdffe~4^Q~13 new_new_n1823
+-001 0
+1--1 0
+100- 0
+.names new_new_n1825 Yinport~15 $sdffe~4^Q~15 $sdff~2^Q~0 reset \
+ new_new_n1427 n1438_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1826 $mul~14[15] $sdffe~4^Q~15 new_new_n1825
+001 1
+010 1
+100 1
+111 1
+.names $mul~14[13] $mul~14[14] new_new_n1818 new_new_n1820 $sdffe~4^Q~14 \
+ $sdffe~4^Q~13 new_new_n1826
+--0011 1
+-1--1- 1
+-100-1 1
+1---11 1
+1-001- 1
+11---1 1
+1100-- 1
+.names $sdffe~4^Q~16 new_new_n1464_1 new_new_n1828 n1443_1
+--1 1
+11- 1
+.names Yinport~16 new_new_n1829 $mul~14[16] $sdffe~4^Q~16 $sdff~2^Q~0 \
+ n1070_1 new_new_n1828
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1826 $mul~14[15] $sdffe~4^Q~15 new_new_n1829
+-11 1
+1-1 1
+11- 1
+.names new_new_n1831 Yinport~17 $sdffe~4^Q~17 $sdff~2^Q~0 reset \
+ new_new_n1427 n1448_1
+--1-01 1
+-1-000 1
+1--100 1
+.names new_new_n1832 $mul~14[17] $sdffe~4^Q~17 new_new_n1831
+000 1
+011 1
+101 1
+110 1
+.names new_new_n1826 $mul~14[16] $sdffe~4^Q~16 $mul~14[15] $sdffe~4^Q~15 \
+ new_new_n1832
+--000 1
+-0-00 1
+-00-- 1
+0-0-0 1
+0-00- 1
+00--0 1
+00-0- 1
+.names $sdffe~4^Q~18 new_new_n1464_1 new_new_n1834 n1453_1
+--1 1
+11- 1
+.names Yinport~18 new_new_n1835 $mul~14[18] $sdffe~4^Q~18 $sdff~2^Q~0 \
+ n1070_1 new_new_n1834
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1832 $mul~14[17] $sdffe~4^Q~17 new_new_n1835
+-11 1
+0-1 1
+01- 1
+.names $sdffe~4^Q~19 new_new_n1464_1 new_new_n1837 n1458_1
+--1 1
+11- 1
+.names Yinport~19 new_new_n1838 $mul~14[19] $sdffe~4^Q~19 $sdff~2^Q~0 \
+ n1070_1 new_new_n1837
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1835 $mul~14[18] $sdffe~4^Q~18 new_new_n1838
+-11 1
+1-1 1
+11- 1
+.names $sdffe~4^Q~20 new_new_n1464_1 new_new_n1840 n1463_1
+--1 1
+11- 1
+.names Yinport~20 new_new_n1841 $mul~14[20] $sdffe~4^Q~20 $sdff~2^Q~0 \
+ n1070_1 new_new_n1840
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1842 new_new_n1844 new_new_n1841
+00 1
+.names new_new_n1832 $mul~14[18] $sdffe~4^Q~18 $mul~14[17] $sdffe~4^Q~17 \
+ new_new_n1843 new_new_n1842
+--0000 1
+-0-000 1
+-00--0 1
+1-0-00 1
+1-00-0 1
+10--00 1
+10-0-0 1
+.names $mul~14[19] $sdffe~4^Q~19 new_new_n1843
+11 1
+.names $mul~14[19] $sdffe~4^Q~19 new_new_n1844
+00 1
+.names $sdffe~4^Q~21 new_new_n1464_1 new_new_n1846 n1468_1
+--1 1
+11- 1
+.names Yinport~21 new_new_n1847 $mul~14[21] $sdffe~4^Q~21 $sdff~2^Q~0 \
+ n1070_1 new_new_n1846
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1841 $mul~14[20] $sdffe~4^Q~20 new_new_n1847
+-00 1
+0-0 1
+00- 1
+.names new_new_n1849 Yinport~22 new_new_n1464_1 $sdffe~4^Q~22 $sdff~2^Q~0 \
+ n1070_1 n1473_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1850 $mul~14[22] $sdffe~4^Q~22 new_new_n1849
+001 1
+010 1
+100 1
+111 1
+.names $mul~14[20] $mul~14[21] new_new_n1842 new_new_n1844 $sdffe~4^Q~21 \
+ $sdffe~4^Q~20 new_new_n1850
+--0011 1
+-1--1- 1
+-100-1 1
+1---11 1
+1-001- 1
+11---1 1
+1100-- 1
+.names $sdffe~4^Q~23 new_new_n1464_1 new_new_n1852 n1478_1
+--1 1
+11- 1
+.names Yinport~23 new_new_n1853 $mul~14[23] $sdffe~4^Q~23 $sdff~2^Q~0 \
+ n1070_1 new_new_n1852
+-00011 1
+-01111 1
+-10111 1
+-11011 1
+1---01 1
+.names new_new_n1850 $mul~14[22] $sdffe~4^Q~22 new_new_n1853
+-00 1
+0-0 1
+00- 1
+.names new_new_n1855 Yinport~24 new_new_n1464_1 $sdffe~4^Q~24 $sdff~2^Q~0 \
+ n1070_1 n1483_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1856 $mul~14[24] $sdffe~4^Q~24 new_new_n1855
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1850 $mul~14[23] $sdffe~4^Q~23 $mul~14[22] $sdffe~4^Q~22 \
+ new_new_n1856
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1858 Yinport~25 new_new_n1464_1 $sdffe~4^Q~25 $sdff~2^Q~0 \
+ n1070_1 n1488_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1856 $mul~14[24] $sdffe~4^Q~24 $mul~14[25] $sdffe~4^Q~25 \
+ new_new_n1858
+-0001 1
+-0010 1
+-1100 1
+-1111 1
+0-001 1
+0-010 1
+00-01 1
+00-10 1
+1-100 1
+1-111 1
+11-00 1
+11-11 1
+.names $sdffe~4^Q~26 new_new_n1464_1 new_new_n1860 n1493_1
+--1 1
+11- 1
+.names Yinport~26 new_new_n1861 $mul~14[26] $sdffe~4^Q~26 $sdff~2^Q~0 \
+ n1070_1 new_new_n1860
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names new_new_n1856 $mul~14[25] $sdffe~4^Q~25 $mul~14[24] $sdffe~4^Q~24 \
+ new_new_n1861
+--111 1
+-1-11 1
+-11-- 1
+1-1-1 1
+1-11- 1
+11--1 1
+11-1- 1
+.names new_new_n1863 Yinport~27 new_new_n1464_1 $sdffe~4^Q~27 $sdff~2^Q~0 \
+ n1070_1 n1498_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1864 new_new_n1866 $mul~14[27] $sdffe~4^Q~27 new_new_n1863
+-100 1
+-111 1
+0001 1
+0010 1
+1-00 1
+1-11 1
+.names new_new_n1856 $mul~14[25] $sdffe~4^Q~25 $mul~14[24] $sdffe~4^Q~24 \
+ new_new_n1865 new_new_n1864
+--1110 1
+-1-110 1
+-11--0 1
+1-1-10 1
+1-11-0 1
+11--10 1
+11-1-0 1
+.names $mul~14[26] $sdffe~4^Q~26 new_new_n1865
+00 1
+.names $mul~14[26] $sdffe~4^Q~26 new_new_n1866
+11 1
+.names $sdffe~4^Q~28 new_new_n1464_1 new_new_n1868 n1503_1
+--1 1
+11- 1
+.names Yinport~28 new_new_n1869 $mul~14[28] $sdffe~4^Q~28 $sdff~2^Q~0 \
+ n1070_1 new_new_n1868
+-00111 1
+-01011 1
+-10011 1
+-11111 1
+1---01 1
+.names $mul~14[27] $sdffe~4^Q~27 new_new_n1864 new_new_n1866 new_new_n1869
+-000 0
+0-00 0
+00-- 0
+.names new_new_n1871 Yinport~29 new_new_n1464_1 $sdffe~4^Q~29 $sdff~2^Q~0 \
+ n1070_1 n1508_1
+--11-- 1
+-1--01 1
+1---11 1
+.names new_new_n1872 $mul~14[29] $sdffe~4^Q~29 new_new_n1871
+000 1
+011 1
+101 1
+110 1
+.names $mul~14[27] $mul~14[28] $sdffe~4^Q~28 $sdffe~4^Q~27 new_new_n1866 \
+ new_new_n1864 new_new_n1872
+--0000 1
+-0-000 1
+-00--- 1
+0-0-00 1
+0-00-- 1
+00--00 1
+00-0-- 1
+.names Yinport~30 $sdff~2^Q~0 new_new_n1464_1 $sdffe~4^Q~30 new_new_n1874 \
+ n1070_1 n1513_1
+--11-- 1
+-1--01 1
+1---01 1
+.names new_new_n1872 $mul~14[29] $sdffe~4^Q~29 $mul~14[30] $sdffe~4^Q~30 \
+ $sdff~2^Q~0 new_new_n1874
+-00001 1
+-00111 1
+-11011 1
+-11101 1
+0-1011 1
+0-1101 1
+01-011 1
+01-101 1
+1-0001 1
+1-0111 1
+10-001 1
+10-111 1
+.names new_new_n1876 Yinport~31 new_new_n1464_1 $sdffe~4^Q~31 $sdff~2^Q~0 \
+ n1070_1 n1518_1
+--11-- 1
+-1--01 1
+0---11 1
+.names new_new_n1872 $mul~14[30] $sdffe~4^Q~30 $mul~14[29] $sdffe~4^Q~29 \
+ new_new_n1877 new_new_n1876
+--0000 1
+--1111 1
+-0-000 1
+-00--0 1
+-1-111 1
+-11--1 1
+0-1-11 1
+0-11-1 1
+01--11 1
+01-1-1 1
+1-0-00 1
+1-00-0 1
+10--00 1
+10-0-0 1
+.names $mul~14[31] $sdffe~4^Q~31 new_new_n1877
+01 1
+10 1
+.names $sdffe~4^Q~0 Youtport~0 new_new_n1464_1 n1523_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~1 Youtport~1 new_new_n1464_1 n1527_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~2 Youtport~2 new_new_n1464_1 n1531_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~3 Youtport~3 new_new_n1464_1 n1535_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~4 Youtport~4 new_new_n1464_1 n1539_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~5 Youtport~5 new_new_n1464_1 n1543_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~6 Youtport~6 new_new_n1464_1 n1547_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~7 Youtport~7 new_new_n1464_1 n1551_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~8 Youtport~8 new_new_n1464_1 n1555_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~9 Youtport~9 new_new_n1464_1 n1559_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~10 Youtport~10 new_new_n1464_1 n1563_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~11 Youtport~11 new_new_n1464_1 n1567_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~12 Youtport~12 new_new_n1464_1 n1571_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~13 Youtport~13 new_new_n1464_1 n1575_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~14 Youtport~14 new_new_n1464_1 n1579_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~15 Youtport~15 new_new_n1464_1 n1583_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~16 Youtport~16 new_new_n1464_1 n1587_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~17 Youtport~17 new_new_n1464_1 n1591_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~18 Youtport~18 new_new_n1464_1 n1595_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~19 Youtport~19 new_new_n1464_1 n1599_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~20 Youtport~20 new_new_n1464_1 n1603_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~21 Youtport~21 new_new_n1464_1 n1607_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~22 Youtport~22 new_new_n1464_1 n1611_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~23 Youtport~23 new_new_n1464_1 n1615_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~24 Youtport~24 new_new_n1464_1 n1619_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~25 Youtport~25 new_new_n1464_1 n1623_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~26 Youtport~26 new_new_n1464_1 n1627_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~27 Youtport~27 new_new_n1464_1 n1631_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~28 Youtport~28 new_new_n1464_1 n1635_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~29 Youtport~29 new_new_n1464_1 n1639_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~30 Youtport~30 new_new_n1464_1 n1643_1
+-10 1
+1-1 1
+.names $sdffe~4^Q~31 Youtport~31 new_new_n1464_1 n1647_1
+-10 1
+1-1 1
+.names unconn
+ 0
+.names vcc
+ 1
+.end
+
+
+.model multiply
+.inputs a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] a[12] \
+ a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] a[21] a[22] a[23] a[24] \
+ a[25] a[26] a[27] a[28] a[29] a[30] a[31] a[32] a[33] a[34] a[35] b[0] \
+ b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] b[9] b[10] b[11] b[12] b[13] b[14] \
+ b[15] b[16] b[17] b[18] b[19] b[20] b[21] b[22] b[23] b[24] b[25] b[26] \
+ b[27] b[28] b[29] b[30] b[31] b[32] b[33] b[34] b[35]
+.outputs out[0] out[1] out[2] out[3] out[4] out[5] out[6] out[7] out[8] \
+ out[9] out[10] out[11] out[12] out[13] out[14] out[15] out[16] out[17] \
+ out[18] out[19] out[20] out[21] out[22] out[23] out[24] out[25] out[26] \
+ out[27] out[28] out[29] out[30] out[31] out[32] out[33] out[34] out[35] \
+ out[36] out[37] out[38] out[39] out[40] out[41] out[42] out[43] out[44] \
+ out[45] out[46] out[47] out[48] out[49] out[50] out[51] out[52] out[53] \
+ out[54] out[55] out[56] out[57] out[58] out[59] out[60] out[61] out[62] \
+ out[63] out[64] out[65] out[66] out[67] out[68] out[69] out[70] out[71]
+.blackbox
+.end

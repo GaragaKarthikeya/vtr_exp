@@ -1,0 +1,2073 @@
+# Benchmark "diffeq_f_systemC" written by ABC on Mon Apr 27 19:20:48 2026
+.model diffeq_f_systemC
+.inputs dxport~5 dxport~6 dxport~4 aport~30 aport~27 aport~7 dxport~2 \
+ dxport~1 dxport~3 aport~28 dxport~0 aport~31 dxport~12 dxport~11 dxport~10 \
+ dxport~16 aport~16 dxport~15 aport~17 dxport~14 aport~18 dxport~13 \
+ dxport~17 dxport~24 dxport~23 dxport~22 dxport~21 dxport~20 dxport~26 \
+ dxport~19 dxport~25 dxport~18 dxport~27 dxport~29 dxport~28 dxport~30 \
+ reset clk dxport~31 aport~9 aport~6 aport~8 aport~12 aport~13 aport~11 \
+ aport~10 aport~20 dxport~9 aport~29 dxport~7 dxport~8 aport~19 aport~14 \
+ aport~15 aport~21 aport~0 aport~22 aport~1 aport~25 aport~4 aport~23 \
+ aport~2 aport~24 aport~3 aport~26 aport~5
+.outputs xport~10 xport~9 xport~8 xport~14 xport~7 xport~6 xport~5 xport~13 \
+ xport~12 xport~15 xport~4 xport~3 xport~2 xport~1 xport~0 xport~11 \
+ xport~16 yport~14 yport~13 yport~12 yport~11 yport~10 yport~9 yport~8 \
+ yport~7 yport~6 yport~5 yport~4 yport~3 yport~2 yport~1 yport~18 yport~0 \
+ xport~31 xport~30 xport~29 xport~28 xport~27 xport~26 yport~16 xport~25 \
+ yport~17 xport~24 xport~23 xport~22 xport~21 xport~20 xport~19 xport~18 \
+ yport~15 xport~17 yport~19 yport~20 yport~21 yport~22 yport~23 yport~24 \
+ yport~25 yport~26 yport~27 yport~28 yport~29 yport~30 yport~31 uport~0 \
+ uport~1 uport~2 uport~3 uport~4 uport~5 uport~6 uport~7 uport~8 uport~9 \
+ uport~10 uport~11 uport~12 uport~13 uport~14 uport~15 uport~16 uport~17 \
+ uport~18 uport~19 uport~20 uport~21 uport~22 uport~23 uport~24 uport~25 \
+ uport~26 uport~27 uport~28 uport~29 uport~30 uport~31
+
+.latch     n590_1    xport~0  0
+.latch     n594_1    xport~1  0
+.latch     n598_1    xport~2  0
+.latch     n602_1    xport~3  0
+.latch     n606_1    xport~4  0
+.latch     n610_1    xport~5  0
+.latch     n614_1    xport~6  0
+.latch     n618_1    xport~7  0
+.latch     n622_1    xport~8  0
+.latch     n626_1    xport~9  0
+.latch     n630_1   xport~10  0
+.latch     n634_1   xport~11  0
+.latch     n638_1   xport~12  0
+.latch     n642_1   xport~13  0
+.latch     n646_1   xport~14  0
+.latch     n650_1   xport~15  0
+.latch     n654_1   xport~16  0
+.latch     n658_1   xport~17  0
+.latch     n662_1   xport~18  0
+.latch     n666_1   xport~19  0
+.latch     n670_1   xport~20  0
+.latch     n674_1   xport~21  0
+.latch     n678_1   xport~22  0
+.latch     n682_1   xport~23  0
+.latch     n686_1   xport~24  0
+.latch     n690_1   xport~25  0
+.latch     n694_1   xport~26  0
+.latch     n698_1   xport~27  0
+.latch     n702_1   xport~28  0
+.latch     n706_1   xport~29  0
+.latch     n710_1   xport~30  0
+.latch     n714_1   xport~31  0
+.latch     n718_1    uport~0  0
+.latch     n722_1    uport~1  0
+.latch     n726_1    uport~2  0
+.latch     n730_1    uport~3  0
+.latch     n734_1    uport~4  0
+.latch     n738_1    uport~5  0
+.latch     n742_1    uport~6  0
+.latch     n746_1    uport~7  0
+.latch     n750_1    uport~8  0
+.latch     n754_1    uport~9  0
+.latch     n758_1   uport~10  0
+.latch     n762_1   uport~11  0
+.latch     n766_1   uport~12  0
+.latch     n770_1   uport~13  0
+.latch     n774_1   uport~14  0
+.latch     n778_1   uport~15  0
+.latch     n782_1   uport~16  0
+.latch     n786_1   uport~17  0
+.latch     n790_1   uport~18  0
+.latch     n794_1   uport~19  0
+.latch     n798_1   uport~20  0
+.latch     n802_1   uport~21  0
+.latch     n806_1   uport~22  0
+.latch     n810_1   uport~23  0
+.latch     n814_1   uport~24  0
+.latch     n818_1   uport~25  0
+.latch     n822_1   uport~26  0
+.latch     n826_1   uport~27  0
+.latch     n830_1   uport~28  0
+.latch     n834_1   uport~29  0
+.latch     n838_1   uport~30  0
+.latch     n842_1   uport~31  0
+.latch     n846_1    yport~0  0
+.latch     n850_1    yport~1  0
+.latch     n854_1    yport~2  0
+.latch     n858_1    yport~3  0
+.latch     n862_1    yport~4  0
+.latch     n866_1    yport~5  0
+.latch     n870_1    yport~6  0
+.latch     n874_1    yport~7  0
+.latch     n878_1    yport~8  0
+.latch     n882_1    yport~9  0
+.latch     n886_1   yport~10  0
+.latch     n890_1   yport~11  0
+.latch     n894_1   yport~12  0
+.latch     n898_1   yport~13  0
+.latch     n902_1   yport~14  0
+.latch     n906_1   yport~15  0
+.latch     n910_1   yport~16  0
+.latch     n914_1   yport~17  0
+.latch     n918_1   yport~18  0
+.latch     n922_1   yport~19  0
+.latch     n926_1   yport~20  0
+.latch     n930_1   yport~21  0
+.latch     n934_1   yport~22  0
+.latch     n938_1   yport~23  0
+.latch     n942_1   yport~24  0
+.latch     n946_1   yport~25  0
+.latch     n950_1   yport~26  0
+.latch     n954_1   yport~27  0
+.latch     n958_1   yport~28  0
+.latch     n962_1   yport~29  0
+.latch     n966_1   yport~30  0
+.latch     n970_1   yport~31  0
+
+
+.subckt multiply a[0]=vcc a[1]=gnd a[2]=vcc a[3]=unconn a[4]=unconn a[5]=unconn a[6]=unconn a[7]=unconn a[8]=unconn a[9]=unconn a[10]=unconn a[11]=unconn a[12]=unconn a[13]=unconn a[14]=unconn a[15]=unconn a[16]=unconn a[17]=unconn a[18]=unconn a[19]=unconn a[20]=unconn a[21]=unconn a[22]=unconn a[23]=unconn a[24]=unconn a[25]=unconn a[26]=unconn a[27]=unconn a[28]=unconn a[29]=unconn a[30]=unconn a[31]=unconn a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=xport~0 b[1]=xport~1 b[2]=xport~2 b[3]=xport~3 b[4]=xport~4 b[5]=xport~5 b[6]=xport~6 b[7]=xport~7 b[8]=xport~8 b[9]=xport~9 b[10]=xport~10 b[11]=xport~11 b[12]=xport~12 b[13]=xport~13 b[14]=xport~14 b[15]=xport~15 b[16]=xport~16 b[17]=xport~17 b[18]=xport~18 b[19]=xport~19 b[20]=xport~20 b[21]=xport~21 b[22]=xport~22 b[23]=xport~23 b[24]=xport~24 b[25]=xport~25 b[26]=xport~26 b[27]=xport~27 b[28]=xport~28 b[29]=xport~29 b[30]=xport~30 b[31]=xport~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~7[0] out[1]=$mul~7[1] out[2]=$mul~7[2] out[3]=$mul~7[3] out[4]=$mul~7[4] out[5]=$mul~7[5] out[6]=$mul~7[6] out[7]=$mul~7[7] out[8]=$mul~7[8] out[9]=$mul~7[9] out[10]=$mul~7[10] out[11]=$mul~7[11] out[12]=$mul~7[12] out[13]=$mul~7[13] out[14]=$mul~7[14] out[15]=$mul~7[15] out[16]=$mul~7[16] out[17]=$mul~7[17] out[18]=$mul~7[18] out[19]=$mul~7[19] out[20]=$mul~7[20] out[21]=$mul~7[21] out[22]=$mul~7[22] out[23]=$mul~7[23] out[24]=$mul~7[24] out[25]=$mul~7[25] out[26]=$mul~7[26] out[27]=$mul~7[27] out[28]=$mul~7[28] out[29]=$mul~7[29] out[30]=$mul~7[30] out[31]=$mul~7[31] out[32]=$mul~7[32] out[33]=$mul~7[33] out[34]=$mul~7[34] out[35]=$mul~7[35] out[36]=$mul~7[36] out[37]=$mul~7[37] out[38]=$mul~7[38] out[39]=$mul~7[39] out[40]=$mul~7[40] out[41]=$mul~7[41] out[42]=$mul~7[42] out[43]=$mul~7[43] out[44]=$mul~7[44] out[45]=$mul~7[45] out[46]=$mul~7[46] out[47]=$mul~7[47] out[48]=$mul~7[48] out[49]=$mul~7[49] out[50]=$mul~7[50] out[51]=$mul~7[51] out[52]=$mul~7[52] out[53]=$mul~7[53] out[54]=$mul~7[54] out[55]=$mul~7[55] out[56]=$mul~7[56] out[57]=$mul~7[57] out[58]=$mul~7[58] out[59]=$mul~7[59] out[60]=$mul~7[60] out[61]=$mul~7[61] out[62]=$mul~7[62] out[63]=$mul~7[63] out[64]=$mul~7[64] out[65]=$mul~7[65] out[66]=$mul~7[66] out[67]=$mul~7[67] out[68]=$mul~7[68] out[69]=$mul~7[69] out[70]=$mul~7[70] out[71]=$mul~7[71]
+.subckt multiply a[0]=$mul~6[0] a[1]=$mul~6[1] a[2]=$mul~6[2] a[3]=$mul~6[3] a[4]=$mul~6[4] a[5]=$mul~6[5] a[6]=$mul~6[6] a[7]=$mul~6[7] a[8]=$mul~6[8] a[9]=$mul~6[9] a[10]=$mul~6[10] a[11]=$mul~6[11] a[12]=$mul~6[12] a[13]=$mul~6[13] a[14]=$mul~6[14] a[15]=$mul~6[15] a[16]=$mul~6[16] a[17]=$mul~6[17] a[18]=$mul~6[18] a[19]=$mul~6[19] a[20]=$mul~6[20] a[21]=$mul~6[21] a[22]=$mul~6[22] a[23]=$mul~6[23] a[24]=$mul~6[24] a[25]=$mul~6[25] a[26]=$mul~6[26] a[27]=$mul~6[27] a[28]=$mul~6[28] a[29]=$mul~6[29] a[30]=$mul~6[30] a[31]=$mul~6[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$mul~7[0] b[1]=$mul~7[1] b[2]=$mul~7[2] b[3]=$mul~7[3] b[4]=$mul~7[4] b[5]=$mul~7[5] b[6]=$mul~7[6] b[7]=$mul~7[7] b[8]=$mul~7[8] b[9]=$mul~7[9] b[10]=$mul~7[10] b[11]=$mul~7[11] b[12]=$mul~7[12] b[13]=$mul~7[13] b[14]=$mul~7[14] b[15]=$mul~7[15] b[16]=$mul~7[16] b[17]=$mul~7[17] b[18]=$mul~7[18] b[19]=$mul~7[19] b[20]=$mul~7[20] b[21]=$mul~7[21] b[22]=$mul~7[22] b[23]=$mul~7[23] b[24]=$mul~7[24] b[25]=$mul~7[25] b[26]=$mul~7[26] b[27]=$mul~7[27] b[28]=$mul~7[28] b[29]=$mul~7[29] b[30]=$mul~7[30] b[31]=$mul~7[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~8[0] out[1]=$mul~8[1] out[2]=$mul~8[2] out[3]=$mul~8[3] out[4]=$mul~8[4] out[5]=$mul~8[5] out[6]=$mul~8[6] out[7]=$mul~8[7] out[8]=$mul~8[8] out[9]=$mul~8[9] out[10]=$mul~8[10] out[11]=$mul~8[11] out[12]=$mul~8[12] out[13]=$mul~8[13] out[14]=$mul~8[14] out[15]=$mul~8[15] out[16]=$mul~8[16] out[17]=$mul~8[17] out[18]=$mul~8[18] out[19]=$mul~8[19] out[20]=$mul~8[20] out[21]=$mul~8[21] out[22]=$mul~8[22] out[23]=$mul~8[23] out[24]=$mul~8[24] out[25]=$mul~8[25] out[26]=$mul~8[26] out[27]=$mul~8[27] out[28]=$mul~8[28] out[29]=$mul~8[29] out[30]=$mul~8[30] out[31]=$mul~8[31] out[32]=$mul~8[32] out[33]=$mul~8[33] out[34]=$mul~8[34] out[35]=$mul~8[35] out[36]=$mul~8[36] out[37]=$mul~8[37] out[38]=$mul~8[38] out[39]=$mul~8[39] out[40]=$mul~8[40] out[41]=$mul~8[41] out[42]=$mul~8[42] out[43]=$mul~8[43] out[44]=$mul~8[44] out[45]=$mul~8[45] out[46]=$mul~8[46] out[47]=$mul~8[47] out[48]=$mul~8[48] out[49]=$mul~8[49] out[50]=$mul~8[50] out[51]=$mul~8[51] out[52]=$mul~8[52] out[53]=$mul~8[53] out[54]=$mul~8[54] out[55]=$mul~8[55] out[56]=$mul~8[56] out[57]=$mul~8[57] out[58]=$mul~8[58] out[59]=$mul~8[59] out[60]=$mul~8[60] out[61]=$mul~8[61] out[62]=$mul~8[62] out[63]=$mul~8[63] out[64]=$mul~8[64] out[65]=$mul~8[65] out[66]=$mul~8[66] out[67]=$mul~8[67] out[68]=$mul~8[68] out[69]=$mul~8[69] out[70]=$mul~8[70] out[71]=$mul~8[71]
+.subckt multiply a[0]=uport~0 a[1]=uport~1 a[2]=uport~2 a[3]=uport~3 a[4]=uport~4 a[5]=uport~5 a[6]=uport~6 a[7]=uport~7 a[8]=uport~8 a[9]=uport~9 a[10]=uport~10 a[11]=uport~11 a[12]=uport~12 a[13]=uport~13 a[14]=uport~14 a[15]=uport~15 a[16]=uport~16 a[17]=uport~17 a[18]=uport~18 a[19]=uport~19 a[20]=uport~20 a[21]=uport~21 a[22]=uport~22 a[23]=uport~23 a[24]=uport~24 a[25]=uport~25 a[26]=uport~26 a[27]=uport~27 a[28]=uport~28 a[29]=uport~29 a[30]=uport~30 a[31]=uport~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=dxport~0 b[1]=dxport~1 b[2]=dxport~2 b[3]=dxport~3 b[4]=dxport~4 b[5]=dxport~5 b[6]=dxport~6 b[7]=dxport~7 b[8]=dxport~8 b[9]=dxport~9 b[10]=dxport~10 b[11]=dxport~11 b[12]=dxport~12 b[13]=dxport~13 b[14]=dxport~14 b[15]=dxport~15 b[16]=dxport~16 b[17]=dxport~17 b[18]=dxport~18 b[19]=dxport~19 b[20]=dxport~20 b[21]=dxport~21 b[22]=dxport~22 b[23]=dxport~23 b[24]=dxport~24 b[25]=dxport~25 b[26]=dxport~26 b[27]=dxport~27 b[28]=dxport~28 b[29]=dxport~29 b[30]=dxport~30 b[31]=dxport~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~6[0] out[1]=$mul~6[1] out[2]=$mul~6[2] out[3]=$mul~6[3] out[4]=$mul~6[4] out[5]=$mul~6[5] out[6]=$mul~6[6] out[7]=$mul~6[7] out[8]=$mul~6[8] out[9]=$mul~6[9] out[10]=$mul~6[10] out[11]=$mul~6[11] out[12]=$mul~6[12] out[13]=$mul~6[13] out[14]=$mul~6[14] out[15]=$mul~6[15] out[16]=$mul~6[16] out[17]=$mul~6[17] out[18]=$mul~6[18] out[19]=$mul~6[19] out[20]=$mul~6[20] out[21]=$mul~6[21] out[22]=$mul~6[22] out[23]=$mul~6[23] out[24]=$mul~6[24] out[25]=$mul~6[25] out[26]=$mul~6[26] out[27]=$mul~6[27] out[28]=$mul~6[28] out[29]=$mul~6[29] out[30]=$mul~6[30] out[31]=$mul~6[31] out[32]=$mul~6[32] out[33]=$mul~6[33] out[34]=$mul~6[34] out[35]=$mul~6[35] out[36]=$mul~6[36] out[37]=$mul~6[37] out[38]=$mul~6[38] out[39]=$mul~6[39] out[40]=$mul~6[40] out[41]=$mul~6[41] out[42]=$mul~6[42] out[43]=$mul~6[43] out[44]=$mul~6[44] out[45]=$mul~6[45] out[46]=$mul~6[46] out[47]=$mul~6[47] out[48]=$mul~6[48] out[49]=$mul~6[49] out[50]=$mul~6[50] out[51]=$mul~6[51] out[52]=$mul~6[52] out[53]=$mul~6[53] out[54]=$mul~6[54] out[55]=$mul~6[55] out[56]=$mul~6[56] out[57]=$mul~6[57] out[58]=$mul~6[58] out[59]=$mul~6[59] out[60]=$mul~6[60] out[61]=$mul~6[61] out[62]=$mul~6[62] out[63]=$mul~6[63] out[64]=$mul~6[64] out[65]=$mul~6[65] out[66]=$mul~6[66] out[67]=$mul~6[67] out[68]=$mul~6[68] out[69]=$mul~6[69] out[70]=$mul~6[70] out[71]=$mul~6[71]
+.subckt multiply a[0]=vcc a[1]=vcc a[2]=unconn a[3]=unconn a[4]=unconn a[5]=unconn a[6]=unconn a[7]=unconn a[8]=unconn a[9]=unconn a[10]=unconn a[11]=unconn a[12]=unconn a[13]=unconn a[14]=unconn a[15]=unconn a[16]=unconn a[17]=unconn a[18]=unconn a[19]=unconn a[20]=unconn a[21]=unconn a[22]=unconn a[23]=unconn a[24]=unconn a[25]=unconn a[26]=unconn a[27]=unconn a[28]=unconn a[29]=unconn a[30]=unconn a[31]=unconn a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=yport~0 b[1]=yport~1 b[2]=yport~2 b[3]=yport~3 b[4]=yport~4 b[5]=yport~5 b[6]=yport~6 b[7]=yport~7 b[8]=yport~8 b[9]=yport~9 b[10]=yport~10 b[11]=yport~11 b[12]=yport~12 b[13]=yport~13 b[14]=yport~14 b[15]=yport~15 b[16]=yport~16 b[17]=yport~17 b[18]=yport~18 b[19]=yport~19 b[20]=yport~20 b[21]=yport~21 b[22]=yport~22 b[23]=yport~23 b[24]=yport~24 b[25]=yport~25 b[26]=yport~26 b[27]=yport~27 b[28]=yport~28 b[29]=yport~29 b[30]=yport~30 b[31]=yport~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~9[0] out[1]=$mul~9[1] out[2]=$mul~9[2] out[3]=$mul~9[3] out[4]=$mul~9[4] out[5]=$mul~9[5] out[6]=$mul~9[6] out[7]=$mul~9[7] out[8]=$mul~9[8] out[9]=$mul~9[9] out[10]=$mul~9[10] out[11]=$mul~9[11] out[12]=$mul~9[12] out[13]=$mul~9[13] out[14]=$mul~9[14] out[15]=$mul~9[15] out[16]=$mul~9[16] out[17]=$mul~9[17] out[18]=$mul~9[18] out[19]=$mul~9[19] out[20]=$mul~9[20] out[21]=$mul~9[21] out[22]=$mul~9[22] out[23]=$mul~9[23] out[24]=$mul~9[24] out[25]=$mul~9[25] out[26]=$mul~9[26] out[27]=$mul~9[27] out[28]=$mul~9[28] out[29]=$mul~9[29] out[30]=$mul~9[30] out[31]=$mul~9[31] out[32]=$mul~9[32] out[33]=$mul~9[33] out[34]=$mul~9[34] out[35]=$mul~9[35] out[36]=$mul~9[36] out[37]=$mul~9[37] out[38]=$mul~9[38] out[39]=$mul~9[39] out[40]=$mul~9[40] out[41]=$mul~9[41] out[42]=$mul~9[42] out[43]=$mul~9[43] out[44]=$mul~9[44] out[45]=$mul~9[45] out[46]=$mul~9[46] out[47]=$mul~9[47] out[48]=$mul~9[48] out[49]=$mul~9[49] out[50]=$mul~9[50] out[51]=$mul~9[51] out[52]=$mul~9[52] out[53]=$mul~9[53] out[54]=$mul~9[54] out[55]=$mul~9[55] out[56]=$mul~9[56] out[57]=$mul~9[57] out[58]=$mul~9[58] out[59]=$mul~9[59] out[60]=$mul~9[60] out[61]=$mul~9[61] out[62]=$mul~9[62] out[63]=$mul~9[63] out[64]=$mul~9[64] out[65]=$mul~9[65] out[66]=$mul~9[66] out[67]=$mul~9[67] out[68]=$mul~9[68] out[69]=$mul~9[69] out[70]=$mul~9[70] out[71]=$mul~9[71]
+.subckt multiply a[0]=dxport~0 a[1]=dxport~1 a[2]=dxport~2 a[3]=dxport~3 a[4]=dxport~4 a[5]=dxport~5 a[6]=dxport~6 a[7]=dxport~7 a[8]=dxport~8 a[9]=dxport~9 a[10]=dxport~10 a[11]=dxport~11 a[12]=dxport~12 a[13]=dxport~13 a[14]=dxport~14 a[15]=dxport~15 a[16]=dxport~16 a[17]=dxport~17 a[18]=dxport~18 a[19]=dxport~19 a[20]=dxport~20 a[21]=dxport~21 a[22]=dxport~22 a[23]=dxport~23 a[24]=dxport~24 a[25]=dxport~25 a[26]=dxport~26 a[27]=dxport~27 a[28]=dxport~28 a[29]=dxport~29 a[30]=dxport~30 a[31]=dxport~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$mul~9[0] b[1]=$mul~9[1] b[2]=$mul~9[2] b[3]=$mul~9[3] b[4]=$mul~9[4] b[5]=$mul~9[5] b[6]=$mul~9[6] b[7]=$mul~9[7] b[8]=$mul~9[8] b[9]=$mul~9[9] b[10]=$mul~9[10] b[11]=$mul~9[11] b[12]=$mul~9[12] b[13]=$mul~9[13] b[14]=$mul~9[14] b[15]=$mul~9[15] b[16]=$mul~9[16] b[17]=$mul~9[17] b[18]=$mul~9[18] b[19]=$mul~9[19] b[20]=$mul~9[20] b[21]=$mul~9[21] b[22]=$mul~9[22] b[23]=$mul~9[23] b[24]=$mul~9[24] b[25]=$mul~9[25] b[26]=$mul~9[26] b[27]=$mul~9[27] b[28]=$mul~9[28] b[29]=$mul~9[29] b[30]=$mul~9[30] b[31]=$mul~9[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~10[0] out[1]=$mul~10[1] out[2]=$mul~10[2] out[3]=$mul~10[3] out[4]=$mul~10[4] out[5]=$mul~10[5] out[6]=$mul~10[6] out[7]=$mul~10[7] out[8]=$mul~10[8] out[9]=$mul~10[9] out[10]=$mul~10[10] out[11]=$mul~10[11] out[12]=$mul~10[12] out[13]=$mul~10[13] out[14]=$mul~10[14] out[15]=$mul~10[15] out[16]=$mul~10[16] out[17]=$mul~10[17] out[18]=$mul~10[18] out[19]=$mul~10[19] out[20]=$mul~10[20] out[21]=$mul~10[21] out[22]=$mul~10[22] out[23]=$mul~10[23] out[24]=$mul~10[24] out[25]=$mul~10[25] out[26]=$mul~10[26] out[27]=$mul~10[27] out[28]=$mul~10[28] out[29]=$mul~10[29] out[30]=$mul~10[30] out[31]=$mul~10[31] out[32]=$mul~10[32] out[33]=$mul~10[33] out[34]=$mul~10[34] out[35]=$mul~10[35] out[36]=$mul~10[36] out[37]=$mul~10[37] out[38]=$mul~10[38] out[39]=$mul~10[39] out[40]=$mul~10[40] out[41]=$mul~10[41] out[42]=$mul~10[42] out[43]=$mul~10[43] out[44]=$mul~10[44] out[45]=$mul~10[45] out[46]=$mul~10[46] out[47]=$mul~10[47] out[48]=$mul~10[48] out[49]=$mul~10[49] out[50]=$mul~10[50] out[51]=$mul~10[51] out[52]=$mul~10[52] out[53]=$mul~10[53] out[54]=$mul~10[54] out[55]=$mul~10[55] out[56]=$mul~10[56] out[57]=$mul~10[57] out[58]=$mul~10[58] out[59]=$mul~10[59] out[60]=$mul~10[60] out[61]=$mul~10[61] out[62]=$mul~10[62] out[63]=$mul~10[63] out[64]=$mul~10[64] out[65]=$mul~10[65] out[66]=$mul~10[66] out[67]=$mul~10[67] out[68]=$mul~10[68] out[69]=$mul~10[69] out[70]=$mul~10[70] out[71]=$mul~10[71]
+
+
+.names new_new_n945 dxport~0 reset xport~0 n590_1
+-001 1
+0-01 1
+1100 1
+.names new_new_n971_1 new_new_n946_1 new_new_n973 new_new_n963_1 \
+ new_new_n967_1 new_new_n968 new_new_n945
+---001 1
+001-01 1
+.names aport~15 xport~15 new_new_n947_1 new_new_n957 new_new_n959_1 \
+ new_new_n961 new_new_n946_1
+---011 1
+--1-11 1
+01--11 1
+.names new_new_n948 aport~11 aport~10 xport~11 xport~10 new_new_n955_1 \
+ new_new_n947_1
+--0111 1
+-0-1-1 1
+-00-11 1
+1----1 1
+.names new_new_n949 aport~8 xport~8 aport~9 xport~9 new_new_n954_1 \
+ new_new_n948
+---011 1
+-01-11 1
+-010-1 1
+1---11 1
+1--0-1 1
+.names xport~8 aport~8 new_new_n950_1 xport~7 aport~7 new_new_n949
+---01 0
+--0-1 0
+--00- 0
+01--- 0
+.names new_new_n951_1 aport~6 xport~6 new_new_n950_1
+-01 1
+0-1 1
+00- 1
+.names new_new_n952 xport~4 aport~4 aport~5 xport~5 new_new_n951_1
+---10 1
+-01-0 1
+-011- 1
+1---0 1
+1--1- 1
+.names aport~4 xport~4 new_new_n953 aport~3 xport~3 new_new_n952
+---01 0
+--0-1 0
+--00- 0
+01--- 0
+.names aport~1 aport~2 xport~2 xport~1 xport~0 aport~0 new_new_n953
+--0001 1
+-1-001 1
+-10--- 1
+1-0-01 1
+1-00-- 1
+11--01 1
+11-0-- 1
+.names aport~11 xport~11 xport~10 aport~10 new_new_n954_1
+0000 1
+0011 1
+1100 1
+1111 1
+.names aport~12 xport~12 aport~13 xport~13 new_new_n956 new_new_n955_1
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~14 xport~14 aport~15 xport~15 new_new_n956
+0000 1
+0011 1
+1100 1
+1111 1
+.names new_new_n958_1 aport~14 xport~14 aport~15 xport~15 new_new_n957
+---10 1
+--001 1
+-1-01 1
+-10-- 1
+0-0-- 1
+01--- 1
+.names aport~13 aport~12 xport~13 xport~12 new_new_n958_1
+-011 1
+0-1- 1
+00-1 1
+.names aport~20 xport~20 aport~21 xport~21 new_new_n960 new_new_n959_1
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~22 xport~22 aport~23 xport~23 new_new_n960
+0000 1
+0011 1
+1100 1
+1111 1
+.names aport~16 xport~16 aport~17 xport~17 new_new_n962_1 new_new_n961
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~18 xport~18 aport~19 xport~19 new_new_n962_1
+0000 1
+0011 1
+1100 1
+1111 1
+.names aport~25 xport~25 aport~24 xport~24 new_new_n964 new_new_n963_1
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~27 xport~27 aport~26 xport~26 new_new_n965 new_new_n964
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~28 xport~28 aport~29 xport~29 new_new_n966_1 new_new_n965
+00001 1
+00111 1
+11001 1
+11111 1
+.names aport~30 xport~30 aport~31 xport~31 new_new_n966_1
+0000 1
+0011 1
+1100 1
+1111 1
+.names aport~25 aport~24 xport~25 xport~24 new_new_n964 new_new_n967_1
+-0111 1
+0-1-1 1
+00-11 1
+.names new_new_n970_1 aport~31 xport~31 xport~30 aport~30 new_new_n969 \
+ new_new_n968
+--0010 1
+-1-010 1
+-10--0 1
+0-0-10 1
+0-00-0 1
+01--10 1
+01-0-0 1
+.names aport~27 aport~26 xport~27 xport~26 new_new_n965 new_new_n969
+-0111 1
+0-1-1 1
+00-11 1
+.names aport~29 aport~28 xport~29 xport~28 new_new_n970_1
+-011 1
+0-1- 1
+00-1 1
+.names new_new_n972 aport~19 aport~18 xport~19 xport~18 new_new_n959_1 \
+ new_new_n971_1
+--0111 1
+-0-1-1 1
+-00-11 1
+1--111 1
+1-01-1 1
+10--11 1
+100--1 1
+.names aport~17 aport~16 xport~17 xport~16 new_new_n972
+-011 1
+0-1- 1
+00-1 1
+.names new_new_n974 aport~23 aport~22 xport~23 xport~22 new_new_n973
+--011 0
+-0-1- 0
+-00-1 0
+1---- 0
+.names aport~21 aport~20 xport~21 xport~20 new_new_n960 new_new_n974
+-0111 1
+0-1-1 1
+00-11 1
+.names new_new_n945 dxport~0 xport~0 dxport~1 reset xport~1 n594_1
+--0001 1
+-0-001 1
+-11101 1
+0---01 1
+1-0100 1
+10-100 1
+111000 1
+.names reset new_new_n977 xport~2 n598_1
+001 1
+010 1
+.names dxport~0 xport~0 dxport~1 xport~1 dxport~2 new_new_n945 new_new_n977
+--0011 1
+--1101 1
+-0-011 1
+-00-11 1
+0--011 1
+0-0-11 1
+11-101 1
+111-01 1
+.names new_new_n945 new_new_n979 dxport~3 reset xport~3 n602_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names dxport~2 dxport~1 xport~1 xport~2 dxport~0 xport~0 new_new_n979
+--1111 0
+-1-111 0
+-111-- 0
+1--1-- 0
+1-1-11 0
+11--11 0
+111--- 0
+.names reset new_new_n981 xport~4 n606_1
+001 1
+010 1
+.names new_new_n979 dxport~3 xport~3 dxport~4 new_new_n945 new_new_n981
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n983 dxport~5 reset xport~5 n610_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n979 dxport~4 xport~4 dxport~3 xport~3 new_new_n983
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n985 xport~6 n614_1
+001 1
+010 1
+.names new_new_n983 dxport~5 xport~5 dxport~6 new_new_n945 new_new_n985
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n987 dxport~7 reset xport~7 n618_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n983 dxport~6 xport~6 dxport~5 xport~5 new_new_n987
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n989 xport~8 n622_1
+001 1
+010 1
+.names new_new_n987 dxport~7 xport~7 dxport~8 new_new_n945 new_new_n989
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n991 dxport~9 reset xport~9 n626_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n987 dxport~8 xport~8 dxport~7 xport~7 new_new_n991
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n993 xport~10 n630_1
+001 1
+010 1
+.names new_new_n991 dxport~9 xport~9 dxport~10 new_new_n945 new_new_n993
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n995 dxport~11 reset xport~11 n634_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n991 dxport~10 xport~10 dxport~9 xport~9 new_new_n995
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n997 xport~12 n638_1
+001 1
+010 1
+.names new_new_n995 dxport~11 xport~11 dxport~12 new_new_n945 new_new_n997
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n999 dxport~13 reset xport~13 n642_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n995 dxport~12 xport~12 dxport~11 xport~11 new_new_n999
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1001 xport~14 n646_1
+001 1
+010 1
+.names new_new_n999 dxport~13 xport~13 dxport~14 new_new_n945 new_new_n1001
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1003 dxport~15 reset xport~15 n650_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n999 dxport~14 xport~14 dxport~13 xport~13 new_new_n1003
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1005 xport~16 n654_1
+001 1
+010 1
+.names new_new_n1003 dxport~15 xport~15 dxport~16 new_new_n945 \
+ new_new_n1005
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1007 dxport~17 reset xport~17 n658_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1003 dxport~16 xport~16 dxport~15 xport~15 new_new_n1007
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1009 xport~18 n662_1
+001 1
+010 1
+.names new_new_n1007 dxport~17 xport~17 dxport~18 new_new_n945 \
+ new_new_n1009
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1011 dxport~19 reset xport~19 n666_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1007 dxport~18 xport~18 dxport~17 xport~17 new_new_n1011
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1013 xport~20 n670_1
+001 1
+010 1
+.names new_new_n1011 dxport~19 xport~19 dxport~20 new_new_n945 \
+ new_new_n1013
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1015 dxport~21 reset xport~21 n674_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1011 dxport~20 xport~20 dxport~19 xport~19 new_new_n1015
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1017 xport~22 n678_1
+001 1
+010 1
+.names new_new_n1015 dxport~21 xport~21 dxport~22 new_new_n945 \
+ new_new_n1017
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1019 dxport~23 reset xport~23 n682_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1015 dxport~22 xport~22 dxport~21 xport~21 new_new_n1019
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1021 xport~24 n686_1
+001 1
+010 1
+.names new_new_n1019 dxport~23 xport~23 dxport~24 new_new_n945 \
+ new_new_n1021
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1023 dxport~25 reset xport~25 n690_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1019 dxport~24 xport~24 dxport~23 xport~23 new_new_n1023
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1025 xport~26 n694_1
+001 1
+010 1
+.names new_new_n1023 dxport~25 xport~25 dxport~26 new_new_n945 \
+ new_new_n1025
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1027 dxport~27 reset xport~27 n698_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1023 dxport~26 xport~26 dxport~25 xport~25 new_new_n1027
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1029 xport~28 n702_1
+001 1
+010 1
+.names new_new_n1027 dxport~27 xport~27 dxport~28 new_new_n945 \
+ new_new_n1029
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1031 dxport~29 reset xport~29 n706_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1027 dxport~28 xport~28 dxport~27 xport~27 new_new_n1031
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1033 xport~30 n710_1
+001 1
+010 1
+.names new_new_n1031 dxport~29 xport~29 dxport~30 new_new_n945 \
+ new_new_n1033
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1035 dxport~31 reset xport~31 n714_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1031 dxport~30 xport~30 dxport~29 xport~29 new_new_n1035
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names new_new_n945 $mul~8[0] $mul~10[0] reset uport~0 n718_1
+-0001 1
+-1101 1
+0--01 1
+10100 1
+11000 1
+.names new_new_n1038 uport~1 reset new_new_n945 n722_1
+-100 1
+0-01 1
+.names $mul~8[0] $mul~10[0] uport~0 $mul~8[1] $mul~10[1] uport~1 \
+ new_new_n1038
+-01000 1
+-01011 1
+-01101 1
+-01110 1
+-10001 1
+-10010 1
+-10100 1
+-10111 1
+0-1000 1
+0-1011 1
+0-1101 1
+0-1110 1
+00-000 1
+00-011 1
+00-101 1
+00-110 1
+1-0001 1
+1-0010 1
+1-0100 1
+1-0111 1
+11-001 1
+11-010 1
+11-100 1
+11-111 1
+.names uport~2 new_new_n1040 new_new_n1041 $mul~10[2] reset new_new_n945 \
+ n726_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names $mul~10[1] $mul~10[0] $mul~8[0] uport~0 $mul~8[1] uport~1 \
+ new_new_n1040
+--0101 0
+--0110 0
+--1000 0
+--1011 0
+-0-101 0
+-0-110 0
+-00-01 0
+-00-10 0
+0---01 0
+0---10 0
+0-01-- 0
+00---- 0
+.names uport~0 $mul~8[0] $mul~8[1] uport~1 $mul~8[2] uport~2 new_new_n1041
+--0101 1
+--0110 1
+--1000 1
+--1011 1
+-0-101 1
+-0-110 1
+-00-01 1
+-00-10 1
+01-000 1
+01-011 1
+011-00 1
+011-11 1
+1--101 1
+1--110 1
+1-0-01 1
+1-0-10 1
+.names new_new_n1043 reset n730_1
+00 1
+.names new_new_n945 new_new_n1044 new_new_n1045 $mul~8[3] $mul~10[3] \
+ uport~3 new_new_n1043
+-00000 1
+-00110 1
+-01010 1
+-01100 1
+-10010 1
+-10100 1
+-11000 1
+-11110 1
+0----0 1
+100011 1
+100101 1
+101001 1
+101111 1
+110001 1
+110111 1
+111011 1
+111101 1
+.names new_new_n1040 new_new_n1041 $mul~10[2] new_new_n1044
+-01 1
+1-1 1
+10- 1
+.names $mul~8[1] $mul~8[2] uport~2 uport~1 uport~0 $mul~8[0] new_new_n1045
+--0001 1
+-1-001 1
+-10--- 1
+1-0-01 1
+1-00-- 1
+11--01 1
+11-0-- 1
+.names uport~4 new_new_n1047 new_new_n1048 $mul~10[4] reset new_new_n945 \
+ n734_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1044 $mul~10[3] new_new_n1045 $mul~8[3] uport~3 \
+ new_new_n1047
+-1000 1
+-1011 1
+-1101 1
+-1110 1
+1-000 1
+1-011 1
+1-101 1
+1-110 1
+11--- 1
+.names new_new_n1045 $mul~8[3] uport~3 $mul~8[4] uport~4 new_new_n1048
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names uport~5 new_new_n1050 new_new_n1051 $mul~10[5] reset new_new_n945 \
+ n738_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1047 new_new_n1048 $mul~10[4] new_new_n1050
+-01 1
+1-1 1
+10- 1
+.names new_new_n1052 $mul~8[5] uport~5 new_new_n1051
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1045 $mul~8[4] uport~4 uport~3 $mul~8[3] new_new_n1052
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names uport~6 new_new_n1054 new_new_n1055 $mul~10[6] reset new_new_n945 \
+ n742_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1047 new_new_n1051 new_new_n1048 $mul~10[5] $mul~10[4] \
+ new_new_n1054
+--011 1
+-0-1- 1
+-00-1 1
+1--11 1
+1-01- 1
+10--1 1
+100-- 1
+.names new_new_n1052 $mul~8[5] uport~5 $mul~8[6] uport~6 new_new_n1055
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names uport~7 new_new_n1057 new_new_n1058 $mul~10[7] reset new_new_n945 \
+ n746_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1054 new_new_n1055 $mul~10[6] new_new_n1057
+-01 1
+1-1 1
+10- 1
+.names new_new_n1059 $mul~8[7] uport~7 new_new_n1058
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1052 $mul~8[6] uport~6 uport~5 $mul~8[5] new_new_n1059
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names uport~8 new_new_n1062 new_new_n1063 new_new_n1061 reset new_new_n945 \
+ n750_1
+--1001 1
+-00101 1
+-1-001 1
+1---00 1
+.names new_new_n1054 new_new_n1058 new_new_n1055 $mul~10[7] $mul~10[6] \
+ new_new_n1061
+--011 1
+-0-1- 1
+-00-1 1
+1--11 1
+1-01- 1
+10--1 1
+100-- 1
+.names new_new_n1059 $mul~8[7] uport~7 $mul~8[8] uport~8 $mul~10[8] \
+ new_new_n1062
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1059 $mul~8[7] uport~7 $mul~10[8] $mul~8[8] uport~8 \
+ new_new_n1063
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names uport~9 new_new_n1065 new_new_n1066 $mul~10[9] reset new_new_n945 \
+ n754_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1061 new_new_n1062 new_new_n1063 new_new_n1065
+-10 1
+1-0 1
+.names new_new_n1067 $mul~8[9] uport~9 new_new_n1066
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1059 $mul~8[8] uport~8 uport~7 $mul~8[7] new_new_n1067
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names uport~10 new_new_n1069 new_new_n1070 $mul~10[10] reset new_new_n945 \
+ n758_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1061 new_new_n1062 new_new_n1066 $mul~10[9] new_new_n1063 \
+ new_new_n1069
+--01- 1
+-1-10 1
+-10-0 1
+1--10 1
+1-0-0 1
+.names new_new_n1071 $mul~8[10] uport~10 new_new_n1070
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1067 uport~9 $mul~8[9] new_new_n1071
+-01 1
+1-1 1
+10- 1
+.names uport~11 new_new_n1073 new_new_n1074 $mul~10[11] reset new_new_n945 \
+ n762_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1069 new_new_n1070 $mul~10[10] new_new_n1073
+-01 1
+1-1 1
+10- 1
+.names new_new_n1071 $mul~8[10] uport~10 $mul~8[11] uport~11 new_new_n1074
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names uport~12 new_new_n1076 new_new_n1079 new_new_n1078 reset \
+ new_new_n945 n766_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1077 $mul~8[12] uport~12 $mul~10[12] new_new_n1076
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1071 $mul~8[11] uport~11 uport~10 $mul~8[10] new_new_n1077
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1069 new_new_n1074 $mul~10[11] $mul~10[10] new_new_n1070 \
+ new_new_n1078
+--001 1
+-1-01 1
+-10-- 1
+0-0-1 1
+0-00- 1
+01--1 1
+01-0- 1
+.names $mul~10[12] new_new_n1077 $mul~8[12] uport~12 new_new_n1079
+0001 1
+0010 1
+0100 1
+0111 1
+.names new_new_n1081 uport~13 reset new_new_n945 n770_1
+-100 1
+0-01 1
+.names new_new_n1078 new_new_n1079 new_new_n1076 new_new_n1082 \
+ new_new_n1086 new_new_n1081
+--1-1 1
+--11- 1
+-1000 1
+00--1 1
+00-1- 1
+1-000 1
+.names new_new_n1083 new_new_n1085 $mul~8[13] uport~13 $mul~10[13] \
+ new_new_n1082
+-1001 1
+-1111 1
+00011 1
+00101 1
+1-001 1
+1-111 1
+.names new_new_n1071 $mul~8[11] $mul~8[10] uport~11 uport~10 new_new_n1084 \
+ new_new_n1083
+--0110 1
+-0-1-0 1
+-00-10 1
+0--110 1
+0-01-0 1
+00--10 1
+000--0 1
+.names uport~12 $mul~8[12] new_new_n1084
+01 1
+.names $mul~8[12] uport~12 new_new_n1085
+01 1
+.names new_new_n1083 new_new_n1085 $mul~10[13] $mul~8[13] uport~13 \
+ new_new_n1086
+-1001 1
+-1010 1
+00000 1
+00011 1
+1-001 1
+1-010 1
+.names uport~14 new_new_n1088 new_new_n1089 $mul~10[14] reset new_new_n945 \
+ n774_1
+-00001 1
+-01101 1
+-10101 1
+-11001 1
+1---00 1
+.names new_new_n1078 new_new_n1079 new_new_n1086 new_new_n1076 \
+ new_new_n1082 new_new_n1088
+--1-0 1
+-1-00 1
+1--00 1
+.names new_new_n1083 new_new_n1085 $mul~8[13] uport~13 $mul~8[14] uport~14 \
+ new_new_n1089
+--0101 1
+--0110 1
+--1000 1
+--1011 1
+-1-101 1
+-1-110 1
+-10-01 1
+-10-10 1
+00-000 1
+00-011 1
+001-00 1
+001-11 1
+1--101 1
+1--110 1
+1-0-01 1
+1-0-10 1
+.names uport~15 new_new_n1092 new_new_n1094 new_new_n1091 reset \
+ new_new_n945 n778_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1088 $mul~10[14] new_new_n1089 new_new_n1091
+-01 1
+1-1 1
+10- 1
+.names new_new_n1093 $mul~8[15] uport~15 $mul~10[15] new_new_n1092
+0001 1
+0111 1
+1011 1
+1101 1
+.names $mul~8[13] $mul~8[14] uport~14 uport~13 new_new_n1085 new_new_n1083 \
+ new_new_n1093
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~10[15] new_new_n1093 $mul~8[15] uport~15 new_new_n1094
+0001 1
+0010 1
+0100 1
+0111 1
+.names uport~16 new_new_n1097 new_new_n1098 new_new_n1096 reset \
+ new_new_n945 n782_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1091 new_new_n1094 new_new_n1092 new_new_n1096
+-10 1
+1-0 1
+.names new_new_n1093 $mul~8[15] uport~15 $mul~8[16] uport~16 $mul~10[16] \
+ new_new_n1097
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1093 $mul~8[15] uport~15 $mul~10[16] $mul~8[16] uport~16 \
+ new_new_n1098
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names uport~17 new_new_n1102 new_new_n1104 new_new_n1100 reset \
+ new_new_n945 n786_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1101 new_new_n1097 new_new_n1100
+00 1
+.names new_new_n1092 new_new_n1088 new_new_n1089 $mul~10[14] new_new_n1094 \
+ new_new_n1098 new_new_n1101
+--0100 1
+-0-100 1
+-00-00 1
+1----0 1
+.names new_new_n1103 $mul~8[17] uport~17 $mul~10[17] new_new_n1102
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1093 $mul~8[16] uport~16 uport~15 $mul~8[15] new_new_n1103
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~10[17] new_new_n1103 $mul~8[17] uport~17 new_new_n1104
+0001 1
+0010 1
+0100 1
+0111 1
+.names uport~18 new_new_n1107 new_new_n1108 new_new_n1106 reset \
+ new_new_n945 n790_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1100 new_new_n1104 new_new_n1102 new_new_n1106
+-10 1
+1-0 1
+.names new_new_n1103 $mul~8[17] uport~17 $mul~8[18] uport~18 $mul~10[18] \
+ new_new_n1107
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1103 $mul~8[17] uport~17 $mul~10[18] $mul~8[18] uport~18 \
+ new_new_n1108
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names new_new_n1110 uport~19 reset new_new_n945 n794_1
+-100 1
+0-01 1
+.names new_new_n1111 new_new_n1112 new_new_n1113 $mul~10[19] new_new_n1110
+0001 1
+0010 1
+0100 1
+0111 1
+1000 1
+1011 1
+1101 1
+1110 1
+.names new_new_n1097 new_new_n1101 new_new_n1104 new_new_n1108 \
+ new_new_n1102 new_new_n1107 new_new_n1111
+---1-- 0
+--1-00 0
+00--00 0
+.names new_new_n1103 $mul~8[18] uport~18 uport~17 $mul~8[17] new_new_n1112
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~8[19] uport~19 new_new_n1113
+00 1
+11 1
+.names new_new_n1115 uport~20 reset new_new_n945 n798_1
+-100 1
+0-01 1
+.names new_new_n1111 $mul~10[19] new_new_n1116 new_new_n1120 new_new_n1112 \
+ new_new_n1113 new_new_n1115
+-00000 1
+-00011 1
+-1-101 1
+-1-110 1
+-11-01 1
+-11-10 1
+0-0000 1
+0-0011 1
+0000-- 1
+1--101 1
+1--110 1
+1-1-01 1
+1-1-10 1
+11-1-- 1
+111--- 1
+.names new_new_n1117 new_new_n1119 $mul~8[20] uport~20 $mul~10[20] \
+ new_new_n1116
+-1001 1
+-1111 1
+00011 1
+00101 1
+1-001 1
+1-111 1
+.names new_new_n1103 $mul~8[18] $mul~8[17] uport~18 uport~17 new_new_n1113 \
+ new_new_n1117
+--0111 1
+-0-1-1 1
+-00-11 1
+0--111 1
+0-01-1 1
+00--11 1
+000--1 1
+.names $mul~8[19] uport~19 new_new_n1119
+01 1
+.names new_new_n1117 new_new_n1119 $mul~10[20] $mul~8[20] uport~20 \
+ new_new_n1120
+-1001 1
+-1010 1
+00000 1
+00011 1
+1-001 1
+1-010 1
+.names uport~21 new_new_n1122 new_new_n1123 $mul~10[21] reset new_new_n945 \
+ n802_1
+-00001 1
+-01101 1
+-10101 1
+-11001 1
+1---00 1
+.names new_new_n1120 new_new_n1111 $mul~10[19] new_new_n1112 new_new_n1113 \
+ new_new_n1116 new_new_n1122
+--0000 1
+--0110 1
+-0-000 1
+-0-110 1
+-00--0 1
+1----0 1
+.names new_new_n1117 new_new_n1119 $mul~8[20] uport~20 $mul~8[21] uport~21 \
+ new_new_n1123
+--0101 1
+--0110 1
+--1000 1
+--1011 1
+-1-101 1
+-1-110 1
+-10-01 1
+-10-10 1
+00-000 1
+00-011 1
+001-00 1
+001-11 1
+1--101 1
+1--110 1
+1-0-01 1
+1-0-10 1
+.names uport~22 new_new_n1126 new_new_n1128 new_new_n1125 reset \
+ new_new_n945 n806_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1122 $mul~10[21] new_new_n1123 new_new_n1125
+-01 1
+1-1 1
+10- 1
+.names new_new_n1127 $mul~8[22] uport~22 $mul~10[22] new_new_n1126
+0001 1
+0111 1
+1011 1
+1101 1
+.names $mul~8[20] $mul~8[21] uport~21 uport~20 new_new_n1119 new_new_n1117 \
+ new_new_n1127
+--0000 1
+-1-000 1
+-10--- 1
+1-0-00 1
+1-00-- 1
+11--00 1
+11-0-- 1
+.names $mul~10[22] new_new_n1127 $mul~8[22] uport~22 new_new_n1128
+0001 1
+0010 1
+0100 1
+0111 1
+.names uport~23 new_new_n1131 new_new_n1132 new_new_n1130 reset \
+ new_new_n945 n810_1
+--1001 1
+-00101 1
+-1-001 1
+1---00 1
+.names new_new_n1125 new_new_n1126 new_new_n1128 new_new_n1130
+-10 1
+0-0 1
+.names new_new_n1127 $mul~8[22] uport~22 $mul~8[23] uport~23 $mul~10[23] \
+ new_new_n1131
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1127 $mul~8[22] uport~22 $mul~10[23] $mul~8[23] uport~23 \
+ new_new_n1132
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names uport~24 new_new_n1136 new_new_n1138 new_new_n1134 reset \
+ new_new_n945 n814_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1135 new_new_n1131 new_new_n1134
+00 1
+.names new_new_n1126 new_new_n1122 new_new_n1123 $mul~10[21] new_new_n1128 \
+ new_new_n1132 new_new_n1135
+--0100 1
+-0-100 1
+-00-00 1
+1---00 1
+.names new_new_n1137 $mul~8[24] uport~24 $mul~10[24] new_new_n1136
+0001 1
+0111 1
+1011 1
+1101 1
+.names new_new_n1127 $mul~8[23] uport~23 uport~22 $mul~8[22] new_new_n1137
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~10[24] new_new_n1137 $mul~8[24] uport~24 new_new_n1138
+0001 1
+0010 1
+0100 1
+0111 1
+.names uport~25 new_new_n1140 new_new_n1141 $mul~10[25] reset new_new_n945 \
+ n818_1
+-00001 1
+-01101 1
+-10101 1
+-11001 1
+1---00 1
+.names new_new_n1134 new_new_n1138 new_new_n1136 new_new_n1140
+-10 1
+1-0 1
+.names new_new_n1137 $mul~8[24] uport~24 $mul~8[25] uport~25 new_new_n1141
+-0101 1
+-0110 1
+-1000 1
+-1011 1
+0-101 1
+0-110 1
+00-01 1
+00-10 1
+1-000 1
+1-011 1
+11-00 1
+11-11 1
+.names uport~26 new_new_n1143 new_new_n1144 reset new_new_n945 n822_1
+-0101 1
+-1001 1
+1--00 1
+.names new_new_n1138 new_new_n1135 new_new_n1131 new_new_n1141 $mul~10[25] \
+ new_new_n1136 new_new_n1143
+---10- 1
+-00-00 1
+-001-0 1
+1---00 1
+1--1-0 1
+.names new_new_n1145 new_new_n1146 $mul~10[26] new_new_n1144
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1137 $mul~8[25] uport~25 uport~24 $mul~8[24] new_new_n1145
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names $mul~8[26] uport~26 new_new_n1146
+00 1
+11 1
+.names uport~27 new_new_n1149 new_new_n1150 new_new_n1148 reset \
+ new_new_n945 n826_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1143 $mul~10[26] new_new_n1146 new_new_n1145 new_new_n1148
+-000 1
+-011 1
+1-00 1
+1-11 1
+10-- 1
+.names new_new_n1145 $mul~8[26] uport~26 $mul~8[27] uport~27 $mul~10[27] \
+ new_new_n1149
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1145 $mul~8[26] uport~26 $mul~10[27] $mul~8[27] uport~27 \
+ new_new_n1150
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names uport~28 new_new_n1152 new_new_n1154 $mul~10[28] reset new_new_n945 \
+ n830_1
+-00001 1
+-01101 1
+-10101 1
+-11001 1
+1---00 1
+.names new_new_n1153 $mul~8[28] uport~28 new_new_n1152
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1145 $mul~8[27] uport~27 uport~26 $mul~8[26] new_new_n1153
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1150 new_new_n1143 $mul~10[26] new_new_n1145 new_new_n1146 \
+ new_new_n1149 new_new_n1154
+--0000 1
+--0110 1
+-1-000 1
+-1-110 1
+-10--0 1
+1----0 1
+.names uport~29 new_new_n1157 new_new_n1158 new_new_n1156 reset \
+ new_new_n945 n834_1
+--1101 1
+-00001 1
+-1-101 1
+1---00 1
+.names new_new_n1152 $mul~10[28] new_new_n1154 new_new_n1156
+-01 1
+1-1 1
+10- 1
+.names new_new_n1153 $mul~8[28] uport~28 $mul~8[29] uport~29 $mul~10[29] \
+ new_new_n1157
+-01001 1
+-01111 1
+-10011 1
+-10101 1
+0-1001 1
+0-1111 1
+00-001 1
+00-111 1
+1-0011 1
+1-0101 1
+11-011 1
+11-101 1
+.names new_new_n1153 $mul~8[28] uport~28 $mul~10[29] $mul~8[29] uport~29 \
+ new_new_n1158
+-01001 1
+-01010 1
+-10000 1
+-10011 1
+0-1001 1
+0-1010 1
+00-001 1
+00-010 1
+1-0000 1
+1-0011 1
+11-000 1
+11-011 1
+.names uport~30 new_new_n1160 new_new_n1162 $mul~10[30] reset new_new_n945 \
+ n838_1
+-00101 1
+-01001 1
+-10001 1
+-11101 1
+1---00 1
+.names new_new_n1161 $mul~8[30] uport~30 new_new_n1160
+001 1
+010 1
+100 1
+111 1
+.names new_new_n1153 $mul~8[29] uport~29 uport~28 $mul~8[28] new_new_n1161
+--001 1
+-1-01 1
+-10-- 1
+1-0-1 1
+1-00- 1
+11--1 1
+11-0- 1
+.names new_new_n1157 new_new_n1152 new_new_n1154 $mul~10[28] new_new_n1158 \
+ new_new_n1162
+--010 1
+-0-10 1
+-00-0 1
+1---0 1
+.names new_new_n945 new_new_n1160 new_new_n1162 $mul~10[30] new_new_n1164 \
+ new_new_n1165 n842_1
+--0001 1
+--1111 1
+-0-111 1
+-01-11 1
+-1-001 1
+-10-01 1
+0----1 1
+.names new_new_n1161 $mul~8[30] uport~30 $mul~8[31] $mul~10[31] uport~31 \
+ new_new_n1164
+-01000 1
+-01011 1
+-01101 1
+-01110 1
+-10001 1
+-10010 1
+-10100 1
+-10111 1
+0-1000 1
+0-1011 1
+0-1101 1
+0-1110 1
+00-000 1
+00-011 1
+00-101 1
+00-110 1
+1-0001 1
+1-0010 1
+1-0100 1
+1-0111 1
+11-001 1
+11-010 1
+11-100 1
+11-111 1
+.names new_new_n945 uport~31 reset new_new_n1165
+-10 1
+1-0 1
+.names new_new_n945 $mul~6[0] reset yport~0 n846_1
+-001 1
+0-01 1
+1100 1
+.names new_new_n945 $mul~6[0] yport~0 $mul~6[1] reset yport~1 n850_1
+--0001 1
+-0-001 1
+-11101 1
+0---01 1
+1-0100 1
+10-100 1
+111000 1
+.names reset new_new_n1169 yport~2 n854_1
+001 1
+010 1
+.names $mul~6[0] yport~0 $mul~6[1] yport~1 $mul~6[2] new_new_n945 \
+ new_new_n1169
+--0011 1
+--1101 1
+-0-011 1
+-00-11 1
+0--011 1
+0-0-11 1
+11-101 1
+111-01 1
+.names new_new_n945 new_new_n1171 $mul~6[3] reset yport~3 n858_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names $mul~6[1] $mul~6[2] yport~2 yport~1 yport~0 $mul~6[0] new_new_n1171
+--1111 0
+-1-111 0
+-11--- 0
+1-1-11 0
+1-11-- 0
+11--11 0
+11-1-- 0
+.names reset new_new_n1173 yport~4 n862_1
+001 1
+010 1
+.names new_new_n1171 $mul~6[3] yport~3 $mul~6[4] new_new_n945 new_new_n1173
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1175 $mul~6[5] reset yport~5 n866_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1171 $mul~6[4] yport~4 $mul~6[3] yport~3 new_new_n1175
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1177 yport~6 n870_1
+001 1
+010 1
+.names new_new_n1175 $mul~6[5] yport~5 $mul~6[6] new_new_n945 new_new_n1177
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1179 $mul~6[7] reset yport~7 n874_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1175 $mul~6[6] yport~6 $mul~6[5] yport~5 new_new_n1179
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1181 yport~8 n878_1
+001 1
+010 1
+.names new_new_n1179 $mul~6[7] yport~7 $mul~6[8] new_new_n945 new_new_n1181
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1183 $mul~6[9] reset yport~9 n882_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1179 $mul~6[8] yport~8 $mul~6[7] yport~7 new_new_n1183
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1185 yport~10 n886_1
+001 1
+010 1
+.names new_new_n1183 $mul~6[9] yport~9 $mul~6[10] new_new_n945 \
+ new_new_n1185
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1187 $mul~6[11] reset yport~11 n890_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1183 $mul~6[10] yport~10 $mul~6[9] yport~9 new_new_n1187
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1189 yport~12 n894_1
+001 1
+010 1
+.names new_new_n1187 $mul~6[11] yport~11 $mul~6[12] new_new_n945 \
+ new_new_n1189
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1191 $mul~6[13] reset yport~13 n898_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1187 $mul~6[12] yport~12 $mul~6[11] yport~11 new_new_n1191
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1193 yport~14 n902_1
+001 1
+010 1
+.names new_new_n1191 $mul~6[13] yport~13 $mul~6[14] new_new_n945 \
+ new_new_n1193
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1195 $mul~6[15] reset yport~15 n906_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1191 $mul~6[14] yport~14 $mul~6[13] yport~13 new_new_n1195
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1197 yport~16 n910_1
+001 1
+010 1
+.names new_new_n1195 $mul~6[15] yport~15 $mul~6[16] new_new_n945 \
+ new_new_n1197
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1199 $mul~6[17] reset yport~17 n914_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1195 $mul~6[16] yport~16 $mul~6[15] yport~15 new_new_n1199
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1201 yport~18 n918_1
+001 1
+010 1
+.names new_new_n1199 $mul~6[17] yport~17 $mul~6[18] new_new_n945 \
+ new_new_n1201
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1203 $mul~6[19] reset yport~19 n922_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1199 $mul~6[18] yport~18 $mul~6[17] yport~17 new_new_n1203
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1205 yport~20 n926_1
+001 1
+010 1
+.names new_new_n1203 $mul~6[19] yport~19 $mul~6[20] new_new_n945 \
+ new_new_n1205
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1207 $mul~6[21] reset yport~21 n930_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1203 $mul~6[20] yport~20 $mul~6[19] yport~19 new_new_n1207
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1209 yport~22 n934_1
+001 1
+010 1
+.names new_new_n1207 $mul~6[21] yport~21 $mul~6[22] new_new_n945 \
+ new_new_n1209
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1211 $mul~6[23] reset yport~23 n938_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1207 $mul~6[22] yport~22 $mul~6[21] yport~21 new_new_n1211
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1213 yport~24 n942_1
+001 1
+010 1
+.names new_new_n1211 $mul~6[23] yport~23 $mul~6[24] new_new_n945 \
+ new_new_n1213
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1215 $mul~6[25] reset yport~25 n946_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1211 $mul~6[24] yport~24 $mul~6[23] yport~23 new_new_n1215
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1217 yport~26 n950_1
+001 1
+010 1
+.names new_new_n1215 $mul~6[25] yport~25 $mul~6[26] new_new_n945 \
+ new_new_n1217
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1219 $mul~6[27] reset yport~27 n954_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1215 $mul~6[26] yport~26 $mul~6[25] yport~25 new_new_n1219
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1221 yport~28 n958_1
+001 1
+010 1
+.names new_new_n1219 $mul~6[27] yport~27 $mul~6[28] new_new_n945 \
+ new_new_n1221
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1223 $mul~6[29] reset yport~29 n962_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1219 $mul~6[28] yport~28 $mul~6[27] yport~27 new_new_n1223
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names reset new_new_n1225 yport~30 n966_1
+001 1
+010 1
+.names new_new_n1223 $mul~6[29] yport~29 $mul~6[30] new_new_n945 \
+ new_new_n1225
+-0011 1
+-1101 1
+0-101 1
+01-01 1
+1-011 1
+10-11 1
+.names new_new_n945 new_new_n1227 $mul~6[31] reset yport~31 n970_1
+-0101 1
+-1001 1
+0--01 1
+10000 1
+11100 1
+.names new_new_n1223 $mul~6[30] yport~30 $mul~6[29] yport~29 new_new_n1227
+--000 1
+-0-00 1
+-00-- 1
+1-0-0 1
+1-00- 1
+10--0 1
+10-0- 1
+.names vcc
+ 1
+.names gnd
+ 0
+.names unconn
+ 0
+.end
+
+
+.model multiply
+.inputs a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] a[12] \
+ a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] a[21] a[22] a[23] a[24] \
+ a[25] a[26] a[27] a[28] a[29] a[30] a[31] a[32] a[33] a[34] a[35] b[0] \
+ b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] b[9] b[10] b[11] b[12] b[13] b[14] \
+ b[15] b[16] b[17] b[18] b[19] b[20] b[21] b[22] b[23] b[24] b[25] b[26] \
+ b[27] b[28] b[29] b[30] b[31] b[32] b[33] b[34] b[35]
+.outputs out[0] out[1] out[2] out[3] out[4] out[5] out[6] out[7] out[8] \
+ out[9] out[10] out[11] out[12] out[13] out[14] out[15] out[16] out[17] \
+ out[18] out[19] out[20] out[21] out[22] out[23] out[24] out[25] out[26] \
+ out[27] out[28] out[29] out[30] out[31] out[32] out[33] out[34] out[35] \
+ out[36] out[37] out[38] out[39] out[40] out[41] out[42] out[43] out[44] \
+ out[45] out[46] out[47] out[48] out[49] out[50] out[51] out[52] out[53] \
+ out[54] out[55] out[56] out[57] out[58] out[59] out[60] out[61] out[62] \
+ out[63] out[64] out[65] out[66] out[67] out[68] out[69] out[70] out[71]
+.blackbox
+.end

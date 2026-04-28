@@ -1,0 +1,122 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq1.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq1.parmys.blif 0_diffeq1.raw.abc.blif; time;
+ABC command line: "echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq1.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq1.parmys.blif 0_diffeq1.raw.abc.blif; time;".
+
+ 
+Load Netlist 
+============ 
+Hierarchy reader converted 6 instances of blackboxes.
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+Circuit Info 
+========== 
+[1;37mdiffeq_paj_convert            :[0m i/o =  522/  323  lat =  193  nd =  1273  edge =   3173  cube =  2334  lev = 69
+Total latches =   193. Init0 = 193. Init1 = 0. InitDC = 0. Const data = 0.
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+LUT Costs 
+========= 
+# The area/delay of k-variable LUTs:
+# k    area     delay
+1      1.00      1.00
+2      1.00      1.00
+3      1.00      1.00
+4      1.00      1.00
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+Logic Opt + Techmap 
+=================== 
+SimWords = 32. Rounds = 4. Mem = 0.46 MB.  Classes: Beg = 1. End = 1.
+Proof = 1. Counter-example = 0. Fail = 0. FailReal = 0. Zero = 0.
+Final = 2540. Miter = 2542. Total = 2542. Mux = 0. (Exor = 0.) SatVars = 177.
+starts        :                0
+conflicts     :                0
+decisions     :                0
+propagations  :                8
+AIG simulation   =     0.00 sec
+AIG traversal    =     0.00 sec
+SAT solving      =     0.00 sec
+    Unsat        =     0.00 sec
+    Sat          =     0.00 sec
+    Fail         =     0.00 sec
+Class refining   =     0.00 sec
+TOTAL RUNTIME    =     0.00 sec
+Allocated 0.12 MB to store simulation information.
+Initial simulation of 4 frames with 2 words.     Time =     0.00 sec
+Collecting candidate equivalence classes.        Time =     0.00 sec
+Simulation of 4 frames with 2 words ( 1 rounds). Time =     0.00 sec
+Before BMC: Equiv classes: Const1 =     0. Class =     1. Lit =     2.
+After  BMC: Equiv classes: Const1 =     0. Class =     0. Lit =     0.
+  0 : C =      0. Cl =      0. LR =     0. NR =  5080. F =    0. - T =     0.00 sec
+Parameters: F = 1. AddF = 2. C-lim = 1000. Constr = 0. MaxLev = 0. Mem = 0.17 MB.
+AIG       : PI = 522. PO = 323. Latch = 193. Node = 2540.  Ave SAT vars = 0.
+SAT calls : Proof = 0. Cex = 2. Fail = 0. Lits proved = 0.
+SAT solver: Vars max = 1683. Calls max = 0. Recycles = 0. Sim rounds = 0.
+NBeg = 2540. NEnd = 2540. (Gain =   0.00 %).  RBeg = 193. REnd = 193. (Gain =   0.00 %).
+BMC         =     0.00 sec (  9.43 %)
+Spec reduce =     0.00 sec ( 14.56 %)
+Mark cones  =     0.00 sec (  0.00 %)
+Sim SAT     =     0.00 sec (  4.53 %)
+SAT solving =     0.00 sec (  2.31 %)
+  unsat     =     0.00 sec (  0.00 %)
+  sat       =     0.00 sec (  2.31 %)
+  undecided =     0.00 sec (  0.00 %)
+Other       =     0.00 sec ( 69.18 %)
+TOTAL       =     0.00 sec (100.00 %)
+Starting:  diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    2540  lev = 134
+Rewrite:   diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    2204  lev =  74
+Refactor:  diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    2180  lev =  74
+Balance:   diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    2180  lev =  74
+Rewrite:   diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    1942  lev =  73
+RewriteZ:  diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    1941  lev =  70
+RefactorZ: diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    1936  lev =  70
+RewriteZ:  diffeq_paj_convert : pi =   522  po =   323  lat =   193  and =    1932  lev =  70
+K = 6. Memory (bytes): Truth =    0. Cut =   56. Obj =  136. Set =  600. CutMin = no
+Node =    2764.  Ch =   369.  Total mem =    0.58 MB. Peak cut mem =    0.03 MB.
+P:  Del =   15.00.  Ar =     766.0.  Edge =     2565.  Cut =    39697.  T =     0.00 sec
+P:  Del =   15.00.  Ar =     548.0.  Edge =     2702.  Cut =    34630.  T =     0.00 sec
+P:  Del =   15.00.  Ar =     573.0.  Edge =     2466.  Cut =    41559.  T =     0.00 sec
+F:  Del =   15.00.  Ar =     524.0.  Edge =     2368.  Cut =    32097.  T =     0.00 sec
+A:  Del =   15.00.  Ar =     498.0.  Edge =     2072.  Cut =    35645.  T =     0.01 sec
+A:  Del =   15.00.  Ar =     484.0.  Edge =     2059.  Cut =    37139.  T =     0.01 sec
+Total time =     0.03 sec
+Performing MFS with 715 PIs, 516 POs, 486 nodes (486 flexible, 0 fixed, 0 empty).
+Nodes = 486. Try = 488. Resub = 2. Div = 43759 (ave = 89). SAT calls = 7572. Timeouts = 0. MaxDivs = 6.
+Attempts :   Remove      0 out of   2061 (  0.00 %)   Resub       2 out of    153 (  1.31 %)   
+Reduction:   Nodes       2 out of    484 (  0.41 %)   Edges       4 out of   2059 (  0.19 %)   
+Win =     0.00 sec (  1.56 %)
+Div =     0.00 sec (  1.65 %)
+Cnf =     0.01 sec ( 14.51 %)
+Sat =     0.07 sec ( 81.18 %)
+Oth =     0.00 sec (  1.10 %)
+ALL =     0.08 sec (100.00 %)
+The network has 2 nodes changed by "mfs".
+[1;37mdiffeq_paj_convert            :[0m i/o =  522/  323  lat =  193  nd =   484  edge =   2055  cube =  2054  lev = 15
+elapse: 0.22 seconds, total: 0.22 seconds
+ 
+Output Netlist 
+============== 
+Hierarchy writer reintroduced 6 instances of blackboxes.
+elapse: 0.00 seconds, total: 0.23 seconds
+	Command being timed: "/root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq1.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq1.parmys.blif 0_diffeq1.raw.abc.blif; time;"
+	User time (seconds): 0.22
+	System time (seconds): 0.01
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 37768
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9705
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

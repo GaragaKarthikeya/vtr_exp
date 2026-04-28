@@ -1,0 +1,740 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/vpr/vpr vpr_arch_run.xml spree --circuit_file spree.pre-vpr.blif --power --tech_properties /root/vtr-verilog-to-routing/vtr_flow/tech/PTM_45nm/45nm.xml --max_router_iterations 150 --route --route_chan_width 154
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-15665-g630df5bbdd
+Revision: v8.0.0-15665-g630df5bbdd
+Compiled: 2026-04-26T05:11:10
+Compiler: GNU 13.3.0 on Linux-6.6.87.2-microsoft-standard-WSL2 x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+/root/vtr-verilog-to-routing/vpr/vpr vpr_arch_run.xml spree --circuit_file spree.pre-vpr.blif --power --tech_properties /root/vtr-verilog-to-routing/vtr_flow/tech/PTM_45nm/45nm.xml --max_router_iterations 150 --route --route_chan_width 154
+
+Using up to 1 parallel worker(s)
+
+Architecture file: vpr_arch_run.xml
+Circuit name: spree
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.02 seconds (max_rss 19.4 MiB, delta_rss +2.6 MiB)
+
+Timing analysis: ON
+Circuit netlist file: spree.net
+Circuit placement file: spree.place
+Circuit routing file: spree.route
+Circuit SDC file: spree.sdc
+Vpr floorplanning constraints file: not specified
+
+Packer: LOAD
+Placer: LOAD
+Analytical Placer: DISABLED
+Router: ENABLED
+Analysis: SKIP IF PRIOR FAIL
+
+VPR was run with the following options:
+
+netlist_opts.absorb_buffer_luts            : true
+netlist_opts.sweep_dangling_primary_ios    : true
+netlist_opts.sweep_dangling_nets           : true
+netlist_opts.sweep_dangling_blocks         : true
+netlist_opts.sweep_constant_primary_outputs: false
+netlist_opts.netlist_verbosity             : 1
+netlist_opts.const_gen_inference           : COMB_SEQ
+
+packer_opts.allow_unrelated_clustering: auto
+packer_opts.timing_gain_weight: 0.750000
+packer_opts.connection_gain_weight: 0.900000
+packer_opts.cluster_seed_type: BLEND2
+packer_opts.connection_driven: true
+packer_opts.timing_driven: true
+packer_opts.target_external_pin_util: auto
+
+placer_opts.place_freq: ONCE
+placer_opts.place_algorithm: CRITICALITY_TIMING_PLACE
+placer_opts.pad_loc_type: FREE
+placer_opts.constraints_file: No constraints file given
+placer_opts.place_chan_width: 154
+placer_opts.congestion_factor: 0.000000
+placer_opts.inner_loop_recompute_divider: 0
+placer_opts.recompute_crit_iter: 1
+placer_opts.timing_tradeoff: 0.500000
+placer_opts.td_place_exp_first: 1.000000
+placer_opts.td_place_exp_last: 8.000000
+placer_opts.delay_offset: 0.000000
+placer_opts.delay_ramp_delta_threshold: -1
+placer_opts.delay_ramp_slope: 0.000000
+placer_opts.tsu_rel_margin: 1.000000
+placer_opts.tsu_abs_margin: 0.000000
+placer_opts.post_place_timing_report_file: 
+placer_opts.allowed_tiles_for_delay_model: 
+placer_opts.delay_model_reducer: MIN
+placer_opts.delay_model_type: SIMPLE
+placer_opts.rlim_escape_fraction: 0.000000
+placer_opts.move_stats_file: 
+placer_opts.placement_saves_per_temperature: 0
+placer_opts.effort_scaling: CIRCUIT
+placer_opts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+placer_opts.seed: 1
+anneal_sched.type: AUTO_SCHED
+anneal_sched.inner_num: 0.500000
+placer_opts.anneal_init_t_estimator: EQUILIBRIUM
+
+router_opts.route_type: DETAILED
+router_opts.flat_routing: false
+router_opts.choke_points: on
+router_opts.router_algorithm: TIMING_DRIVEN
+router_opts.base_cost_type: DELAY_NORMALIZED_LENGTH
+router_opts.fixed_channel_width: 154
+router_opts.check_route: FULL
+router_opts.acc_fac: 1.000000
+router_opts.bb_factor: 3
+router_opts.bend_cost: 0.000000
+router_opts.first_iter_pres_fac: 0.000000
+router_opts.initial_pres_fac: 0.500000
+router_opts.pres_fac_mult: 1.300000
+router_opts.max_pres_fac: 1000.000000
+router_opts.max_router_iterations: 150
+router_opts.min_incremental_reroute_fanout: 16
+router_opts.initial_acc_cost_chan_congestion_threshold: 0.500000
+router_opts.initial_acc_cost_chan_congestion_weight: 0.500000
+router_opts.do_check_rr_graph: true
+router_opts.verify_binary_search: false
+router_opts.min_channel_width_hint: 0
+router_opts.read_rr_edge_metadata: false
+router_opts.exit_after_first_routing_iteration: false
+router_opts.astar_fac: 1.200000
+router_opts.astar_offset: 0.000000
+router_opts.router_profiler_astar_fac: 1.200000
+router_opts.enable_parallel_connection_router: false
+router_opts.post_target_prune_fac: 1.200000
+router_opts.post_target_prune_offset: 0
+router_opts.multi_queue_num_threads: 1
+router_opts.multi_queue_num_queues: 2
+router_opts.multi_queue_direct_draining: false
+router_opts.criticality_exp: 1.000000
+router_opts.max_criticality: 0.990000
+router_opts.init_wirelength_abort_threshold: 0.850000
+router_opts.incr_reroute_delay_ripup: AUTO
+router_opts.save_routing_per_iteration: false
+router_opts.congested_routing_iteration_threshold_frac: 1.000000
+router_opts.high_fanout_threshold: 64
+router_opts.router_debug_net: -2
+router_opts.router_debug_sink_rr: -2
+router_opts.router_debug_iteration: -2
+router_opts.max_convergence_count: 1
+router_opts.reconvergence_cpd_threshold: 0.990000
+router_opts.update_lower_bound_delays: true
+router_opts.first_iteration_timing_report_file: 
+router_opts.route_bb_update: DYNAMIC
+router_opts.lookahead_type: MAP
+router_opts.initial_timing: LOOKAHEAD
+router_opts.router_heap: FOUR_ARY_HEAP
+router_opts.routing_failure_predictor = SAFE
+router_opts.routing_budgets_algorithm = DISABLE
+
+analysis_opts.gen_post_synthesis_netlist: false
+analysis_opts.gen_post_implementation_merged_netlist: false
+analysis_opts.gen_post_implementation_sdc: false
+analysis_opts.timing_report_npaths: 100
+analysis_opts.timing_report_skew: false
+analysis_opts.echo_dot_timing_graph_node: -1
+analysis_opts.timing_report_detail: NETLIST
+analysis_opts.post_synth_netlist_unconn_input_handling: UNCONNECTED
+analysis_opts.post_synth_netlist_unconn_output_handling: UNCONNECTED
+analysis_opts.post_synth_netlist_module_parameters: on
+
+# Building complex block graph
+Warning 1: io[0].clock[0] unconnected pin in architecture.
+# Building complex block graph took 0.01 seconds (max_rss 24.7 MiB, delta_rss +5.3 MiB)
+Circuit file: spree.pre-vpr.blif
+# Load circuit
+Found constant-zero generator 'gnd'
+Found constant-zero generator 'unconn'
+# Load circuit took 0.02 seconds (max_rss 27.3 MiB, delta_rss +2.5 MiB)
+# Clean circuit
+Absorbed 5 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 87
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 175
+Swept block(s)      : 0
+Constant Pins Marked: 0
+# Clean circuit took 0.00 seconds (max_rss 27.5 MiB, delta_rss +0.2 MiB)
+# Compress circuit
+# Compress circuit took 0.00 seconds (max_rss 27.6 MiB, delta_rss +0.2 MiB)
+# Verify circuit
+# Verify circuit took 0.00 seconds (max_rss 27.6 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 1145
+    .input         :      45
+    .latch         :     200
+    .names         :     739
+        0-LUT:       1
+        1-LUT:       1
+        2-LUT:      83
+        3-LUT:     193
+        4-LUT:     199
+        5-LUT:     111
+        6-LUT:     151
+    .output        :      32
+    dual_port_ram  :      32
+    multiply       :       1
+    single_port_ram:      96
+  Nets  : 1128
+    Avg Fanout:     4.6
+    Max Fanout:   328.0
+    Min Fanout:     1.0
+  Netlist Clocks: 1
+# Load Activity File
+Warning 2: Net dual_port_ram^MEM~3-0^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 3: Net dual_port_ram^MEM~3-31^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 4: Net dual_port_ram^MEM~3-1^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 5: Net dual_port_ram^MEM~3-2^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 6: Net dual_port_ram^MEM~3-3^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 7: Net dual_port_ram^MEM~3-4^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 8: Net dual_port_ram^MEM~3-5^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 9: Net dual_port_ram^MEM~3-6^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 10: Net dual_port_ram^MEM~3-7^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 11: Net dual_port_ram^MEM~3-8^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 12: Net dual_port_ram^MEM~3-9^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 13: Net dual_port_ram^MEM~3-10^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 14: Net dual_port_ram^MEM~3-11^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 15: Net dual_port_ram^MEM~3-12^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 16: Net dual_port_ram^MEM~3-13^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 17: Net dual_port_ram^MEM~3-14^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 18: Net dual_port_ram^MEM~3-15^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 19: Net dual_port_ram^MEM~3-16^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 20: Net dual_port_ram^MEM~3-17^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 21: Net dual_port_ram^MEM~3-18^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 22: Net dual_port_ram^MEM~3-19^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 23: Net dual_port_ram^MEM~3-20^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 24: Net dual_port_ram^MEM~3-21^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 25: Net dual_port_ram^MEM~3-22^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 26: Net dual_port_ram^MEM~3-23^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 27: Net dual_port_ram^MEM~3-24^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 28: Net dual_port_ram^MEM~3-25^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 29: Net dual_port_ram^MEM~3-26^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 30: Net dual_port_ram^MEM~3-27^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 31: Net dual_port_ram^MEM~3-28^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 32: Net dual_port_ram^MEM~3-29^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 33: Net dual_port_ram^MEM~3-30^out2~1 found in activity file, but it does not exist in the .blif file.
+Warning 34: Net $mul~477[16] found in activity file, but it does not exist in the .blif file.
+Warning 35: Net $mul~477[17] found in activity file, but it does not exist in the .blif file.
+Warning 36: Net $mul~477[18] found in activity file, but it does not exist in the .blif file.
+Warning 37: Net $mul~477[19] found in activity file, but it does not exist in the .blif file.
+Warning 38: Net $mul~477[20] found in activity file, but it does not exist in the .blif file.
+Warning 39: Net $mul~477[21] found in activity file, but it does not exist in the .blif file.
+Warning 40: Net $mul~477[22] found in activity file, but it does not exist in the .blif file.
+Warning 41: Net $mul~477[23] found in activity file, but it does not exist in the .blif file.
+Warning 42: Net $mul~477[24] found in activity file, but it does not exist in the .blif file.
+Warning 43: Net $mul~477[25] found in activity file, but it does not exist in the .blif file.
+Warning 44: Net $mul~477[26] found in activity file, but it does not exist in the .blif file.
+Warning 45: Net $mul~477[27] found in activity file, but it does not exist in the .blif file.
+Warning 46: Net $mul~477[28] found in activity file, but it does not exist in the .blif file.
+Warning 47: Net $mul~477[29] found in activity file, but it does not exist in the .blif file.
+Warning 48: Net $mul~477[30] found in activity file, but it does not exist in the .blif file.
+Warning 49: Net $mul~477[31] found in activity file, but it does not exist in the .blif file.
+Warning 50: Net $mul~477[32] found in activity file, but it does not exist in the .blif file.
+Warning 51: Net $mul~477[33] found in activity file, but it does not exist in the .blif file.
+Warning 52: Net $mul~477[34] found in activity file, but it does not exist in the .blif file.
+Warning 53: Net $mul~477[35] found in activity file, but it does not exist in the .blif file.
+Warning 54: Net $mul~477[36] found in activity file, but it does not exist in the .blif file.
+Warning 55: Net $mul~477[37] found in activity file, but it does not exist in the .blif file.
+Warning 56: Net $mul~477[38] found in activity file, but it does not exist in the .blif file.
+Warning 57: Net $mul~477[39] found in activity file, but it does not exist in the .blif file.
+Warning 58: Net $mul~477[40] found in activity file, but it does not exist in the .blif file.
+Warning 59: Net $mul~477[41] found in activity file, but it does not exist in the .blif file.
+Warning 60: Net $mul~477[42] found in activity file, but it does not exist in the .blif file.
+Warning 61: Net $mul~477[43] found in activity file, but it does not exist in the .blif file.
+Warning 62: Net $mul~477[44] found in activity file, but it does not exist in the .blif file.
+Warning 63: Net $mul~477[45] found in activity file, but it does not exist in the .blif file.
+Warning 64: Net $mul~477[46] found in activity file, but it does not exist in the .blif file.
+Warning 65: Net $mul~477[47] found in activity file, but it does not exist in the .blif file.
+Warning 66: Net $mul~477[48] found in activity file, but it does not exist in the .blif file.
+Warning 67: Net $mul~477[49] found in activity file, but it does not exist in the .blif file.
+Warning 68: Net $mul~477[50] found in activity file, but it does not exist in the .blif file.
+Warning 69: Net $mul~477[51] found in activity file, but it does not exist in the .blif file.
+Warning 70: Net $mul~477[52] found in activity file, but it does not exist in the .blif file.
+Warning 71: Net $mul~477[53] found in activity file, but it does not exist in the .blif file.
+Warning 72: Net $mul~477[54] found in activity file, but it does not exist in the .blif file.
+Warning 73: Net $mul~477[55] found in activity file, but it does not exist in the .blif file.
+Warning 74: Net $mul~477[56] found in activity file, but it does not exist in the .blif file.
+Warning 75: Net $mul~477[57] found in activity file, but it does not exist in the .blif file.
+Warning 76: Net $mul~477[58] found in activity file, but it does not exist in the .blif file.
+Warning 77: Net $mul~477[59] found in activity file, but it does not exist in the .blif file.
+Warning 78: Net $mul~477[60] found in activity file, but it does not exist in the .blif file.
+Warning 79: Net $mul~477[61] found in activity file, but it does not exist in the .blif file.
+Warning 80: Net $mul~477[62] found in activity file, but it does not exist in the .blif file.
+Warning 81: Net $mul~477[63] found in activity file, but it does not exist in the .blif file.
+Warning 82: Net $mul~477[64] found in activity file, but it does not exist in the .blif file.
+Warning 83: Net $mul~477[65] found in activity file, but it does not exist in the .blif file.
+Warning 84: Net $mul~477[66] found in activity file, but it does not exist in the .blif file.
+Warning 85: Net $mul~477[67] found in activity file, but it does not exist in the .blif file.
+Warning 86: Net $mul~477[68] found in activity file, but it does not exist in the .blif file.
+Warning 87: Net $mul~477[69] found in activity file, but it does not exist in the .blif file.
+Warning 88: Net $mul~477[70] found in activity file, but it does not exist in the .blif file.
+Warning 89: Net $mul~477[71] found in activity file, but it does not exist in the .blif file.
+Warning 90: Net boot_daddr~5 found in activity file, but it does not exist in the .blif file.
+Warning 91: Net boot_daddr~6 found in activity file, but it does not exist in the .blif file.
+Warning 92: Net boot_iaddr~19 found in activity file, but it does not exist in the .blif file.
+Warning 93: Net boot_daddr~7 found in activity file, but it does not exist in the .blif file.
+Warning 94: Net boot_iaddr~15 found in activity file, but it does not exist in the .blif file.
+Warning 95: Net boot_ddata~2 found in activity file, but it does not exist in the .blif file.
+Warning 96: Net boot_daddr~8 found in activity file, but it does not exist in the .blif file.
+Warning 97: Net boot_daddr~9 found in activity file, but it does not exist in the .blif file.
+Warning 98: Net boot_daddr~10 found in activity file, but it does not exist in the .blif file.
+Warning 99: Net boot_daddr~11 found in activity file, but it does not exist in the .blif file.
+Warning 100: Net boot_daddr~12 found in activity file, but it does not exist in the .blif file.
+Warning 101: Net boot_daddr~18 found in activity file, but it does not exist in the .blif file.
+Warning 102: Net boot_iaddr~17 found in activity file, but it does not exist in the .blif file.
+Warning 103: Net boot_daddr~22 found in activity file, but it does not exist in the .blif file.
+Warning 104: Net boot_daddr~23 found in activity file, but it does not exist in the .blif file.
+Warning 105: Net boot_daddr~1 found in activity file, but it does not exist in the .blif file.
+Warning 106: Net boot_daddr~26 found in activity file, but it does not exist in the .blif file.
+Warning 107: Net boot_daddr~2 found in activity file, but it does not exist in the .blif file.
+Warning 108: Net boot_daddr~27 found in activity file, but it does not exist in the .blif file.
+Warning 109: Net boot_iaddr~18 found in activity file, but it does not exist in the .blif file.
+Warning 110: Net boot_iaddr~12 found in activity file, but it does not exist in the .blif file.
+Warning 111: Net boot_ddata~0 found in activity file, but it does not exist in the .blif file.
+Warning 112: Net boot_daddr~3 found in activity file, but it does not exist in the .blif file.
+Warning 113: Net boot_ddata~1 found in activity file, but it does not exist in the .blif file.
+Warning 114: Net boot_daddr~4 found in activity file, but it does not exist in the .blif file.
+Warning 115: Net boot_iaddr~14 found in activity file, but it does not exist in the .blif file.
+Warning 116: Net boot_iaddr~11 found in activity file, but it does not exist in the .blif file.
+Warning 117: Net boot_daddr~17 found in activity file, but it does not exist in the .blif file.
+Warning 118: Net boot_daddr~15 found in activity file, but it does not exist in the .blif file.
+Warning 119: Net boot_daddr~16 found in activity file, but it does not exist in the .blif file.
+Warning 120: Net boot_daddr~20 found in activity file, but it does not exist in the .blif file.
+Warning 121: Net boot_daddr~19 found in activity file, but it does not exist in the .blif file.
+Warning 122: Net boot_iaddr~16 found in activity file, but it does not exist in the .blif file.
+Warning 123: Net boot_iaddr~13 found in activity file, but it does not exist in the .blif file.
+Warning 124: Net boot_daddr~31 found in activity file, but it does not exist in the .blif file.
+Warning 125: Net boot_daddr~13 found in activity file, but it does not exist in the .blif file.
+Warning 126: Net boot_daddr~14 found in activity file, but it does not exist in the .blif file.
+Warning 127: Net boot_iaddr~10 found in activity file, but it does not exist in the .blif file.
+Warning 128: Net boot_ddata~3 found in activity file, but it does not exist in the .blif file.
+Warning 129: Net boot_ddata~13 found in activity file, but it does not exist in the .blif file.
+Warning 130: Net boot_daddr~0 found in activity file, but it does not exist in the .blif file.
+Warning 131: Net boot_daddr~21 found in activity file, but it does not exist in the .blif file.
+Warning 132: Net boot_ddata~8 found in activity file, but it does not exist in the .blif file.
+Warning 133: Net boot_ddata~10 found in activity file, but it does not exist in the .blif file.
+Warning 134: Net boot_ddata~9 found in activity file, but it does not exist in the .blif file.
+Warning 135: Net boot_ddata~4 found in activity file, but it does not exist in the .blif file.
+Warning 136: Net boot_ddata~5 found in activity file, but it does not exist in the .blif file.
+Warning 137: Net boot_ddata~6 found in activity file, but it does not exist in the .blif file.
+Warning 138: Net boot_ddata~7 found in activity file, but it does not exist in the .blif file.
+Warning 139: Net boot_daddr~30 found in activity file, but it does not exist in the .blif file.
+Warning 140: Net boot_daddr~28 found in activity file, but it does not exist in the .blif file.
+Warning 141: Net boot_daddr~29 found in activity file, but it does not exist in the .blif file.
+Warning 142: Net boot_ddata~12 found in activity file, but it does not exist in the .blif file.
+Warning 143: Net boot_ddata~11 found in activity file, but it does not exist in the .blif file.
+Warning 144: Net boot_daddr~25 found in activity file, but it does not exist in the .blif file.
+Warning 145: Net boot_daddr~24 found in activity file, but it does not exist in the .blif file.
+Warning 146: Net boot_ddata~14 found in activity file, but it does not exist in the .blif file.
+Warning 147: Net boot_iaddr~20 found in activity file, but it does not exist in the .blif file.
+Warning 148: Net boot_iaddr~21 found in activity file, but it does not exist in the .blif file.
+Warning 149: Net boot_ddata~15 found in activity file, but it does not exist in the .blif file.
+Warning 150: Net boot_ddata~16 found in activity file, but it does not exist in the .blif file.
+Warning 151: Net boot_ddata~17 found in activity file, but it does not exist in the .blif file.
+Warning 152: Net boot_ddata~18 found in activity file, but it does not exist in the .blif file.
+Warning 153: Net boot_ddata~19 found in activity file, but it does not exist in the .blif file.
+Warning 154: Net boot_ddata~20 found in activity file, but it does not exist in the .blif file.
+Warning 155: Net boot_ddata~21 found in activity file, but it does not exist in the .blif file.
+Warning 156: Net boot_ddata~22 found in activity file, but it does not exist in the .blif file.
+Warning 157: Net boot_ddata~23 found in activity file, but it does not exist in the .blif file.
+Warning 158: Net boot_ddata~24 found in activity file, but it does not exist in the .blif file.
+Warning 159: Net boot_ddata~25 found in activity file, but it does not exist in the .blif file.
+Warning 160: Net boot_ddata~26 found in activity file, but it does not exist in the .blif file.
+Warning 161: Net boot_ddata~27 found in activity file, but it does not exist in the .blif file.
+Warning 162: Net boot_ddata~28 found in activity file, but it does not exist in the .blif file.
+Warning 163: Net boot_ddata~29 found in activity file, but it does not exist in the .blif file.
+Warning 164: Net boot_ddata~30 found in activity file, but it does not exist in the .blif file.
+Warning 165: Net boot_ddata~31 found in activity file, but it does not exist in the .blif file.
+Warning 166: Net boot_dwe found in activity file, but it does not exist in the .blif file.
+Warning 167: Net boot_iaddr~22 found in activity file, but it does not exist in the .blif file.
+Warning 168: Net boot_iaddr~23 found in activity file, but it does not exist in the .blif file.
+Warning 169: Net boot_iaddr~24 found in activity file, but it does not exist in the .blif file.
+Warning 170: Net boot_iaddr~25 found in activity file, but it does not exist in the .blif file.
+Warning 171: Net boot_iaddr~26 found in activity file, but it does not exist in the .blif file.
+Warning 172: Net boot_iaddr~27 found in activity file, but it does not exist in the .blif file.
+Warning 173: Net boot_iaddr~28 found in activity file, but it does not exist in the .blif file.
+Warning 174: Net boot_iaddr~29 found in activity file, but it does not exist in the .blif file.
+Warning 175: Net boot_iaddr~30 found in activity file, but it does not exist in the .blif file.
+Warning 176: Net boot_iaddr~31 found in activity file, but it does not exist in the .blif file.
+Warning 177: Net $sdffe~491^Q~0 found in activity file, but it does not exist in the .blif file.
+Warning 178: Net $sdffe~491^Q~1 found in activity file, but it does not exist in the .blif file.
+Warning 179: Net $sdffe~491^Q~2 found in activity file, but it does not exist in the .blif file.
+Warning 180: Net $sdffe~491^Q~3 found in activity file, but it does not exist in the .blif file.
+Warning 181: Net $sdffe~491^Q~4 found in activity file, but it does not exist in the .blif file.
+# Load Activity File took 0.00 seconds (max_rss 27.6 MiB, delta_rss +0.0 MiB)
+# Build Timing Graph
+  Timing Graph Nodes: 6355
+  Timing Graph Edges: 11382
+  Timing Graph Levels: 36
+# Build Timing Graph took 0.01 seconds (max_rss 28.6 MiB, delta_rss +0.9 MiB)
+Netlist contains 1 clocks
+  Netlist Clock 'clk' Fanout: 328 pins (5.2%), 328 blocks (28.6%)
+# Load Timing Constraints
+
+SDC file 'spree.sdc' not found
+Setting default timing constraints:
+   * constrain all primary inputs and primary outputs on netlist clock 'clk'
+   * optimize netlist clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'clk' Source: 'clk.inpad[0]'
+
+# Load Timing Constraints took 0.00 seconds (max_rss 28.6 MiB, delta_rss +0.0 MiB)
+# Load packing
+## Loading packed FPGA netlist file.
+Netlist generated from file 'spree.net'.
+Detected 1 constant generators (to see names run with higher pack verbosity)
+## Loading packed FPGA netlist file. took 0.08 seconds (max_rss 34.1 MiB, delta_rss +5.2 MiB)
+Warning 182: Treated 1 constant nets as global which will not be routed (to see net names increase packer verbosity).
+Netlist contains 3 global net to non-global architecture pin connections
+Warning 183: Logic block #111 (gnd) has only 1 output pin 'gnd.O[9]'. It may be a constant generator.
+Completed clustering consistency check successfully.
+Cluster level netlist and block usage statistics
+Netlist num_nets: 839
+Netlist num_blocks: 189
+Netlist EMPTY blocks: 0.
+Netlist io blocks: 77.
+Netlist clb blocks: 108.
+Netlist mult_36 blocks: 1.
+Netlist memory blocks: 3.
+Netlist inputs pins: 45
+Netlist output pins: 32
+
+Pb types usage...
+  io                   : 77
+   inpad               : 45
+   outpad              : 32
+  clb                  : 108
+   ble                 : 741
+    soft_logic         : 739
+     lut6              : 739
+      lut              : 739
+    ff                 : 200
+  mult_36              : 1
+   mult_36x36_slice    : 1
+    mult_36x36         : 1
+  memory               : 3
+   mem_512x64_sp       : 1
+    memory_slice       : 64
+   mem_1024x32_sp      : 1
+    memory_slice       : 32
+   mem_1024x32_dp      : 1
+    memory_slice       : 32
+
+# Load packing took 0.15 seconds (max_rss 71.1 MiB, delta_rss +42.2 MiB)
+# Create Device
+## Build Device Grid
+FPGA sized to 14 x 13: 182 grid tiles (my_layout)
+## Build Device Grid took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+## Build routing resource graph
+## Build routing resource graph took 0.14 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+  RR Graph Nodes: 28618
+  RR Graph Edges: 235340
+# Create Device took 0.15 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+
+Resource usage...
+	Netlist
+		77	blocks of type: io
+	Architecture
+		368	blocks of type: io
+	Netlist
+		108	blocks of type: clb
+	Architecture
+		110	blocks of type: clb
+	Netlist
+		1	blocks of type: mult_36
+	Architecture
+		1	blocks of type: mult_36
+	Netlist
+		3	blocks of type: memory
+	Architecture
+		3	blocks of type: memory
+
+Device Utilization: 0.77 (target 1.00)
+	Physical Tile io:
+	Block Utilization: 0.21 Logical Block: io
+	Physical Tile clb:
+	Block Utilization: 0.98 Logical Block: clb
+	Physical Tile mult_36:
+	Block Utilization: 1.00 Logical Block: mult_36
+	Physical Tile memory:
+	Block Utilization: 1.00 Logical Block: memory
+
+
+# Load Placement
+Reading spree.place.
+
+Successfully read spree.place.
+
+Completed placement consistency check successfully.
+# Load Placement took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+
+# Computing router lookahead map
+## Computing wire lookahead
+## Computing wire lookahead took 0.05 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead
+Warning 184: Found no more sample locations for SOURCE in io
+Warning 185: Found no more sample locations for OPIN in io
+Warning 186: Found no more sample locations for SOURCE in clb
+Warning 187: Found no more sample locations for OPIN in clb
+Warning 188: Found no more sample locations for SOURCE in mult_36
+Warning 189: Found no more sample locations for OPIN in mult_36
+Warning 190: Found no more sample locations for SOURCE in memory
+Warning 191: Found no more sample locations for OPIN in memory
+## Computing src/opin lookahead took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 0.05 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+# Routing
+RR graph channel widths unchanged, skipping RR graph rebuild
+## Initializing router criticalities
+Initial Net Connection Criticality Histogram:
+[        0:      0.1) 390 ( 15.0%) |******************************************
+[      0.1:      0.2) 295 ( 11.3%) |********************************
+[      0.2:      0.3) 434 ( 16.7%) |***********************************************
+[      0.3:      0.4) 280 ( 10.7%) |******************************
+[      0.4:      0.5) 212 (  8.1%) |***********************
+[      0.5:      0.6) 284 ( 10.9%) |*******************************
+[      0.6:      0.7) 319 ( 12.2%) |***********************************
+[      0.7:      0.8) 193 (  7.4%) |*********************
+[      0.8:      0.9) 133 (  5.1%) |**************
+[      0.9:        1)  66 (  2.5%) |*******
+## Initializing router criticalities took 0.02 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
+      (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+   1    0.1     0.0    0  815268     837    2510    1056 ( 3.690%)   20314 (46.0%)   13.639     -8731.    -13.639     -20.88     -0.292      N/A
+   2    0.1     0.5    0  749277     619    2130     532 ( 1.859%)   20491 (46.4%)   13.639     -8699.    -13.639     -20.94     -0.292      N/A
+   3    0.1     0.6    0  671718     455    1685     468 ( 1.635%)   20927 (47.3%)   13.640     -8760.    -13.640     -20.80     -0.292      N/A
+   4    0.1     0.8    0  620089     372    1500     315 ( 1.101%)   21327 (48.3%)   13.642     -8761.    -13.642     -22.12     -0.292      N/A
+   5    0.1     1.1    0  512083     263    1159     186 ( 0.650%)   21637 (49.0%)   13.578     -8781.    -13.578     -20.79     -0.292      N/A
+   6    0.1     1.4    0  345274     166     754     106 ( 0.370%)   21828 (49.4%)   13.642     -8852.    -13.642     -20.76     -0.292      N/A
+   7    0.0     1.9    0  197270     109     488      42 ( 0.147%)   21980 (49.7%)   13.642     -8831.    -13.642     -20.76     -0.292      N/A
+   8    0.0     2.4    0  104894      51     220      13 ( 0.045%)   22078 (50.0%)   13.642     -8833.    -13.642     -20.76     -0.292      N/A
+   9    0.0     3.1    0   60096      26     113       2 ( 0.007%)   22134 (50.1%)   13.642     -8832.    -13.642     -20.76     -0.292      N/A
+  10    0.0     4.1    0    7601      13      35       1 ( 0.003%)   22130 (50.1%)   13.642     -8832.    -13.642     -20.76     -0.292       10
+  11    0.0     5.3    0   14849      13      46       1 ( 0.003%)   22137 (50.1%)   13.642     -8832.    -13.642     -20.76     -0.292       10
+  12    0.0     6.9    0    9951      12      34       0 ( 0.000%)   22141 (50.1%)   13.642     -8832.    -13.642     -20.76     -0.292       10
+Restoring best routing
+Critical path: 13.6419 ns
+Successfully routed after 12 routing iterations.
+Final Net Connection Criticality Histogram:
+[        0:      0.1) 284 ( 10.9%) |***************************
+[      0.1:      0.2) 366 ( 14.0%) |**********************************
+[      0.2:      0.3) 503 ( 19.3%) |***********************************************
+[      0.3:      0.4) 279 ( 10.7%) |**************************
+[      0.4:      0.5) 231 (  8.9%) |**********************
+[      0.5:      0.6) 328 ( 12.6%) |*******************************
+[      0.6:      0.7) 282 ( 10.8%) |**************************
+[      0.7:      0.8) 118 (  4.5%) |***********
+[      0.8:      0.9) 139 (  5.3%) |*************
+[      0.9:        1)  76 (  2.9%) |*******
+Router Stats: total_nets_routed: 2936 total_connections_routed: 10674 total_heap_pushes: 4108370 total_heap_pops: 1078100 
+Serial Connection Router is being destroyed. Time spent on path search: 0.582 seconds.
+# Routing took 0.76 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+
+Checking to ensure routing is legal...
+# Checking to ensure non-configurable edges are legal
+# Checking to ensure non-configurable edges are legal took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+Completed routing consistency check successfully.
+
+Serial number (magic cookie) for the routing is: -1774031476
+Circuit successfully routed with a channel width factor of 154.
+# Synchronize the packed netlist to routing optimization
+## Annotating rr_node with routed nets
+## Annotating rr_node with routed nets took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+Found 0 mismatches between routing and packing results.
+Fixed 0 routing traces due to mismatch between routing and packing results.
+# Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 71.1 MiB, delta_rss +0.0 MiB)
+Final Clustering Statistics: 
+----------   --------   ------------------------------------   --------------------------
+Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
+----------   --------   ------------------------------------   --------------------------
+     EMPTY          0                                      0                            0   
+        io         77                               0.415584                     0.584416   
+       clb        108                                21.3704                      6.01852   
+   mult_36          1                                     64                           16   
+    memory          3                                67.3333                      42.6667   
+Absorbed logical nets 289 out of 1128 nets, 839 nets not absorbed.
+
+
+Average number of bends per net: 4.41816  Maximum # of bends: 125
+
+Number of global nets: 2
+Number of routed nets (nonglobal): 837
+Wire length results (in units of 1 clb segments)...
+	Total wirelength: 22141, average net length: 26.4528
+	Maximum net length: 704
+
+Wire length results in terms of physical segments...
+	Total wiring segments used: 6331, average wire segments per net: 7.56392
+	Maximum segments used by a net: 212
+	Total local nets with reserved CLB opins: 0
+Total number of nets absorbed: 0
+
+Routing channel utilization histogram:
+[        1:      inf)  0 (  0.0%) |
+[      0.9:        1)  0 (  0.0%) |
+[      0.8:      0.9)  0 (  0.0%) |
+[      0.7:      0.8) 74 ( 23.7%) |*******************************************
+[      0.5:      0.6) 82 ( 26.3%) |************************************************
+[      0.4:      0.5) 60 ( 19.2%) |***********************************
+[      0.3:      0.4) 41 ( 13.1%) |************************
+[      0.2:      0.3) 26 (  8.3%) |***************
+[      0.1:      0.2)  4 (  1.3%) |**
+[        0:      0.1) 25 (  8.0%) |***************
+Maximum routing channel utilization:      0.75 at (8,4)
+
+X - Directed channels: layer   y   max occ   ave occ   ave cap
+                        ----- ---- -------- -------- --------
+                            0    0       89   67.667      154
+                            0    1      100   75.667      154
+                            0    2       99   78.750      154
+                            0    3      101   79.750      154
+                            0    4      115   83.583      154
+                            0    5      112   87.750      154
+                            0    6      111   87.917      154
+                            0    7      103   83.833      154
+                            0    8       98   79.333      154
+                            0    9      105   82.583      154
+                            0   10      101   70.250      154
+                            0   11       84   59.917      154
+Y - Directed channels: layer   x   max occ   ave occ   ave cap
+                        ----- ---- -------- -------- --------
+                            0    0       61   46.909      154
+                            0    1       87   65.455      154
+                            0    2       87   68.273      154
+                            0    3       89   77.273      154
+                            0    4       97   84.273      154
+                            0    5      109   88.818      154
+                            0    6      103   82.818      154
+                            0    7      109   87.727      154
+                            0    8      105   87.364      154
+                            0    9      110   87.636      154
+                            0   10      109   81.455      154
+                            0   11      100   70.909      154
+                            0   12       89   61.727      154
+
+Total existing wires segments: CHANX     22176, CHANY     22022, ALL     44198
+Total used wires segments:     CHANX     11244, CHANY     10897, ALL     22141
+Usage percentage:              CHANX     50.7%, CHANY     49.5%, ALL     50.1%
+
+Logic area (in minimum width transistor areas, excludes I/Os and empty grid tiles)...
+	Total logic block area (Warning, need to add pitch of routing to blocks with height > 3): 7.96834e+06
+	Total used logic block area: 7.86055e+06
+
+Routing area (in minimum width transistor areas)...
+	Total routing area: 1.44855e+06, per logic tile: 7959.06
+
+Total Number of Wiring Segments by Direction: direction length number
+                                              --------- ------ -------
+                                                      X      4   6930
+                                                      Y      4   7006
+
+X - Directed Wiring Segment usage by length: length utilization
+                                             ------ -----------
+                                             4       0.458
+
+Y - Directed Wiring Segment usage by length: length utilization
+                                             ------ -----------
+                                             4       0.451
+
+Segment occupancy by length: Length Occupancy Capacity Utilization
+                             ------ --------- -------- -----------
+                             L4          6331    13936       0.454
+
+Segment occupancy by type:              name type utilization
+                           ----------------- ---- -----------
+                           unnamed_segment_0    0       0.454
+
+Final hold Worst Negative Slack (hWNS): -0.292146 ns
+Final hold Total Negative Slack (hTNS): -20.7577 ns
+
+Final hold slack histogram:
+[ -2.9e-10: -6.6e-11) 109 (  6.2%) |***************
+[ -6.6e-11:  1.6e-10) 275 ( 15.6%) |**************************************
+[  1.6e-10:  3.9e-10) 134 (  7.6%) |*******************
+[  3.9e-10:  6.1e-10) 266 ( 15.0%) |*************************************
+[  6.1e-10:  8.4e-10) 340 ( 19.2%) |***********************************************
+[  8.4e-10:  1.1e-09) 249 ( 14.1%) |**********************************
+[  1.1e-09:  1.3e-09) 135 (  7.6%) |*******************
+[  1.3e-09:  1.5e-09) 159 (  9.0%) |**********************
+[  1.5e-09:  1.7e-09)  94 (  5.3%) |*************
+[  1.7e-09:    2e-09)   7 (  0.4%) |*
+
+Final critical path delay (least slack): 13.6419 ns, Fmax: 73.3037 MHz
+Final setup Worst Negative Slack (sWNS): -13.6419 ns
+Final setup Total Negative Slack (sTNS): -8832.33 ns
+
+Final setup slack histogram:
+[ -1.4e-08: -1.2e-08)  45 (  2.5%) |***
+[ -1.2e-08: -1.1e-08)  22 (  1.2%) |*
+[ -1.1e-08: -9.8e-09)  34 (  1.9%) |**
+[ -9.8e-09: -8.5e-09) 369 ( 20.9%) |************************
+[ -8.5e-09: -7.2e-09) 164 (  9.3%) |***********
+[ -7.2e-09:   -6e-09) 137 (  7.7%) |*********
+[   -6e-09: -4.7e-09)  68 (  3.8%) |****
+[ -4.7e-09: -3.4e-09)  77 (  4.4%) |*****
+[ -3.4e-09: -2.1e-09) 125 (  7.1%) |********
+[ -2.1e-09: -8.6e-10) 727 ( 41.1%) |***********************************************
+
+Final geomean non-virtual intra-domain period: 13.6419 ns (73.3037 MHz)
+Final fanout-weighted geomean non-virtual intra-domain period: 13.6419 ns (73.3037 MHz)
+
+
+
+Power Estimation:
+-----------------
+Initializing power module
+Running power estimation
+Power estimation took 0.085991 seconds
+Uninitializing power module
+
+Incr Slack updates 1 in 0.000100363 sec
+Full Max Req/Worst Slack updates 1 in 0.000106112 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.000258778 sec
+Flow timing analysis took 0.899479 seconds (0.892425 STA, 0.00705431 slack) (14 full updates: 0 setup, 0 hold, 14 combined).
+VPR succeeded
+The entire flow of VPR took 1.40 seconds (max_rss 71.1 MiB)
+Incr Slack updates 13 in 0.000857053 sec
+Full Max Req/Worst Slack updates 2 in 0.000141777 sec
+Incr Max Req/Worst Slack updates 11 in 0.000712783 sec
+Incr Criticality updates 7 in 0.000882932 sec
+Full Criticality updates 6 in 0.000955712 sec
+	Command being timed: "/root/vtr-verilog-to-routing/vpr/vpr vpr_arch_run.xml spree --circuit_file spree.pre-vpr.blif --power --tech_properties /root/vtr-verilog-to-routing/vtr_flow/tech/PTM_45nm/45nm.xml --max_router_iterations 150 --route --route_chan_width 154"
+	User time (seconds): 1.34
+	System time (seconds): 0.09
+	Percent of CPU this job got: 64%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 72840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 29833
+	Voluntary context switches: 19
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 6624
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

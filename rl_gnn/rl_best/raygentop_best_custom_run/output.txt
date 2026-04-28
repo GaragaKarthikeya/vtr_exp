@@ -1,0 +1,5 @@
+vpr_status=success
+vpr_seconds=33
+rundir=/root/desktop/vtr_exp/rl_gnn
+hostname=lohithprapoorna
+error=

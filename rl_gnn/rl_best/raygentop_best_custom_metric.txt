@@ -1,0 +1,12 @@
+{
+    "delay_ns": 7.39016,
+    "wirelength": 46658.0,
+    "power_w": 0.026
+}
+
+
+Delay (delay_ns): -3.46% (Degradation) (Increased from 7.14327 to 7.39016)
+
+Wirelength (wirelength): 1.54% improvement (Reduced from 47386.0 to 46658.0)
+
+Power (power_w): -0.85% (Degradation) (Increased from 0.02578 to 0.026)

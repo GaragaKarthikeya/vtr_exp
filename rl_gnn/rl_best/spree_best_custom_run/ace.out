@@ -1,0 +1,42 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/ace2/ace -b spree.abc.blif -c clk -n spree.raw.ace.blif -o spree.act -s 1
+Hierarchy reader converted 129 instances of blackboxes.
+Objects in network: 1941
+PIs in network: 364
+POs in network: 232
+Nodes in network: 745
+Latches in network: 200
+Max Depth: 16
+Input activities will be assumed (0.500000, 0.200000, 0.200000)...
+Clock detected: clk
+Name Manager Entries: 1939
+181/200 latches are part of cycle(s)
+Stage 1: Simulating Probabilities...
+Stage 2: Computing Probabilities...
+Stage 3: Computing Register Output Activities...
+Stage 4: Computing Switching Activities...
+Hierarchy writer reintroduced 129 instances of blackboxes.
+Done
+Ace took 1.00 seconds (max_rss 57.2 MiB)
+	Command being timed: "/root/vtr-verilog-to-routing/ace2/ace -b spree.abc.blif -c clk -n spree.raw.ace.blif -o spree.act -s 1"
+	User time (seconds): 0.96
+	System time (seconds): 0.03
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 58568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 41
+	Minor (reclaiming a frame) page faults: 13345
+	Voluntary context switches: 35
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 9464
+	File system outputs: 416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,180 @@
+----------------------------------- Summary ------------------------------------
+Circuit: diffeq2
+Architecture: vpr_arch_run.xml
+Technology (nm): 45
+Voltage: 0.90
+Temperature: 85
+Critical Path: 2.14008e-08
+Size of FPGA: 7 x 14
+Channel Width: 150
+
+------------------------------- Power Breakdown --------------------------------
+Component                       Power (W)   %-Total     %-Dynamic   Method      
+
+Total                           0.005565    1           0.7094      
+ Routing                        0.002632    0.4729      0.492       
+  Switch Box                    0.00167     0.3001      0.3325      
+  Connection Box                0.0003017   0.05421     0.2636      
+  Global Wires                  0.00066     0.1186      1           
+ PB Types                       0.002838    0.51        0.9042      
+  Primitives                    0.0003546   0.06371     0.435       
+  Interc Structures             4.965e-05   0.008921    0.2186      
+  Buffers and Wires             5.617e-05   0.01009     0.4177      
+  Other Estimation Methods      0.002378    0.4272      1           
+ Clock                          9.537e-05   0.01714     0.909       
+
+---------------------------- Power Breakdown by PB -----------------------------
+This sections provides a detailed breakdown of power usage by PB (physical
+block). For each PB, the power is listed, which is the sum power of all
+instances of the block.  It also indicates its percentage of total power (entire
+FPGA), as well as the percentage of its power that is dynamic (vs. static).  It
+also indicates the method used for power estimation.
+
+The data includes:
+	Modes:		When a pb contains multiple modes, each mode is listed, with
+				its power statistics.
+	Bufs/Wires:	Power of all local buffers and local wire switching
+				(transistor-level estimation only).
+	Interc:		Power of local interconnect multiplexers (transistor-
+				level estimation only)
+
+Description of Estimation Methods:
+	Transistor Auto-Size: Transistor-level power estimation. Local buffers and
+		wire lengths are automatically sized. This is the default estimation
+		method.
+	Transistor Specify-Size: Transistor-level power estimation. Local buffers
+		and wire lengths are only inserted where specified by the user in the
+		architecture file.
+	Pin-Toggle: Dynamic power is calculated using enery-per-toggle of the PB
+		input pins. Static power is absolute.
+	C-Internal: Dynamic power is calculated using an internal equivalent
+		capacitance for PB type. Static power is absolute.
+	Absolute: Dynamic and static power are absolutes from the architecture file.
+	Sum of Children: Power of PB is only the sum of all child PBs; interconnect
+		between the PB and its children is ignored.
+	Ignore: Power of PB is ignored.
+
+
+Component                       Power (W)   %-Total     %-Dynamic   Method      
+
+io                              0           0           -nan        Ignore      
+clb                             0.0004604   0.08272     0.4095      Transistor Auto-Size
+ Bufs/Wires                     5.192e-05   0.009329    0.4361      
+ Interc:                        4.721e-05   0.008482    0.2196      
+  clks                          0           0           -nan        
+  crossbar-0-0                  3.575e-08   6.424e-06   0.3142      
+  crossbar-0-1                  2.853e-08   5.127e-06   0.1748      
+  crossbar-0-2                  3.178e-08   5.711e-06   0.273       
+  crossbar-0-3                  1.389e-07   2.497e-05   0.09695     
+  crossbar-0-4                  1.211e-07   2.175e-05   0.1672      
+  crossbar-0-5                  0           0           -nan        
+  crossbar-1-0                  1.7e-07     3.054e-05   0.2165      
+  crossbar-1-1                  2.012e-07   3.616e-05   0.198       
+  crossbar-1-2                  1.574e-07   2.828e-05   0.1977      
+  crossbar-1-3                  1.282e-07   2.304e-05   0.2778      
+  crossbar-1-4                  1.005e-06   0.0001805   0.1702      
+  crossbar-1-5                  1.401e-07   2.517e-05   0.1382      
+  crossbar-2-0                  3.276e-07   5.887e-05   0.2372      
+  crossbar-2-1                  7.292e-07   0.000131    0.1734      
+  crossbar-2-2                  6.865e-07   0.0001233   0.2246      
+  crossbar-2-3                  9.658e-07   0.0001735   0.2028      
+  crossbar-2-4                  6.074e-07   0.0001091   0.1602      
+  crossbar-2-5                  5.034e-07   9.045e-05   0.2955      
+  crossbar-3-0                  8.16e-07    0.0001466   0.195       
+  crossbar-3-1                  9.953e-07   0.0001788   0.2428      
+  crossbar-3-2                  8.508e-07   0.0001529   0.1279      
+  crossbar-3-3                  9.146e-07   0.0001643   0.2344      
+  crossbar-3-4                  8.264e-07   0.0001485   0.1818      
+  crossbar-3-5                  1.033e-06   0.0001856   0.2528      
+  crossbar-4-0                  7.503e-07   0.0001348   0.2285      
+  crossbar-4-1                  8.6e-07     0.0001545   0.2154      
+  crossbar-4-2                  9.544e-07   0.0001715   0.2529      
+  crossbar-4-3                  1.136e-06   0.0002041   0.141       
+  crossbar-4-4                  8.44e-07    0.0001516   0.166       
+  crossbar-4-5                  8.044e-07   0.0001445   0.2111      
+  crossbar-5-0                  9.936e-07   0.0001785   0.2627      
+  crossbar-5-1                  1.148e-06   0.0002063   0.1882      
+  crossbar-5-2                  7.989e-07   0.0001436   0.2618      
+  crossbar-5-3                  1.106e-06   0.0001987   0.2578      
+  crossbar-5-4                  1.006e-06   0.0001808   0.3078      
+  crossbar-5-5                  9.934e-07   0.0001785   0.2366      
+  crossbar-6-0                  1.161e-06   0.0002086   0.2159      
+  crossbar-6-1                  8.004e-07   0.0001438   0.2247      
+  crossbar-6-2                  8.493e-07   0.0001526   0.2228      
+  crossbar-6-3                  9.942e-07   0.0001786   0.1979      
+  crossbar-6-4                  8.161e-07   0.0001466   0.1917      
+  crossbar-6-5                  1.086e-06   0.0001951   0.202       
+  crossbar-7-0                  1.059e-06   0.0001902   0.2113      
+  crossbar-7-1                  9.329e-07   0.0001676   0.1388      
+  crossbar-7-2                  8.651e-07   0.0001554   0.241       
+  crossbar-7-3                  8.089e-07   0.0001454   0.2015      
+  crossbar-7-4                  1.105e-06   0.0001986   0.1805      
+  crossbar-7-5                  9.493e-07   0.0001706   0.2108      
+  crossbar-8-0                  8.051e-07   0.0001447   0.252       
+  crossbar-8-1                  1.073e-06   0.0001929   0.2428      
+  crossbar-8-2                  1.313e-06   0.0002358   0.2422      
+  crossbar-8-3                  1.118e-06   0.0002008   0.1852      
+  crossbar-8-4                  1.058e-06   0.00019     0.2884      
+  crossbar-8-5                  9.346e-07   0.0001679   0.251       
+  crossbar-9-0                  1.288e-06   0.0002315   0.294       
+  crossbar-9-1                  7.529e-07   0.0001353   0.2405      
+  crossbar-9-2                  1.085e-06   0.0001949   0.2126      
+  crossbar-9-3                  1.132e-06   0.0002034   0.2024      
+  crossbar-9-4                  1.226e-06   0.0002203   0.2847      
+  crossbar-9-5                  1.185e-06   0.000213    0.2029      
+ ble                            0.0003613   0.06491     0.4305      Transistor Auto-Size
+  Bufs/Wires                    2.381e-06   0.0004278   0.2372      
+  Interc:                       2.444e-06   0.0004391   0.1995      
+   mux2                         0           0           -nan        
+   mux3                         2.444e-06   0.0004391   0.1995      
+  soft_logic                    0.0002681   0.04816     0.3263      Transistor Auto-Size
+   Bufs/Wires                   1.865e-06   0.0003351   0.1343      
+   Interc:                      0           0           -nan        
+   lut6                         0.0002662   0.04783     0.3277      Transistor Auto-Size
+    Bufs/Wires                  0           0           -nan        
+    Mode:wire                   0           0           -nan        
+     Interc:                    0           0           -nan        
+      complete:lut6             0           0           -nan        
+    Mode:lut6                   0.0002662   0.04783     0.3277      
+     Interc:                    0           0           -nan        
+     lut                        0.0002662   0.04783     0.3277      Transistor Auto-Size
+      Bufs/Wires                0           0           -nan        
+  ff                            8.838e-05   0.01588     0.7583      Transistor Auto-Size
+   Bufs/Wires                   0           0           -nan        
+mult_36                         0.002378    0.4272      1           Sum of Children
+ Mode:two_divisible_mult_18x18  0           0           -nan        
+  divisible_mult_18x18          0           0           -nan        Sum of Children
+   Mode:two_mult_9x9            0           0           -nan        
+    mult_9x9_slice              0           0           -nan        Pin-Toggle  
+   Mode:mult_18x18              0           0           -nan        
+    mult_18x18_slice            0           0           -nan        Pin-Toggle  
+ Mode:mult_36x36                0.002378    0.4272      1           
+  mult_36x36_slice              0.002378    0.4272      1           Pin-Toggle  
+memory                          0           0           -nan        Sum of Children
+ Mode:mem_512x64_sp             0           0           -nan        
+  mem_512x64_sp                 0           0           -nan        Pin-Toggle  
+ Mode:mem_1024x32_sp            0           0           -nan        
+  mem_1024x32_sp                0           0           -nan        Pin-Toggle  
+ Mode:mem_2048x16_sp            0           0           -nan        
+  mem_2048x16_sp                0           0           -nan        Pin-Toggle  
+ Mode:mem_4096x8_sp             0           0           -nan        
+  mem_4096x8_sp                 0           0           -nan        Pin-Toggle  
+ Mode:mem_8192x4_sp             0           0           -nan        
+  mem_8192x4_sp                 0           0           -nan        Pin-Toggle  
+ Mode:mem_16384x2_sp            0           0           -nan        
+  mem_16384x2_sp                0           0           -nan        Pin-Toggle  
+ Mode:mem_32768x1_sp            0           0           -nan        
+  mem_32768x1_sp                0           0           -nan        Pin-Toggle  
+ Mode:mem_1024x32_dp            0           0           -nan        
+  mem_1024x32_dp                0           0           -nan        Pin-Toggle  
+ Mode:mem_2048x16_dp            0           0           -nan        
+  mem_2048x16_dp                0           0           -nan        Pin-Toggle  
+ Mode:mem_2048x8_dp             0           0           -nan        
+  mem_2048x8_dp                 0           0           -nan        Pin-Toggle  
+ Mode:mem_8192x4_dp             0           0           -nan        
+  mem_8192x4_dp                 0           0           -nan        Pin-Toggle  
+ Mode:mem_16384x2_dp            0           0           -nan        
+  mem_16384x2_dp                0           0           -nan        Pin-Toggle  
+ Mode:mem_32768x1_dp            0           0           -nan        
+  mem_32768x1_dp                0           0           -nan        Pin-Toggle  
+

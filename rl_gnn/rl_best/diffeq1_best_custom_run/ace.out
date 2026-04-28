@@ -1,0 +1,42 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/ace2/ace -b diffeq1.abc.blif -c clk -n diffeq1.raw.ace.blif -o diffeq1.act -s 1
+Hierarchy reader converted 5 instances of blackboxes.
+Objects in network: 1907
+PIs in network: 522
+POs in network: 322
+Nodes in network: 484
+Latches in network: 193
+Max Depth: 15
+Input activities will be assumed (0.500000, 0.200000, 0.200000)...
+Clock detected: clk
+Name Manager Entries: 1905
+193/193 latches are part of cycle(s)
+Stage 1: Simulating Probabilities...
+Stage 2: Computing Probabilities...
+Stage 3: Computing Register Output Activities...
+Stage 4: Computing Switching Activities...
+Hierarchy writer reintroduced 5 instances of blackboxes.
+Done
+Ace took 0.62 seconds (max_rss 54.8 MiB)
+	Command being timed: "/root/vtr-verilog-to-routing/ace2/ace -b diffeq1.abc.blif -c clk -n diffeq1.raw.ace.blif -o diffeq1.act -s 1"
+	User time (seconds): 0.58
+	System time (seconds): 0.01
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 56152
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 12946
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 280
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
