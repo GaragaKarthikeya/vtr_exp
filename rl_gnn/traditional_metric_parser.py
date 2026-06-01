@@ -66,7 +66,7 @@ def extract_baseline_only(run_dir, circuit_name, output_file="raygentop_traditio
 if __name__ == "__main__":
     # Point this strictly to the folder where your baseline files already sit
     # Example: if your files are in "runs/diffeq1/"
-    TARGET_DIR = "/root/desktop/vtr_exp/runs/raygentop"
-    CIRCUIT = "raygentop"
+    TARGET_DIR = "/root/desktop/vtr_exp/runs/diffeq1"
+    CIRCUIT = "diffeq1"
     
     extract_baseline_only(TARGET_DIR, CIRCUIT)

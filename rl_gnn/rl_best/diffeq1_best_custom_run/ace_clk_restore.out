@@ -1,5 +1,5 @@
-/usr/bin/env time -v /root/vtr-verilog-to-routing/vtr_flow/scripts/restore_multiclock_latch.pl diffeq1.parmys.blif diffeq1.raw.ace.blif diffeq1.ace.blif
-	Command being timed: "/root/vtr-verilog-to-routing/vtr_flow/scripts/restore_multiclock_latch.pl diffeq1.parmys.blif diffeq1.raw.ace.blif diffeq1.ace.blif"
+/usr/bin/env time -v /home/digital-2/vtr/vtr_flow/scripts/restore_multiclock_latch.pl diffeq1.parmys.blif diffeq1.raw.ace.blif diffeq1.ace.blif
+	Command being timed: "/home/digital-2/vtr/vtr_flow/scripts/restore_multiclock_latch.pl diffeq1.parmys.blif diffeq1.raw.ace.blif diffeq1.ace.blif"
 	User time (seconds): 0.00
 	System time (seconds): 0.00
 	Percent of CPU this job got: 100%
@@ -8,10 +8,10 @@
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 5440
+	Maximum resident set size (kbytes): 5924
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 363
+	Minor (reclaiming a frame) page faults: 328
 	Voluntary context switches: 1
 	Involuntary context switches: 0
 	Swaps: 0

@@ -111,7 +111,7 @@ if __name__ == "__main__":
     )
 
     bake_architecture(
-        template_path="/root/desktop/vtr_exp/arch/k6_N10_I40_Fi6_L4_frac0_ff1_C5_45nm.xml.j2",
+        template_path="../arch/k6_N10_I40_Fi6_L4_frac0_ff1_C5_45nm.xml.j2",
         output_path="vpr_arch_run.xml",
         width=width,
         height=height,

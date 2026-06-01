@@ -1,4 +1,4 @@
-/usr/bin/env time -v /root/vtr-verilog-to-routing/vtr_flow/scripts/blackbox_latches.pl --input diffeq1.parmys.blif --output_list report_clk.out
+/usr/bin/env time -v /home/digital-2/vtr/vtr_flow/scripts/blackbox_latches.pl --input diffeq1.parmys.blif --output_list report_clk.out
 using input blif: diffeq1.parmys.blif
 using output clock file: report_clk.out
 blackboxing all latches in file
@@ -11,19 +11,19 @@ ____
 Black Boxed Latches:
 	latch_^_re_^_clk_^_0	#193
 
-	Command being timed: "/root/vtr-verilog-to-routing/vtr_flow/scripts/blackbox_latches.pl --input diffeq1.parmys.blif --output_list report_clk.out"
-	User time (seconds): 0.01
+	Command being timed: "/home/digital-2/vtr/vtr_flow/scripts/blackbox_latches.pl --input diffeq1.parmys.blif --output_list report_clk.out"
+	User time (seconds): 0.00
 	System time (seconds): 0.00
-	Percent of CPU this job got: 87%
+	Percent of CPU this job got: 80%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 5600
+	Maximum resident set size (kbytes): 6004
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 384
+	Minor (reclaiming a frame) page faults: 358
 	Voluntary context switches: 1
 	Involuntary context switches: 0
 	Swaps: 0

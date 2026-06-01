@@ -1,7 +1,7 @@
 Printing architecture... 
 
 *************************************************
-Layout: 'my_layout' Type: fixed Width: 12 Height 11
+Layout: 'my_layout' Type: fixed Width: 19 Height 19
 *************************************************
 
 *************************************************
@@ -12,7 +12,7 @@ Device Info:
 		x: type uniform peak 1.000000e+00
 		y: type uniform peak 1.000000e+00
 	Switch Block: type wilton fs 3
-	Input Connect Block Switch Name: ipin_cblock
+	Input Connect Block Switch Name Within a Same Die: ipin_cblock
 *************************************************
 
 *************************************************
@@ -48,43 +48,7 @@ Clock:
 *************************************************
 
 *************************************************
-Printing library models 
-Model: ".input"
-	Output Ports: "inpad" "1" min_size="1"
-	pb_type 0: "inpad"
-Model: ".output"
-	Input Ports: "outpad" "1" min_size="1"
-	pb_type 0: "outpad"
-Model: ".latch"
-	Input Ports: "D" "1" min_size="1"
-	Input Ports: "clk" "1" min_size="1"
-	Output Ports: "Q" "1" min_size="1"
-	pb_type 0: "ff"
-Model: ".names"
-	Input Ports: "in" "6" min_size="1"
-	Output Ports: "out" "1" min_size="1"
-	pb_type 0: "lut"
 Printing user models 
-Model: "multiply"
-	Input Ports: "b" "36" min_size="0"
-	Input Ports: "a" "36" min_size="0"
-	Output Ports: "out" "72" min_size="0"
-	pb_type 0: "mult_36x36"
-	pb_type 1: "mult_18x18"
-	pb_type 2: "mult_9x9"
-Model: "single_port_ram"
-	Input Ports: "clk" "1" min_size="0"
-	Input Ports: "data" "1" min_size="0"
-	Input Ports: "addr" "15" min_size="0"
-	Input Ports: "we" "1" min_size="0"
-	Output Ports: "out" "1" min_size="0"
-	pb_type 0: "memory_slice"
-	pb_type 1: "memory_slice"
-	pb_type 2: "memory_slice"
-	pb_type 3: "memory_slice"
-	pb_type 4: "memory_slice"
-	pb_type 5: "memory_slice"
-	pb_type 6: "memory_slice"
 Model: "dual_port_ram"
 	Input Ports: "clk" "1" min_size="0"
 	Input Ports: "data2" "1" min_size="0"
@@ -101,6 +65,42 @@ Model: "dual_port_ram"
 	pb_type 3: "memory_slice"
 	pb_type 4: "memory_slice"
 	pb_type 5: "memory_slice"
+Model: "single_port_ram"
+	Input Ports: "clk" "1" min_size="0"
+	Input Ports: "data" "1" min_size="0"
+	Input Ports: "addr" "15" min_size="0"
+	Input Ports: "we" "1" min_size="0"
+	Output Ports: "out" "1" min_size="0"
+	pb_type 0: "memory_slice"
+	pb_type 1: "memory_slice"
+	pb_type 2: "memory_slice"
+	pb_type 3: "memory_slice"
+	pb_type 4: "memory_slice"
+	pb_type 5: "memory_slice"
+	pb_type 6: "memory_slice"
+Model: "multiply"
+	Input Ports: "b" "36" min_size="0"
+	Input Ports: "a" "36" min_size="0"
+	Output Ports: "out" "72" min_size="0"
+	pb_type 0: "mult_36x36"
+	pb_type 1: "mult_18x18"
+	pb_type 2: "mult_9x9"
+Printing library models 
+Model: ".input"
+	Output Ports: "inpad" "1" min_size="1"
+	pb_type 0: "inpad"
+Model: ".output"
+	Input Ports: "outpad" "1" min_size="1"
+	pb_type 0: "outpad"
+Model: ".latch"
+	Input Ports: "D" "1" min_size="1"
+	Input Ports: "clk" "1" min_size="1"
+	Output Ports: "Q" "1" min_size="1"
+	pb_type 0: "ff"
+Model: ".names"
+	Input Ports: "in" "6" min_size="1"
+	Output Ports: "out" "1" min_size="1"
+	pb_type 0: "lut"
 *************************************************
 
 *************************************************
@@ -285,8 +285,8 @@ Equivalent Site: memory
 							port D type 0 num_pins 1
 							port Q type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk ff.D  1: 6.6e-11
-									annotation clk ff.Q  1: 1.24e-10
+									annotation clk ff.D (null) 1: 6.6e-11
+									annotation clk ff.Q (null) 1: 1.24e-10
 						interconnect 2 ble.in soft_logic.in
 						interconnect 2 ble.clk ff[0:0].clk
 						interconnect 3 soft_logic.out[0:0] ff[0:0].D
@@ -693,8 +693,8 @@ Equivalent Site: memory
 									port a type 0 num_pins 9
 									port b type 0 num_pins 9
 									port out type 1 num_pins 18
-											annotation  mult_9x9.a mult_9x9.out 1: 1.523e-9
-											annotation  mult_9x9.b mult_9x9.out 1: 1.523e-9
+											annotation (null) mult_9x9.a mult_9x9.out 1: 1.523e-9
+											annotation (null) mult_9x9.b mult_9x9.out 1: 1.523e-9
 								interconnect 2 mult_9x9_slice.A_cfg mult_9x9.a
 								interconnect 2 mult_9x9_slice.B_cfg mult_9x9.b
 								interconnect 2 mult_9x9.out mult_9x9_slice.OUT_cfg
@@ -724,8 +724,8 @@ Equivalent Site: memory
 									port a type 0 num_pins 18
 									port b type 0 num_pins 18
 									port out type 1 num_pins 36
-											annotation  mult_18x18.a mult_18x18.out 1: 1.523e-9
-											annotation  mult_18x18.b mult_18x18.out 1: 1.523e-9
+											annotation (null) mult_18x18.a mult_18x18.out 1: 1.523e-9
+											annotation (null) mult_18x18.b mult_18x18.out 1: 1.523e-9
 								interconnect 2 mult_18x18_slice.A_cfg mult_18x18.a
 								interconnect 2 mult_18x18_slice.B_cfg mult_18x18.b
 								interconnect 2 mult_18x18.out mult_18x18_slice.OUT_cfg
@@ -762,8 +762,8 @@ Equivalent Site: memory
 							port a type 0 num_pins 36
 							port b type 0 num_pins 36
 							port out type 1 num_pins 72
-									annotation  mult_36x36.a mult_36x36.out 1: 1.523e-9
-									annotation  mult_36x36.b mult_36x36.out 1: 1.523e-9
+									annotation (null) mult_36x36.a mult_36x36.out 1: 1.523e-9
+									annotation (null) mult_36x36.b mult_36x36.out 1: 1.523e-9
 						interconnect 2 mult_36x36_slice.A_cfg mult_36x36.a
 						interconnect 2 mult_36x36_slice.B_cfg mult_36x36.b
 						interconnect 2 mult_36x36.out mult_36x36_slice.OUT_cfg
@@ -814,10 +814,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_512x64_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_512x64_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_512x64_sp.addr memory_slice[2:2].addr
@@ -1046,10 +1046,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_1024x32_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_1024x32_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_1024x32_sp.addr memory_slice[2:2].addr
@@ -1182,10 +1182,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_2048x16_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_2048x16_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_2048x16_sp.addr memory_slice[2:2].addr
@@ -1270,10 +1270,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_4096x8_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_4096x8_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_4096x8_sp.addr memory_slice[2:2].addr
@@ -1334,10 +1334,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_8192x4_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_8192x4_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_8192x4_sp.addr memory_slice[2:2].addr
@@ -1386,10 +1386,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_16384x2_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_16384x2_sp.addr memory_slice[1:1].addr
 						interconnect 2 mem_16384x2_sp.data memory_slice[1:0].data
@@ -1432,10 +1432,10 @@ Equivalent Site: memory
 							port we type 0 num_pins 1
 							port out type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr  1: 509e-12
-									annotation clk memory_slice.data  1: 509e-12
-									annotation clk memory_slice.we  1: 509e-12
-									annotation clk memory_slice.out  1: 1.234e-9
+									annotation clk memory_slice.addr (null) 1: 509e-12
+									annotation clk memory_slice.data (null) 1: 509e-12
+									annotation clk memory_slice.we (null) 1: 509e-12
+									annotation clk memory_slice.out (null) 1: 1.234e-9
 						interconnect 2 mem_32768x1_sp.addr memory_slice[0:0].addr
 						interconnect 2 mem_32768x1_sp.data memory_slice[0:0].data
 						interconnect 2 mem_32768x1_sp.we memory_slice[0:0].we
@@ -1483,14 +1483,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_1024x32_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_1024x32_dp.addr1 memory_slice[1:1].addr1
 						interconnect 2 mem_1024x32_dp.addr1 memory_slice[2:2].addr1
@@ -1705,14 +1705,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_2048x16_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_2048x16_dp.addr1 memory_slice[1:1].addr1
 						interconnect 2 mem_2048x16_dp.addr1 memory_slice[2:2].addr1
@@ -1847,14 +1847,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_2048x8_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_2048x8_dp.addr1 memory_slice[1:1].addr1
 						interconnect 2 mem_2048x8_dp.addr1 memory_slice[2:2].addr1
@@ -1949,14 +1949,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_8192x4_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_8192x4_dp.addr1 memory_slice[1:1].addr1
 						interconnect 2 mem_8192x4_dp.addr1 memory_slice[2:2].addr1
@@ -2031,14 +2031,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_16384x2_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_16384x2_dp.addr1 memory_slice[1:1].addr1
 						interconnect 2 mem_16384x2_dp.addr2 memory_slice[0:0].addr2
@@ -2103,14 +2103,14 @@ Equivalent Site: memory
 							port out1 type 1 num_pins 1
 							port out2 type 1 num_pins 1
 							port clk type 0 num_pins 1
-									annotation clk memory_slice.addr1  1: 509e-12
-									annotation clk memory_slice.data1  1: 509e-12
-									annotation clk memory_slice.we1  1: 509e-12
-									annotation clk memory_slice.addr2  1: 509e-12
-									annotation clk memory_slice.data2  1: 509e-12
-									annotation clk memory_slice.we2  1: 509e-12
-									annotation clk memory_slice.out1  1: 1.234e-9
-									annotation clk memory_slice.out2  1: 1.234e-9
+									annotation clk memory_slice.addr1 (null) 1: 509e-12
+									annotation clk memory_slice.data1 (null) 1: 509e-12
+									annotation clk memory_slice.we1 (null) 1: 509e-12
+									annotation clk memory_slice.addr2 (null) 1: 509e-12
+									annotation clk memory_slice.data2 (null) 1: 509e-12
+									annotation clk memory_slice.we2 (null) 1: 509e-12
+									annotation clk memory_slice.out1 (null) 1: 1.234e-9
+									annotation clk memory_slice.out2 (null) 1: 1.234e-9
 						interconnect 2 mem_32768x1_dp.addr1 memory_slice[0:0].addr1
 						interconnect 2 mem_32768x1_dp.addr2 memory_slice[0:0].addr2
 						interconnect 2 mem_32768x1_dp.data1 memory_slice[0:0].data1

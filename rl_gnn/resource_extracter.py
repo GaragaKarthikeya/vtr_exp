@@ -63,4 +63,4 @@ def extract_resources(run_dir, output_file="resources.txt"):
 
 if __name__ == "__main__":
     # Point this to your baseline directory
-    extract_resources("/root/desktop/vtr_exp/runs/raygentop")
+    extract_resources("../runs/diffeq1")

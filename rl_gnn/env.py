@@ -17,7 +17,7 @@ class VTRPlacementEnv(gym.Env):
     def __init__(
         self,
         req_file_path: str = "resources.txt",
-        baseline_file_path: str = "raygentop_traditional_metric.txt",
+        baseline_file_path: str = "diffeq1_traditional_metric.txt",
     ):
         super().__init__()
 

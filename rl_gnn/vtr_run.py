@@ -12,13 +12,14 @@ from pathlib import Path
 
 def run_vtr(script_dir: Path) -> int:
     arch_file = script_dir / "vpr_arch_run.xml"
-    circuit_file = script_dir / "raygentop.v"
+    circuit_file = script_dir / "diffeq1.v"
     output_dir = script_dir / "custom_run"
 
-    vtr_root = Path("/root/vtr-verilog-to-routing")
-    vtr_python = vtr_root / ".venv" / "bin" / "python"
-    vtr_flow_script = vtr_root / "vtr_flow" / "scripts" / "run_vtr_flow.py"
-    cmos_tech_file = vtr_root / "vtr_flow" / "tech" / "PTM_45nm" / "45nm.xml"
+    import os
+    vtr_root = Path(os.environ.get("VTR_ROOT", "/home/digital-2/vtr"))
+    vtr_python = Path(sys.executable)
+    vtr_flow_script = Path(os.environ.get("VTR_FLOW_SCRIPT", str(vtr_root / "vtr_flow" / "scripts" / "run_vtr_flow.py")))
+    cmos_tech_file = Path(os.environ.get("VTR_CMOS_TECH_FILE", str(vtr_root / "vtr_flow" / "tech" / "PTM_45nm" / "45nm.xml")))
 
     if not arch_file.is_file():
         print(f"Missing architecture file: {arch_file}", file=sys.stderr)
@@ -61,7 +62,7 @@ def run_vtr(script_dir: Path) -> int:
 
 def extract_metrics(script_dir: Path) -> dict[str, float]:
     run_dir = script_dir / "custom_run"
-    circuit_name = "raygentop"
+    circuit_name = "diffeq1"
 
     vpr_out_file = run_dir / "vpr.out"
     crit_path_file = run_dir / "vpr.crit_path.out"

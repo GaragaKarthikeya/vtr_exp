@@ -10,7 +10,7 @@
 
 		
 
-		<input_path_and_name>raygentop.v</input_path_and_name>
+		<input_path_and_name>diffeq1.v</input_path_and_name>
 
 	</inputs>
 
@@ -20,7 +20,7 @@
 
 		<output_type>blif</output_type>
 
-		<output_path_and_name>raygentop.parmys.blif</output_path_and_name>
+		<output_path_and_name>diffeq1.parmys.blif</output_path_and_name>
 
 		<target>
 

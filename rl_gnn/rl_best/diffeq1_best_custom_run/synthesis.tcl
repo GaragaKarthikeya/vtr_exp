@@ -1,92 +1,64 @@
 yosys -import
 
+
+
 plugin -i parmys
 
-
-
-# yosys-slang plugin error handling
-
-if {$env(PARSER) == "slang" } {
-
-	if {![info exists ::env(yosys_slang_path)]} {
-
-		puts "Error: $err"
-
-		puts "yosys_slang_path is not set"
-
-	} elseif {![file exists $::env(yosys_slang_path)]} {
-
-		error "Error: cannot find plugin at '$::env(yosys_slang_path)'. Run make with CMake param -DSLANG_SYSTEMVERILOG=ON to enable yosys-slang plugin."
-
-	} else {
-
-		plugin -i slang
-
-		yosys -import
-
-		puts "Using yosys-slang as yosys frontend"
-
-	}
-
-} elseif {$env(PARSER) == "default" } {
-
-	yosys -import
-
-	puts "Using Yosys read_verilog as yosys frontend"
-
-} else {
-
-	error "Invalid PARSER"
-
-}
+yosys -import
 
 
 
-# arch file: /root/desktop/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml
+read_verilog -nomem2reg +/parmys/vtr_primitives.v
+
+setattr -mod -set keep_hierarchy 1 single_port_ram
+
+setattr -mod -set keep_hierarchy 1 dual_port_ram
+
+
+
+puts "Using parmys as partial mapper"
+
+
+
+# arch file: /home/digital-2/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml
 
 # input files: [diffeq1.v]
 
-# other args: []
+# other args: [YYY]
 
-# config file: /root/desktop/vtr_exp/rl_gnn/custom_run/odin_config.xml
+# config file: /home/digital-2/vtr_exp/rl_gnn/custom_run/odin_config.xml
 
 # output file: diffeq1.parmys.blif
 
 
 
-parmys_arch -a /root/desktop/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml
+parmys_arch -a /home/digital-2/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml
 
 
 
-if {$env(PARSER) == "slang" } {
+if {$env(PARSER) == "surelog" } {
 
-	# Create a file list containing the name(s) of file(s) \
+	puts "Using Yosys read_uhdm command"
 
-	# to read together with read_slang
+	plugin -i systemverilog
 
-	source [file join [pwd] "slang_filelist.tcl"]
+	yosys -import
 
-	set readfile [file join [pwd] "filelist.txt"]
+	read_uhdm diffeq1.v
 
-	#Writing names of circuit files to file list
+} elseif {$env(PARSER) == "system-verilog" } {
 
-	build_filelist {diffeq1.v} $readfile
+	puts "Using Yosys read_systemverilog command"
 
-	puts "Using Yosys read_slang command"
+	plugin -i systemverilog
 
-	#Read vtr_primitives library and user design verilog in same command
+	yosys -import
 
-	read_slang -v $env(PRIMITIVES) -C $readfile
+	read_systemverilog diffeq1.v
 
 } elseif {$env(PARSER) == "default" } {
 
 	puts "Using Yosys read_verilog command"
-
-	read_verilog -nomem2reg +/parmys/vtr_primitives.v
-
-	setattr -mod -set keep_hierarchy 1 single_port_ram
-
- 	setattr -mod -set keep_hierarchy 1 dual_port_ram
 
 	read_verilog -sv -nolatches diffeq1.v
 
@@ -162,15 +134,7 @@ opt -full
 
 
 
-# Separate options for Parmys execution (Verilog or SystemVerilog)
-
-if {$env(PARSER) == "default" || $env(PARSER) == "slang"} {
-
-    # For Verilog, use -nopass for a simpler, faster flow
-
-    parmys -a /root/desktop/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml -nopass -c /root/desktop/vtr_exp/rl_gnn/custom_run/odin_config.xml 
-
-} 
+parmys -a /home/digital-2/vtr_exp/rl_gnn/custom_run/vpr_arch_run.xml -nopass -c /home/digital-2/vtr_exp/rl_gnn/custom_run/odin_config.xml YYY
 
 
 
@@ -187,6 +151,8 @@ opt -fast
 dffunmap
 
 opt -fast -noff
+
+
 
 #autoname
 

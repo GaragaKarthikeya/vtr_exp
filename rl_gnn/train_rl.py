@@ -42,14 +42,14 @@ class BestResultWrapper(gym.Wrapper):
 
             arch_file = self.script_dir / "vpr_arch_run.xml"
             if arch_file.exists():
-                shutil.copy2(arch_file, self.save_dir / "raygentop_best_vpr_arch_run.xml")
+                shutil.copy2(arch_file, self.save_dir / "diffeq1_best_vpr_arch_run.xml")
 
             metric_file = self.script_dir / "custom_run" / "custom_metric.txt"
             if metric_file.exists():
-                shutil.copy2(metric_file, self.save_dir / "raygentop_best_custom_metric.txt")
+                shutil.copy2(metric_file, self.save_dir / "diffeq1_best_custom_metric.txt")
 
             run_dir = self.script_dir / "custom_run"
-            best_run_dir = self.save_dir / "raygentop_best_custom_run"
+            best_run_dir = self.save_dir / "diffeq1_best_custom_run"
 
             if run_dir.exists():
                 if best_run_dir.exists():
@@ -65,7 +65,7 @@ class BestResultWrapper(gym.Wrapper):
 def main() -> None:
     env = VTRPlacementEnv(
         req_file_path="resources.txt",
-        baseline_file_path="raygentop_traditional_metric.txt",
+        baseline_file_path="diffeq1_traditional_metric.txt",
     )
 
     env = BestResultWrapper(env, save_dir="rl_best")
@@ -79,6 +79,7 @@ def main() -> None:
         n_steps=8,
         batch_size=8,
         gamma=1.0,
+        device="cpu",
     )
 
     model.learn(total_timesteps=50)
