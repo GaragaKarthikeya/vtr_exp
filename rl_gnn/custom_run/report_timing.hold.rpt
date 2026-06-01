@@ -1,0 +1,2749 @@
+#Timing report of worst 100 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: rgCfgData~11.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-11^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~11.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-11^out~0.data[0] (single_port_ram)                       0.306     0.306
+data arrival time                                                                        0.306
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-11^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.306
+----------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                        -0.203
+
+
+#Path 2
+Startpoint: rgCfgData~2.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-2^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~2.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-2^out~0.data[0] (single_port_ram)                       0.321     0.321
+data arrival time                                                                       0.321
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-2^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.321
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.188
+
+
+#Path 3
+Startpoint: rgCfgData~10.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-10^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~10.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-10^out~0.data[0] (single_port_ram)                       0.350     0.350
+data arrival time                                                                        0.350
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-10^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.350
+----------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                        -0.159
+
+
+#Path 4
+Startpoint: rgCfgData~8.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-8^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~8.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-8^out~0.data[0] (single_port_ram)                       0.378     0.378
+data arrival time                                                                       0.378
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-8^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.378
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.131
+
+
+#Path 5
+Startpoint: rgCfgData~1.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-1^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~1.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-1^out~0.data[0] (single_port_ram)                       0.396     0.396
+data arrival time                                                                       0.396
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-1^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.396
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.113
+
+
+#Path 6
+Startpoint: rgCfgData~20.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-20^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~20.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-20^out~0.data[0] (single_port_ram)                       0.443     0.443
+data arrival time                                                                        0.443
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-20^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.443
+----------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                        -0.066
+
+
+#Path 7
+Startpoint: rgCfgData~6.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-6^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~6.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-6^out~0.data[0] (single_port_ram)                       0.446     0.446
+data arrival time                                                                       0.446
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-6^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.446
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.063
+
+
+#Path 8
+Startpoint: rgCfgData~13.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-13^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~13.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-13^out~0.data[0] (single_port_ram)                       0.448     0.448
+data arrival time                                                                        0.448
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-13^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.448
+----------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                        -0.061
+
+
+#Path 9
+Startpoint: rgCfgData~17.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-17^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~17.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-17^out~0.data[0] (single_port_ram)                       0.468     0.468
+data arrival time                                                                        0.468
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-17^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.468
+----------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                        -0.041
+
+
+#Path 10
+Startpoint: rgCfgData~4.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-4^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~4.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-4^out~0.data[0] (single_port_ram)                       0.477     0.477
+data arrival time                                                                       0.477
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-4^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.477
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.032
+
+
+#Path 11
+Startpoint: rgCfgData~0.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-0^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~0.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-0^out~0.data[0] (single_port_ram)                       0.501     0.501
+data arrival time                                                                       0.501
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-0^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.501
+---------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                       -0.008
+
+
+#Path 12
+Startpoint: $dff~13^Q~0.Q[0] (.latch clocked by clk)
+Endpoint  : $dff~14^Q~0.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+$dff~13^Q~0.clk[0] (.latch)                                      0.000     0.000
+$dff~13^Q~0.Q[0] (.latch) [clock-to-output]                      0.124     0.124
+$dff~14^Q~0.D[0] (.latch)                                        0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+$dff~14^Q~0.clk[0] (.latch)                                      0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 13
+Startpoint: $dff~14^Q~0.Q[0] (.latch clocked by clk)
+Endpoint  : $auto$hard_block.cc:122:cell_hard_block$7667.B[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                                                    Incr      Path
+-------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                   0.000     0.000
+clock source latency                                                                    0.000     0.000
+clk.inpad[0] (.input)                                                                   0.000     0.000
+$dff~14^Q~0.clk[0] (.latch)                                                             0.000     0.000
+$dff~14^Q~0.Q[0] (.latch) [clock-to-output]                                             0.124     0.124
+$auto$hard_block.cc:122:cell_hard_block$7667.B[1].D[0] (.latch)                         0.000     0.124
+data arrival time                                                                                 0.124
+
+clock clk (rise edge)                                                                   0.000     0.000
+clock source latency                                                                    0.000     0.000
+clk.inpad[0] (.input)                                                                   0.000     0.000
+$auto$hard_block.cc:122:cell_hard_block$7667.B[1].clk[0] (.latch)                       0.000     0.000
+clock uncertainty                                                                       0.000     0.000
+cell hold time                                                                          0.066     0.066
+data required time                                                                                0.066
+-------------------------------------------------------------------------------------------------------
+data required time                                                                               -0.066
+data arrival time                                                                                 0.124
+-------------------------------------------------------------------------------------------------------
+slack (MET)                                                                                       0.058
+
+
+#Path 14
+Startpoint: lo157.Q[0] (.latch clocked by clk)
+Endpoint  : lo158.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo157.clk[0] (.latch)                                            0.000     0.000
+lo157.Q[0] (.latch) [clock-to-output]                            0.124     0.124
+lo158.D[0] (.latch)                                              0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo158.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 15
+Startpoint: lo155.Q[0] (.latch clocked by clk)
+Endpoint  : lo156.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo155.clk[0] (.latch)                                            0.000     0.000
+lo155.Q[0] (.latch) [clock-to-output]                            0.124     0.124
+lo156.D[0] (.latch)                                              0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo156.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 16
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : lo154.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo153.clk[0] (.latch)                                            0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                            0.124     0.124
+lo154.D[0] (.latch)                                              0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo154.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 17
+Startpoint: lo152.Q[0] (.latch clocked by clk)
+Endpoint  : lo153.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo152.clk[0] (.latch)                                            0.000     0.000
+lo152.Q[0] (.latch) [clock-to-output]                            0.124     0.124
+lo153.D[0] (.latch)                                              0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo153.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 18
+Startpoint: lo151.Q[0] (.latch clocked by clk)
+Endpoint  : lo152.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo151.clk[0] (.latch)                                            0.000     0.000
+lo151.Q[0] (.latch) [clock-to-output]                            0.124     0.124
+lo152.D[0] (.latch)                                              0.000     0.124
+data arrival time                                                          0.124
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo152.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.124
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 19
+Startpoint: rgCfgData~9.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-9^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+input external delay                                                          0.000     0.000
+rgCfgData~9.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-9^out~0.data[0] (single_port_ram)                       0.587     0.587
+data arrival time                                                                       0.587
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-9^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.587
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.078
+
+
+#Path 20
+Startpoint: rgCfgData~12.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-12^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~12.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-12^out~0.data[0] (single_port_ram)                       0.622     0.622
+data arrival time                                                                        0.622
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-12^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.622
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.113
+
+
+#Path 21
+Startpoint: tm3_sram_data_in~29.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~29.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~29.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~29.outpad[0] (.output)                             0.148     0.148
+data arrival time                                                          0.148
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.148
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.148
+
+
+#Path 22
+Startpoint: tm3_sram_data_in~18.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~18.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~18.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~18.outpad[0] (.output)                             0.150     0.150
+data arrival time                                                          0.150
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.150
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.150
+
+
+#Path 23
+Startpoint: tm3_sram_data_in~10.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~10.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~10.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~10.outpad[0] (.output)                             0.150     0.150
+data arrival time                                                          0.150
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.150
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.150
+
+
+#Path 24
+Startpoint: tm3_sram_data_in~55.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~55.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~55.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~55.outpad[0] (.output)                             0.165     0.165
+data arrival time                                                          0.165
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.165
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.165
+
+
+#Path 25
+Startpoint: tm3_sram_data_in~7.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~7.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~7.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~7.outpad[0] (.output)                              0.187     0.187
+data arrival time                                                          0.187
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.187
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.187
+
+
+#Path 26
+Startpoint: tm3_sram_data_in~24.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~24.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~24.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~24.outpad[0] (.output)                             0.189     0.189
+data arrival time                                                          0.189
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.189
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.189
+
+
+#Path 27
+Startpoint: tm3_sram_data_in~9.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~9.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~9.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~9.outpad[0] (.output)                              0.189     0.189
+data arrival time                                                          0.189
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.189
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.189
+
+
+#Path 28
+Startpoint: tm3_sram_data_in~54.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~54.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~54.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~54.outpad[0] (.output)                             0.191     0.191
+data arrival time                                                          0.191
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.191
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.191
+
+
+#Path 29
+Startpoint: tm3_sram_data_in~56.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~56.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~56.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~56.outpad[0] (.output)                             0.192     0.192
+data arrival time                                                          0.192
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.192
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.192
+
+
+#Path 30
+Startpoint: tm3_sram_data_in~60.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~60.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~60.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~60.outpad[0] (.output)                             0.192     0.192
+data arrival time                                                          0.192
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.192
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.192
+
+
+#Path 31
+Startpoint: rgCfgData~15.inpad[0] (.input clocked by clk)
+Endpoint  : single_port_ram^MEM~7-15^out~0.data[0] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+input external delay                                                           0.000     0.000
+rgCfgData~15.inpad[0] (.input)                                                 0.000     0.000
+single_port_ram^MEM~7-15^out~0.data[0] (single_port_ram)                       0.702     0.702
+data arrival time                                                                        0.702
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-15^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.702
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.193
+
+
+#Path 32
+Startpoint: tm3_sram_data_in~48.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~48.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~48.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~48.outpad[0] (.output)                             0.208     0.208
+data arrival time                                                          0.208
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.208
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.208
+
+
+#Path 33
+Startpoint: tm3_sram_data_in~8.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~8.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~8.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~8.outpad[0] (.output)                              0.210     0.210
+data arrival time                                                          0.210
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.210
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.210
+
+
+#Path 34
+Startpoint: tm3_sram_data_in~52.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~52.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~52.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~52.outpad[0] (.output)                             0.210     0.210
+data arrival time                                                          0.210
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.210
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.210
+
+
+#Path 35
+Startpoint: tm3_sram_data_in~3.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~3.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~3.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~3.outpad[0] (.output)                              0.210     0.210
+data arrival time                                                          0.210
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.210
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.210
+
+
+#Path 36
+Startpoint: tm3_sram_data_in~11.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~11.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~11.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~11.outpad[0] (.output)                             0.210     0.210
+data arrival time                                                          0.210
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.210
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.210
+
+
+#Path 37
+Startpoint: tm3_sram_data_in~42.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~42.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~42.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~42.outpad[0] (.output)                             0.210     0.210
+data arrival time                                                          0.210
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.210
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.210
+
+
+#Path 38
+Startpoint: tm3_sram_data_in~31.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~31.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~31.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~31.outpad[0] (.output)                             0.211     0.211
+data arrival time                                                          0.211
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.211
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.211
+
+
+#Path 39
+Startpoint: tm3_sram_data_in~41.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~41.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~41.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~41.outpad[0] (.output)                             0.212     0.212
+data arrival time                                                          0.212
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.212
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.212
+
+
+#Path 40
+Startpoint: tm3_sram_data_in~25.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~25.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~25.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~25.outpad[0] (.output)                             0.212     0.212
+data arrival time                                                          0.212
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.212
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.212
+
+
+#Path 41
+Startpoint: tm3_sram_data_in~5.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~5.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~5.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~5.outpad[0] (.output)                              0.212     0.212
+data arrival time                                                          0.212
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.212
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.212
+
+
+#Path 42
+Startpoint: tm3_sram_data_in~39.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~39.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~39.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~39.outpad[0] (.output)                             0.212     0.212
+data arrival time                                                          0.212
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.212
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.212
+
+
+#Path 43
+Startpoint: tm3_sram_data_in~15.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~15.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~15.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~15.outpad[0] (.output)                             0.214     0.214
+data arrival time                                                          0.214
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.214
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.214
+
+
+#Path 44
+Startpoint: tm3_sram_data_in~26.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~26.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~26.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~26.outpad[0] (.output)                             0.214     0.214
+data arrival time                                                          0.214
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.214
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.214
+
+
+#Path 45
+Startpoint: tm3_sram_data_in~20.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~20.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~20.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~20.outpad[0] (.output)                             0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 46
+Startpoint: tm3_sram_data_in~34.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~34.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~34.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~34.outpad[0] (.output)                             0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 47
+Startpoint: tm3_sram_data_in~33.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~33.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~33.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~33.outpad[0] (.output)                             0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 48
+Startpoint: tm3_sram_data_in~4.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~4.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~4.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~4.outpad[0] (.output)                              0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 49
+Startpoint: tm3_sram_data_in~1.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~1.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~1.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~1.outpad[0] (.output)                              0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 50
+Startpoint: tm3_sram_data_in~40.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~40.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~40.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~40.outpad[0] (.output)                             0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 51
+Startpoint: tm3_sram_data_in~28.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~28.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~28.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~28.outpad[0] (.output)                             0.215     0.215
+data arrival time                                                          0.215
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.215
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.215
+
+
+#Path 52
+Startpoint: tm3_sram_data_in~37.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~37.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~37.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~37.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 53
+Startpoint: tm3_sram_data_in~19.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~19.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~19.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~19.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 54
+Startpoint: tm3_sram_data_in~21.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~21.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~21.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~21.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 55
+Startpoint: tm3_sram_data_in~27.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~27.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~27.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~27.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 56
+Startpoint: tm3_sram_data_in~53.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~53.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~53.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~53.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 57
+Startpoint: tm3_sram_data_in~62.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~62.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~62.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~62.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 58
+Startpoint: tm3_sram_data_in~12.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~12.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~12.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~12.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 59
+Startpoint: tm3_sram_data_in~46.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~46.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~46.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~46.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 60
+Startpoint: tm3_sram_data_in~49.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~49.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~49.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~49.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 61
+Startpoint: tm3_sram_data_in~16.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~16.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~16.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~16.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 62
+Startpoint: tm3_sram_data_in~57.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~57.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~57.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~57.outpad[0] (.output)                             0.216     0.216
+data arrival time                                                          0.216
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.216
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.216
+
+
+#Path 63
+Startpoint: tm3_sram_data_in~36.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~36.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~36.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~36.outpad[0] (.output)                             0.217     0.217
+data arrival time                                                          0.217
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.217
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.217
+
+
+#Path 64
+Startpoint: tm3_sram_data_in~51.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~51.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~51.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~51.outpad[0] (.output)                             0.217     0.217
+data arrival time                                                          0.217
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.217
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.217
+
+
+#Path 65
+Startpoint: tm3_sram_data_in~59.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~59.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~59.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~59.outpad[0] (.output)                             0.217     0.217
+data arrival time                                                          0.217
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.217
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.217
+
+
+#Path 66
+Startpoint: tm3_sram_data_in~22.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~22.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~22.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~22.outpad[0] (.output)                             0.218     0.218
+data arrival time                                                          0.218
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.218
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.218
+
+
+#Path 67
+Startpoint: tm3_sram_data_in~6.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~6.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~6.inpad[0] (.input)                             0.000     0.000
+out:rgdataout~6.outpad[0] (.output)                              0.218     0.218
+data arrival time                                                          0.218
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.218
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.218
+
+
+#Path 68
+Startpoint: tm3_sram_data_in~13.inpad[0] (.input clocked by clk)
+Endpoint  : out:rgdataout~13.outpad[0] (.output clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~13.inpad[0] (.input)                            0.000     0.000
+out:rgdataout~13.outpad[0] (.output)                             0.218     0.218
+data arrival time                                                          0.218
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.218
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.218
+
+
+#Path 69
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-9^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-9^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-9^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 70
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-5^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-5^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-5^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 71
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-20^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-20^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-20^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 72
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-0^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-0^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-0^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 73
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-1^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-1^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-1^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 74
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-2^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-2^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-2^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 75
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-3^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-3^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-3^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 76
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-4^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-4^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-4^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 77
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-6^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-6^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-6^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 78
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-7^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-7^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-7^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 79
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-8^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo156.clk[0] (.latch)                                                         0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-8^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                       0.745
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-8^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.745
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.236
+
+
+#Path 80
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-10^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-10^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-10^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 81
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-11^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-11^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-11^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 82
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-12^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-12^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-12^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 83
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-13^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-13^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-13^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 84
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-14^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-14^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-14^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 85
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-15^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-15^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-15^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 86
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-16^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-16^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-16^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 87
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-17^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-17^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-17^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 88
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-18^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-18^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-18^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 89
+Startpoint: lo156.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-19^out~0.addr[5] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo156.clk[0] (.latch)                                                          0.000     0.000
+lo156.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-19^out~0.addr[5] (single_port_ram)                       0.621     0.745
+data arrival time                                                                        0.745
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-19^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.745
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.236
+
+
+#Path 90
+Startpoint: tm3_sram_data_in~3.inpad[0] (.input clocked by clk)
+Endpoint  : lo730.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+tm3_sram_data_in~3.inpad[0] (.input)                             0.000     0.000
+lo730.D[0] (.latch)                                              0.307     0.307
+data arrival time                                                          0.307
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+lo730.clk[0] (.latch)                                            0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.307
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.241
+
+
+#Path 91
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-19^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo153.clk[0] (.latch)                                                          0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-19^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                        0.773
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-19^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.773
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.264
+
+
+#Path 92
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-20^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                           Incr      Path
+----------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+lo153.clk[0] (.latch)                                                          0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                          0.124     0.124
+single_port_ram^MEM~7-20^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                        0.773
+
+clock clk (rise edge)                                                          0.000     0.000
+clock source latency                                                           0.000     0.000
+clk.inpad[0] (.input)                                                          0.000     0.000
+single_port_ram^MEM~7-20^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                              0.000     0.000
+cell hold time                                                                 0.509     0.509
+data required time                                                                       0.509
+----------------------------------------------------------------------------------------------
+data required time                                                                      -0.509
+data arrival time                                                                        0.773
+----------------------------------------------------------------------------------------------
+slack (MET)                                                                              0.264
+
+
+#Path 93
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-0^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-0^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-0^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 94
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-1^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-1^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-1^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 95
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-2^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-2^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-2^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 96
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-3^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-3^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-3^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 97
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-4^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-4^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-4^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 98
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-5^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-5^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-5^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 99
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-6^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-6^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-6^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#Path 100
+Startpoint: lo153.Q[0] (.latch clocked by clk)
+Endpoint  : single_port_ram^MEM~7-7^out~0.addr[2] (single_port_ram clocked by clk)
+Path Type : hold
+
+Point                                                                          Incr      Path
+---------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+lo153.clk[0] (.latch)                                                         0.000     0.000
+lo153.Q[0] (.latch) [clock-to-output]                                         0.124     0.124
+single_port_ram^MEM~7-7^out~0.addr[2] (single_port_ram)                       0.649     0.773
+data arrival time                                                                       0.773
+
+clock clk (rise edge)                                                         0.000     0.000
+clock source latency                                                          0.000     0.000
+clk.inpad[0] (.input)                                                         0.000     0.000
+single_port_ram^MEM~7-7^out~0.clk[0] (single_port_ram)                        0.000     0.000
+clock uncertainty                                                             0.000     0.000
+cell hold time                                                                0.509     0.509
+data required time                                                                      0.509
+---------------------------------------------------------------------------------------------
+data required time                                                                     -0.509
+data arrival time                                                                       0.773
+---------------------------------------------------------------------------------------------
+slack (MET)                                                                             0.264
+
+
+#End of timing report

@@ -1,0 +1,5 @@
+{
+    "delay_ns": 7.39016,
+    "wirelength": 46658.0,
+    "power_w": 0.026
+}

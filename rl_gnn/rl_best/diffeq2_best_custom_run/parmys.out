@@ -1,0 +1,992 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/build/bin/yosys -c synthesis.tcl
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.55 (git sha1 60f126cd0, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `abstract' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `add' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `aigmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `alumacc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `anlogic_eqn' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `anlogic_fixcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `assertpmux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `async2sync' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `attrmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `attrmvcp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `autoname' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `blackbox' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bmuxmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `booth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `box_derive' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bufnorm' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bugpoint' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bwmuxmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cellmatch' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `check' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chformal' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chparam' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chtype' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clean_zerowidth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clk2fflogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clkbufmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clockgate' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connect_rpc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connwrappers' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `constmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `coolrunner2_fixup' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `coolrunner2_sop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `copy' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cutpoint' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `debug' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `delete' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `deminout' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `demuxmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `design' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dffinit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dfflegalize' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dfflibmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dffunmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dft_tag' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dump' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `echo' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `edgetypes' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `efinix_fixcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_add' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_induct' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_make' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_mark' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_miter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_purge' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_remove' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_simple' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_status' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_struct' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `example_dt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `expose' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_counter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_fa' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_reduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extractinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `flatten' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `flowmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fmcombine' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fminit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `formalff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `freduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_detect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_expand' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_export' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_extract' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_info' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_map' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_recode' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fst2tb' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `future' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `gatemate_foldinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `glift' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `greenpak4_dffinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `help' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `hierarchy' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `hilomap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `history' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_braminit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_dsp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_wrapcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `insbuf' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `internal_stats' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `iopadmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `jny' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `keep_hierarchy' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `lattice_gsr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `libcache' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `license' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `log' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `logger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ls' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ltp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `lut2mux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `maccmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_bmux2rom' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_bram' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_collect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_libmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_map' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_memx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_narrow' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_nordff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_unpack' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `microchip_dffopt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `microchip_dsp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `miter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `mutate' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `muxcover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `muxpack' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `nlutmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `nx_carry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `onehot' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_demorgan' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_expr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_ffinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_lut' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_lut_ins' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_feedback' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_priority' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_widen' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_merge' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_muxtree' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_reduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `paramap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `peepopt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `plugin' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `pmux2shiftx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `pmuxtree' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `portarcs' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `portlist' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `prep' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `printattrs' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_arst' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_dlatch' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_init' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_memwr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_mux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_prune' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_rmdead' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_rom' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `qbfsat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_bram_merge' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_bram_types' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_dsp_io_regs' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_dsp_macc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_dsp_simd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ql_ioff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_aiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_blif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_liberty' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_rtlil' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_verilog' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_verilog_file_list' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_xaiger2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `recover_names' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `rename' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `rmports' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scatter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scratchpad' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `script' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `select' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setattr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setenv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setparam' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setundef' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `shell' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `show' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `shregmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sim' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `simplemap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `splice' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `splitcells' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `splitnets' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sta' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `stat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `submod' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `supercover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_achronix' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_anlogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_coolrunner2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_easic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_ecp5' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_efinix' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_fabulous' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_gatemate' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_gowin' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_greenpak4' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_ice40' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_intel' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_intel_alm' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_lattice' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_microchip' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_nanoxplore' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_nexus' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_quicklogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_sf2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_xilinx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synthprop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tcl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `techmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tee' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_abcloop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_autotb' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_cell' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_generic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_pmgen' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_select' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `timeest' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `torder' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tribuf' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `uniquify' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verific' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verilog_defaults' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verilog_defines' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `viz' -> skip.
+[TCL: yosys -import] Command name collisioUsing Yosys read_verilog as yosys frontend
+Using Yosys read_verilog command
+n: found pre-existing command `wbflip' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `wrapcell' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `wreduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_aiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_aiger2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_blif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_btor' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_cxxrtl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_edif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_file' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_firrtl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_functional_cxx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_functional_rosette' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_functional_smt2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_intersynth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_jny' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_rtlil' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_simplec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_smt2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_smv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_spice' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_table' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_verilog' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_xaiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_xaiger2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_dffopt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_dsp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_srl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xprop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `zinit' -> skip.
+parmys_arch pass finished.
+
+1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/vtr_primitives.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/vtr_primitives.v' to AST representation.
+Generating RTLIL representation for module `\LUT_K'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\fpga_interconnect'.
+Generating RTLIL representation for module `\mux'.
+Generating RTLIL representation for module `\adder'.
+Generating RTLIL representation for module `\multiply'.
+Generating RTLIL representation for module `\single_port_ram'.
+Generating RTLIL representation for module `\dual_port_ram'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: diffeq2.v
+Parsing SystemVerilog input from `diffeq2.v' to AST representation.
+Generating RTLIL representation for module `\diffeq_f_systemC'.
+Successfully finished Verilog frontend.
+
+3. Executing SCC pass (detecting logic loops).
+Skipping module \diffeq_f_systemC as it contains processes (run 'proc' pass first).
+Skipping module \dual_port_ram as it contains processes (run 'proc' pass first).
+Skipping module \single_port_ram as it contains processes (run 'proc' pass first).
+Found 0 SCCs in module multiply.
+Found 0 SCCs in module adder.
+Found 0 SCCs in module mux.
+Found 0 SCCs in module fpga_interconnect.
+Skipping module \DFF as it contains processes (run 'proc' pass first).
+Found 0 SCCs in module LUT_K.
+Found 0 SCCs.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Finding top of design hierarchy..
+root of   0 design levels: diffeq_f_systemC    
+root of   0 design levels: dual_port_ram       
+root of   0 design levels: single_port_ram     
+root of   0 design levels: multiply            
+root of   0 design levels: adder               
+root of   0 design levels: mux                 
+root of   0 design levels: fpga_interconnect   
+root of   0 design levels: DFF                 
+root of   0 design levels: LUT_K               
+Automatically selected diffeq_f_systemC as design top module.
+
+4.2. Analyzing design hierarchy..
+Top module:  \diffeq_f_systemC
+
+4.3. Analyzing design hierarchy..
+Top module:  \diffeq_f_systemC
+Removing unused module `\dual_port_ram'.
+Removing unused module `\single_port_ram'.
+Removing unused module `\multiply'.
+Removing unused module `\adder'.
+Removing unused module `\mux'.
+Removing unused module `\fpga_interconnect'.
+Removing unused module `\DFF'.
+Removing unused module `\LUT_K'.
+Removed 8 unused modules.
+
+5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+<suppressed ~1 debug messages>
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module diffeq_f_systemC because it contains processes (run 'proc' command first).
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module diffeq_f_systemC...
+Found and reported 0 problems.
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Warning: Ignoring module diffeq_f_systemC because it contains processes (run 'proc' command first).
+Removed 0 multiplexer ports.
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module diffeq_f_systemC because it contains processes (run 'proc' command first).
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing PROC pass (convert processes to netlists).
+
+9.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$diffeq2.v:47$39 in module diffeq_f_systemC.
+Removed a total of 0 dead cases.
+
+9.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+9.4. Executing PROC_INIT pass (extract init attributes).
+
+9.5. Executing PROC_ARST pass (detect async resets in processes).
+
+9.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+     1/3: $0\uport[31:0]
+     2/3: $0\yport[31:0]
+     3/3: $0\xport[31:0]
+
+9.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+9.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\diffeq_f_systemC.\xport' using process `\diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+  created $dff cell `$procdff$65' with positive edge clock.
+Creating register for signal `\diffeq_f_systemC.\yport' using process `\diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+  created $dff cell `$procdff$66' with positive edge clock.
+Creating register for signal `\diffeq_f_systemC.\uport' using process `\diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+  created $dff cell `$procdff$67' with positive edge clock.
+
+9.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+Removing empty process `diffeq_f_systemC.$proc$diffeq2.v:47$39'.
+Cleaned up 2 empty switches.
+
+9.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+10. Executing FSM pass (extract and optimize FSM).
+
+10.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+10.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+10.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+10.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+10.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+10.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$67 ($dff) from module diffeq_f_systemC (D = $procmux$50_Y, Q = \uport, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$68 ($sdff) from module diffeq_f_systemC (D = $sub$diffeq2.v:60$49_Y, Q = \uport).
+Adding SRST signal on $procdff$66 ($dff) from module diffeq_f_systemC (D = $procmux$55_Y, Q = \yport, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$70 ($sdff) from module diffeq_f_systemC (D = $add$diffeq2.v:59$43_Y, Q = \yport).
+Adding SRST signal on $procdff$65 ($dff) from module diffeq_f_systemC (D = $procmux$60_Y, Q = \xport, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$72 ($sdff) from module diffeq_f_systemC (D = $add$diffeq2.v:58$42_Y, Q = \xport).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+Removed 6 unused cells and 6 unused wires.
+<suppressed ~7 debug messages>
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+11.16. Finished OPT passes. (There is nothing left to do.)
+
+12. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 bits (of 32) from port A of cell diffeq_f_systemC.$mul$diffeq2.v:60$44 ($mul).
+Removed top 30 bits (of 32) from port A of cell diffeq_f_systemC.$mul$diffeq2.v:60$47 ($mul).
+
+13. Executing PEEPOPT pass (run peephole optimizers).
+
+14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+15. Executing SHARE pass (SAT-based resource sharing).
+
+16. Executing OPT pass (performing simple optimizations).
+
+16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+16.6. Executing OPT_SHARE pass.
+
+16.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+16.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+16.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+16.10. Finished OPT passes. (There is nothing left to do.)
+
+17. Executing MEMORY pass.
+
+17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+18. Executing FLATTEN pass (flatten design).
+
+19. Executing OPT pass (performing simple optimizations).
+
+19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+19.6. Executing OPT_SHARE pass.
+
+19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+19.10. Finished OPT passes. (There is nothing left to do.)
+
+20. Executing TECHMAP pass (map to technology primitives).
+
+20.1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/adff2dff.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/adff2dff.v' to AST representation.
+Generating RTLIL representation for module `\adff2dff'.
+Successfully finished Verilog frontend.
+
+20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+21. Executing TECHMAP pass (map to technology primitives).
+
+21.1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/adffe2dff.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/adffe2dff.v' to AST representation.
+Generating RTLIL representation for module `\adffe2dff'.
+Successfully finished Verilog frontend.
+
+21.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+22. Executing TECHMAP pass (map to technology primitives).
+
+22.1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/aldff2dff.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/aldff2dff.v' to AST representation.
+Generating RTLIL representation for module `\aldff2dff'.
+Successfully finished Verilog frontend.
+
+22.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+23. Executing TECHMAP pass (map to technology primitives).
+
+23.1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/aldffe2dff.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/parmys/aldffe2dff.v' to AST representation.
+Generating RTLIL representation for module `\aldffe2dff'.
+Successfully finished Verilog frontend.
+
+23.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_SHARE pass.
+
+24.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+24.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+24.10. Finished OPT passes. (There is nothing left to do.)
+
+25. Starting parmys pass.
+Reading Configuration file
+Architecture: vpr_arch_run.xml
+Reading FPGA Architecture file
+Using Lut input width of: 6
+--------------------------------------------------------------------
+Creating Odin-II Netlist from Design
+--------------------------------------------------------------------
+High-level Synthesis Begin
+
+Elaboration Time: 0.0ms
+--------------------------------------------------------------------
+Successful Elaboration of the design by Odin-II
+Performing Optimization on the Netlist
+
+Optimization Time: 0.0ms
+--------------------------------------------------------------------
+Successful Optimization of netlist by Odin-II
+Performing Partial Technology Mapping to the target device
+
+Techmap Time: 0.2ms
+--------------------------------------------------------------------
+Successful Partial Technology Mapping by Odin-II
+
+Total Synthesis Time: 0.3ms
+--------------------------------------------------------------------
+
+Hard Multiplier Distribution
+============================
+2 X 32 => 1
+3 X 32 => 1
+32 X 32 => 3
+
+
+Total # of multipliers = 5
+
+	==== Stats ====
+Number of <INPUT_NODE> node:              66
+Number of <OUTPUT_NODE> node:             96
+Number of <LOGICAL_NOT> node:             64
+Number of <LOGICAL_OR> node:              2
+Number of <LOGICAL_AND> node:             2
+Number of <LOGICAL_XNOR> node:            2
+Number of <LOGICAL_XOR> node:             2
+Number of <MULTIPLY> node:                5
+Number of <GENERIC> node:                 320
+Total estimated number of lut:            351
+Total number of node:                     325
+Longest path:                             106
+Average path:                             1
+
+
+--------------------------------------------------------------------
+Updating the Design
+--------------------------------------------------------------------
+parmys pass finished.
+
+26. Executing OPT pass (performing simple optimizations).
+
+26.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+26.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+26.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+26.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+26.6. Executing OPT_SHARE pass.
+
+26.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+Removed 0 unused cells and 99 unused wires.
+<suppressed ~1 debug messages>
+
+26.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+26.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+26.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \diffeq_f_systemC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \diffeq_f_systemC.
+Performed a total of 0 changes.
+
+26.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+26.14. Executing OPT_SHARE pass.
+
+26.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+26.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+26.18. Finished OPT passes. (There is nothing left to do.)
+
+27. Executing TECHMAP pass (map to technology primitives).
+
+27.1. Executing Verilog-2005 frontend: /root/vtr-verilog-to-routing/build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/root/vtr-verilog-to-routing/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+27.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_xnor.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $reduce_xor.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $lut.
+Using extmapper simplemap for cells of type $reduce_and.
+Running "alumacc" on wrapper $extern:wrap:$lt:A_SIGNED=0:A_WIDTH=32:B_SIGNED=0:B_WIDTH=32:Y_WIDTH=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$lt:A_SIGNED=0:A_WIDTH=32:B_SIGNED=0:B_WIDTH=32:Y_WIDTH=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$lt:A_SIGNED=0:A_WIDTH=32:B_SIGNED=0:B_WIDTH=32:Y_WIDTH=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~718 debug messages>
+
+28. Executing OPT pass (performing simple optimizations).
+
+28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+<suppressed ~671 debug messages>
+
+28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+28.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+Removed 85 unused cells and 429 unused wires.
+<suppressed ~86 debug messages>
+
+28.5. Finished fast OPT passes.
+
+29. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module diffeq_f_systemC.
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\diffeq_f_systemC'.
+Removed a total of 0 cells.
+
+30.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \diffeq_f_systemC..
+
+30.4. Finished fast OPT passes.
+
+31. Printing statistics.
+
+=== diffeq_f_systemC ===
+
+   Number of wires:               1363
+   Number of wire bits:           1613
+   Number of public wires:         162
+   Number of public wire bits:     162
+   Number of ports:                162
+   Number of port bits:            162
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1160
+     $_AND_                         91
+     $_DFF_P_                       96
+     $_MUX_                        552
+     $_NOT_                         98
+     $_OR_                          34
+     $_XOR_                        284
+     multiply                        5
+
+32. Executing HIERARCHY pass (managing design hierarchy).
+
+32.1. Finding top of design hierarchy..
+root of   1 design levels: diffeq_f_systemC    
+Automatically selected diffeq_f_systemC as design top module.
+
+32.2. Analyzing design hierarchy..
+Top module:  \diffeq_f_systemC
+
+32.3. Analyzing design hierarchy..
+Top module:  \diffeq_f_systemC
+Removed 0 unused modules.
+
+33. Executing BLIF backend.
+
+Warnings: 1 unique messages, 3 total
+End of script. Logfile hash: 59a0ee3ec8, CPU: user 0.10s system 0.01s, MEM: 29.75 MB peak
+Yosys 0.55 (git sha1 60f126cd0, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)
+Time spent: 23% 20x opt_expr (0 sec), 19% 16x opt_clean (0 sec), ...
+	Command being timed: "/root/vtr-verilog-to-routing/build/bin/yosys -c synthesis.tcl"
+	User time (seconds): 0.09
+	System time (seconds): 0.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 30492
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2962
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 568
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

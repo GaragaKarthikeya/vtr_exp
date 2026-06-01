@@ -1,0 +1,118 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq2.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq2.parmys.blif 0_diffeq2.raw.abc.blif; time;
+ABC command line: "echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq2.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq2.parmys.blif 0_diffeq2.raw.abc.blif; time;".
+
+ 
+Load Netlist 
+============ 
+Hierarchy reader converted 6 instances of blackboxes.
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+Circuit Info 
+========== 
+[1;37mdiffeq_f_systemC              :[0m i/o =  426/  228  lat =   96  nd =  1070  edge =   2578  cube =  1935  lev = 68
+Total latches =    96. Init0 = 96. Init1 = 0. InitDC = 0. Const data = 0.
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+LUT Costs 
+========= 
+# The area/delay of k-variable LUTs:
+# k    area     delay
+1      1.00      1.00
+2      1.00      1.00
+3      1.00      1.00
+4      1.00      1.00
+elapse: 0.00 seconds, total: 0.00 seconds
+ 
+Logic Opt + Techmap 
+=================== 
+SimWords = 32. Rounds = 4. Mem = 0.34 MB.  Classes: Beg = 0. End = 0.
+Proof = 0. Counter-example = 0. Fail = 0. FailReal = 0. Zero = 0.
+Final = 1961. Miter = 1961. Total = 1961. Mux = 0. (Exor = 0.) SatVars = 0.
+AIG simulation   =     0.00 sec
+AIG traversal    =     0.00 sec
+SAT solving      =     0.00 sec
+    Unsat        =     0.00 sec
+    Sat          =     0.00 sec
+    Fail         =     0.00 sec
+Class refining   =     0.00 sec
+TOTAL RUNTIME    =     0.00 sec
+Allocated 0.09 MB to store simulation information.
+Initial simulation of 4 frames with 2 words.     Time =     0.00 sec
+Collecting candidate equivalence classes.        Time =     0.00 sec
+Simulation of 4 frames with 2 words ( 2 rounds). Time =     0.00 sec
+Before BMC: Equiv classes: Const1 =     0. Class =     1. Lit =     1.
+After  BMC: Equiv classes: Const1 =     0. Class =     0. Lit =     0.
+  0 : C =      0. Cl =      0. LR =     0. NR =  3922. F =    0. - T =     0.00 sec
+Parameters: F = 1. AddF = 2. C-lim = 1000. Constr = 0. MaxLev = 0. Mem = 0.13 MB.
+AIG       : PI = 426. PO = 228. Latch = 96. Node = 1961.  Ave SAT vars = 0.
+SAT calls : Proof = 0. Cex = 1. Fail = 0. Lits proved = 0.
+SAT solver: Vars max = 1295. Calls max = 0. Recycles = 0. Sim rounds = 0.
+NBeg = 1961. NEnd = 1961. (Gain =   0.00 %).  RBeg = 96. REnd = 96. (Gain =   0.00 %).
+BMC         =     0.00 sec (  7.72 %)
+Spec reduce =     0.00 sec ( 15.73 %)
+Mark cones  =     0.00 sec (  0.00 %)
+Sim SAT     =     0.00 sec (  2.04 %)
+SAT solving =     0.00 sec (  1.40 %)
+  unsat     =     0.00 sec (  0.00 %)
+  sat       =     0.00 sec (  1.40 %)
+  undecided =     0.00 sec (  0.00 %)
+Other       =     0.00 sec ( 73.10 %)
+TOTAL       =     0.00 sec (100.00 %)
+Starting:  diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1961  lev = 132
+Rewrite:   diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1571  lev =  97
+Refactor:  diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1547  lev =  97
+Balance:   diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1547  lev =  97
+Rewrite:   diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1429  lev =  97
+RewriteZ:  diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1428  lev =  97
+RefactorZ: diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1422  lev =  97
+RewriteZ:  diffeq_f_systemC : pi =   426  po =   228  lat =    96  and =    1418  lev =  97
+K = 6. Memory (bytes): Truth =    0. Cut =   56. Obj =  136. Set =  600. CutMin = no
+Node =    2105.  Ch =   311.  Total mem =    0.43 MB. Peak cut mem =    0.01 MB.
+P:  Del =   16.00.  Ar =     440.0.  Edge =     1869.  Cut =    33661.  T =     0.00 sec
+P:  Del =   16.00.  Ar =     337.0.  Edge =     1571.  Cut =    29369.  T =     0.00 sec
+P:  Del =   16.00.  Ar =     376.0.  Edge =     1623.  Cut =    37319.  T =     0.00 sec
+F:  Del =   16.00.  Ar =     312.0.  Edge =     1468.  Cut =    32147.  T =     0.00 sec
+A:  Del =   16.00.  Ar =     288.0.  Edge =     1338.  Cut =    30682.  T =     0.00 sec
+A:  Del =   16.00.  Ar =     284.0.  Edge =     1332.  Cut =    32686.  T =     0.00 sec
+Total time =     0.02 sec
+Performing MFS with 522 PIs, 324 POs, 287 nodes (287 flexible, 0 fixed, 0 empty).
+Nodes = 287. Try = 288. Resub = 1. Div = 25804 (ave = 89). SAT calls = 4083. Timeouts = 0. MaxDivs = 0.
+Attempts :   Remove      0 out of   1333 (  0.00 %)   Resub       1 out of     77 (  1.30 %)   
+Reduction:   Nodes       1 out of    284 (  0.35 %)   Edges       2 out of   1332 (  0.15 %)   
+Win =     0.00 sec (  1.71 %)
+Div =     0.00 sec (  1.61 %)
+Cnf =     0.01 sec ( 16.35 %)
+Sat =     0.03 sec ( 78.68 %)
+Oth =     0.00 sec (  1.65 %)
+ALL =     0.03 sec (100.00 %)
+The network has 1 nodes changed by "mfs".
+[1;37mdiffeq_f_systemC              :[0m i/o =  426/  228  lat =   96  nd =   286  edge =   1330  cube =  1543  lev = 16
+elapse: 0.12 seconds, total: 0.12 seconds
+ 
+Output Netlist 
+============== 
+Hierarchy writer reintroduced 6 instances of blackboxes.
+elapse: 0.00 seconds, total: 0.13 seconds
+	Command being timed: "/root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_diffeq2.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_diffeq2.parmys.blif 0_diffeq2.raw.abc.blif; time;"
+	User time (seconds): 0.11
+	System time (seconds): 0.01
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 36836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9432
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 96
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

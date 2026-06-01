@@ -1,0 +1,151 @@
+/usr/bin/env time -v /root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_raygentop.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_raygentop.parmys.blif 0_raygentop.raw.abc.blif; time;
+ABC command line: "echo ""; echo "Load Netlist"; echo "============"; read 0_raygentop.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_raygentop.parmys.blif 0_raygentop.raw.abc.blif; time;".
+
+ 
+Load Netlist 
+============ 
+Hierarchy reader converted 37 instances of blackboxes.
+elapse: 0.02 seconds, total: 0.02 seconds
+ 
+Circuit Info 
+========== 
+[1;37mpaj_raygentop_hierarchy_no_mem:[0m i/o = 1356/  433  lat =  938  nd =  5008  edge =  11003  cube =  8211  lev = 34
+Total latches =   938. Init0 = 938. Init1 = 0. InitDC = 0. Const data = 1.
+elapse: 0.00 seconds, total: 0.02 seconds
+ 
+LUT Costs 
+========= 
+# The area/delay of k-variable LUTs:
+# k    area     delay
+1      1.00      1.00
+2      1.00      1.00
+3      1.00      1.00
+4      1.00      1.00
+elapse: 0.00 seconds, total: 0.02 seconds
+ 
+Logic Opt + Techmap 
+=================== 
+SimWords = 32. Rounds = 68. Mem = 1.25 MB.  Classes: Beg = 377. End = 351.
+Proof = 362. Counter-example = 47. Fail = 0. FailReal = 0. Zero = 59.
+Final = 6107. Miter = 6523. Total = 6550. Mux = 0. (Exor = 0.) SatVars = 2608.
+starts        :               48
+conflicts     :                7
+decisions     :            25859
+propagations  :            85382
+AIG simulation   =     0.01 sec
+AIG traversal    =     0.00 sec
+SAT solving      =     0.01 sec
+    Unsat        =     0.00 sec
+    Sat          =     0.01 sec
+    Fail         =     0.00 sec
+Class refining   =     0.00 sec
+TOTAL RUNTIME    =     0.11 sec
+Allocated 0.30 MB to store simulation information.
+Initial simulation of 4 frames with 2 words.     Time =     0.00 sec
+Collecting candidate equivalence classes.        Time =     0.00 sec
+Simulation of 4 frames with 2 words (15 rounds). Time =     0.01 sec
+Before BMC: Equiv classes: Const1 =   913. Class =   724. Lit =  2210.
+After  BMC: Equiv classes: Const1 =   913. Class =   724. Lit =  2210.
+  0 : C =    649. Cl =    612. LR =   403. NR =  8443. F =    0. - T =     0.05 sec
+  1 : C =    426. Cl =    757. LR =   424. NR =  9512. F =    0. - T =     0.07 sec
+  2 : C =    269. Cl =    661. LR =   196. NR = 10024. F =    0. - T =     0.06 sec
+  3 : C =    220. Cl =    642. LR =   143. NR = 10130. F =    0. - T =     0.01 sec
+  4 : C =    198. Cl =    640. LR =   123. NR = 10214. F =    0. - T =     0.01 sec
+  5 : C =    154. Cl =    618. LR =   118. NR = 10251. F =    0. - T =     0.00 sec
+  6 : C =    136. Cl =    611. LR =   111. NR = 10422. F =    0. - T =     0.00 sec
+  7 : C =    124. Cl =    611. LR =   102. NR = 10446. F =    0. - T =     0.00 sec
+  8 : C =    110. Cl =    609. LR =   101. NR = 10469. F =    0. - T =     0.00 sec
+  9 : C =    104. Cl =    607. LR =    97. NR = 10487. F =    0. - T =     0.00 sec
+ 10 : C =     98. Cl =    607. LR =    94. NR = 10497. F =    0. - T =     0.00 sec
+ 11 : C =     92. Cl =    607. LR =    93. NR = 10507. F =    0. - T =     0.00 sec
+ 12 : C =     86. Cl =    607. LR =    92. NR = 10517. F =    0. - T =     0.00 sec
+ 13 : C =     80. Cl =    607. LR =    91. NR = 10527. F =    0. - T =     0.00 sec
+ 14 : C =     74. Cl =    607. LR =    90. NR = 10537. F =    0. - T =     0.00 sec
+ 15 : C =     68. Cl =    607. LR =    89. NR = 10547. F =    0. - T =     0.00 sec
+ 16 : C =     62. Cl =    607. LR =    88. NR = 10557. F =    0. - T =     0.00 sec
+ 17 : C =     56. Cl =    607. LR =    87. NR = 10567. F =    0. - T =     0.00 sec
+ 18 : C =     50. Cl =    607. LR =    86. NR = 10577. F =    0. - T =     0.00 sec
+ 19 : C =     44. Cl =    607. LR =    85. NR = 10587. F =    0. - T =     0.00 sec
+ 20 : C =     38. Cl =    607. LR =    84. NR = 10597. F =    0. - T =     0.00 sec
+ 21 : C =     32. Cl =    607. LR =    83. NR = 10607. F =    0. - T =     0.00 sec
+ 22 : C =     26. Cl =    607. LR =    82. NR = 10617. F =    0. - T =     0.00 sec
+ 23 : C =     20. Cl =    607. LR =    81. NR = 10627. F =    0. - T =     0.00 sec
+ 24 : C =     14. Cl =    607. LR =    80. NR = 10637. F =    0. - T =     0.00 sec
+ 25 : C =      8. Cl =    607. LR =    79. NR = 10647. F =    0. - T =     0.00 sec
+ 26 : C =      2. Cl =    607. LR =    78. NR = 10657. F =    0. - T =     0.00 sec
+ 27 : C =      2. Cl =    605. LR =    76. NR = 10664. F =    0. - T =     0.00 sec
+ 28 : C =      2. Cl =    605. LR =    74. NR = 10664. F =    0. - T =     0.00 sec
+Parameters: F = 1. AddF = 2. C-lim = 1000. Constr = 0. MaxLev = 0. Mem = 0.45 MB.
+AIG       : PI = 1356. PO = 433. Latch = 938. Node = 6107.  Ave SAT vars = 0.
+SAT calls : Proof = 653. Cex = 396. Fail = 0. Lits proved = 624.
+SAT solver: Vars max = 4138. Calls max = 160. Recycles = 0. Sim rounds = 0.
+NBeg = 6107. NEnd = 5499. (Gain =   9.96 %).  RBeg = 938. REnd = 885. (Gain =   5.65 %).
+BMC         =     0.00 sec (  0.11 %)
+Spec reduce =     0.04 sec ( 12.84 %)
+Mark cones  =     0.00 sec (  0.00 %)
+Sim SAT     =     0.09 sec ( 32.29 %)
+SAT solving =     0.11 sec ( 41.76 %)
+  unsat     =     0.00 sec (  1.27 %)
+  sat       =     0.11 sec ( 40.51 %)
+  undecided =     0.00 sec (  0.00 %)
+Other       =     0.04 sec ( 13.00 %)
+TOTAL       =     0.27 sec (100.00 %)
+Starting:  paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    5499  lev =  65
+Rewrite:   paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    5065  lev =  38
+Refactor:  paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    5014  lev =  38
+Balance:   paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    4985  lev =  38
+Rewrite:   paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    4662  lev =  37
+RewriteZ:  paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    4586  lev =  36
+RefactorZ: paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    4531  lev =  37
+RewriteZ:  paj_raygentop_hierarchy_no_mem : pi =  1356  po =   433  lat =   885  and =    4513  lev =  36
+K = 6. Memory (bytes): Truth =    0. Cut =   56. Obj =  136. Set =  600. CutMin = no
+Node =    6999.  Ch =   836.  Total mem =    1.53 MB. Peak cut mem =    0.06 MB.
+P:  Del =    8.00.  Ar =    1759.0.  Edge =     6903.  Cut =   110732.  T =     0.02 sec
+P:  Del =    8.00.  Ar =    1382.0.  Edge =     6335.  Cut =    86689.  T =     0.01 sec
+P:  Del =    8.00.  Ar =    1401.0.  Edge =     5926.  Cut =    96806.  T =     0.01 sec
+F:  Del =    8.00.  Ar =    1328.0.  Edge =     5714.  Cut =    85671.  T =     0.01 sec
+A:  Del =    8.00.  Ar =    1288.0.  Edge =     5262.  Cut =    92072.  T =     0.02 sec
+A:  Del =    8.00.  Ar =    1284.0.  Edge =     5255.  Cut =    91909.  T =     0.02 sec
+Total time =     0.10 sec
+Duplicated 556 gates to decouple the CO drivers.
+Performing MFS with 2241 PIs, 1318 POs, 1847 nodes (1847 flexible, 0 fixed, 0 empty).
+Nodes = 1847. Try = 1866. Resub = 19. Div = 37615 (ave = 20). SAT calls = 21035. Timeouts = 0. MaxDivs = 0.
+Attempts :   Remove     10 out of   5852 (  0.17 %)   Resub       9 out of    276 (  3.26 %)   
+Reduction:   Nodes       9 out of   1840 (  0.49 %)   Edges      39 out of   5811 (  0.67 %)   
+Win =     0.00 sec (  1.17 %)
+Div =     0.00 sec (  1.67 %)
+Cnf =     0.02 sec ( 13.69 %)
+Sat =     0.15 sec ( 82.84 %)
+Oth =     0.00 sec (  0.63 %)
+ALL =     0.18 sec (100.00 %)
+The network has 18 nodes changed by "mfs".
+[1;37mpaj_raygentop_hierarchy_no_mem:[0m i/o = 1356/  433  lat =  885  nd =  1838  edge =   5772  cube =  5020  lev = 8
+elapse: 1.01 seconds, total: 1.03 seconds
+ 
+Output Netlist 
+============== 
+Hierarchy writer reintroduced 37 instances of blackboxes.
+elapse: 0.02 seconds, total: 1.05 seconds
+	Command being timed: "/root/vtr-verilog-to-routing/abc/abc -c echo ""; echo "Load Netlist"; echo "============"; read 0_raygentop.parmys.blif; time; echo ""; echo "Circuit Info"; echo "=========="; print_stats; print_latch; time; echo ""; echo "LUT Costs"; echo "========="; print_lut; time; echo ""; echo "Logic Opt + Techmap"; echo "==================="; strash; ifraig -v; scorr -v; dc2 -v; dch -f; if -K 6 -v; mfs2 -v; print_stats; time; echo ""; echo "Output Netlist"; echo "=============="; write_hie 0_raygentop.parmys.blif 0_raygentop.raw.abc.blif; time;"
+	User time (seconds): 1.06
+	System time (seconds): 0.04
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 41676
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11523
+	Voluntary context switches: 1
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 568
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
