@@ -116,7 +116,7 @@
     </tile>
   </tiles>
   <layout>
-    <fixed_layout name="my_layout" width="14" height="14">
+    <fixed_layout name="my_layout" width="16" height="16">
   <!--Perimeter of 'io' blocks with 'EMPTY' blocks at corners-->
   <perimeter type="io" priority="100"/>
   <corners type="EMPTY" priority="101"/>
@@ -125,11 +125,10 @@
   <fill type="clb" priority="10"/>
 
   <!--DSP blocks from generated positions-->
-  <single type="mult_36" x="1" y="1" priority="20"/>
-  <single type="mult_36" x="3" y="1" priority="20"/>
+  <single type="mult_36" x="1" y="2" priority="20"/>
 
   <!--BRAM blocks from generated positions-->
-  <single type="memory" x="2" y="1" priority="20"/>
+  <single type="memory" x="2" y="3" priority="20"/>
 </fixed_layout>
 
   </layout>

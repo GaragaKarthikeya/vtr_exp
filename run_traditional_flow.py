@@ -138,7 +138,7 @@ def parse_resources(vpr_out_file: Path, output_file: Path) -> dict:
     # Matches: FPGA sized to 16 x 16
     size_match = re.search(r"FPGA sized to\s+([0-9]+)\s+x\s+([0-9]+)", content)
     if size_match:
-        resources["fpga_size"] = [int(size_match.group(1))-2, int(size_match.group(2))-2]
+        resources["fpga_size"] = [int(size_match.group(1))-2, int(size_match.group(2))-2] # very important step here we take out the ios occupying place and give the size 
     
     # 2. Extract Netlist Requirements & Architecture Limits
     resource_map = {
