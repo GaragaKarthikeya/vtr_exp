@@ -139,6 +139,12 @@ class FPGAEnvPoC(gym.Env):
                 
         return mask
 
+    def action_masks(self) -> np.ndarray:
+        """
+        Required by sb3-contrib's MaskablePPO for action masking during rollout.
+        """
+        return self.get_action_mask()
+
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         self.grid = np.zeros((self.virtual_width, self.virtual_height), dtype=np.int8)

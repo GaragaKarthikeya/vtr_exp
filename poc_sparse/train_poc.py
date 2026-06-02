@@ -6,7 +6,7 @@ import json
 import argparse
 import time
 from pathlib import Path
-from stable_baselines3 import PPO
+from sb3_contrib import MaskablePPO
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.callbacks import BaseCallback
@@ -154,8 +154,8 @@ def main():
     except ImportError:
         pass
 
-    # SB3 PPO model configuration
-    model = PPO(
+    # SB3 MaskablePPO model configuration
+    model = MaskablePPO(
         "MlpPolicy",
         env,
         learning_rate=args.lr,
