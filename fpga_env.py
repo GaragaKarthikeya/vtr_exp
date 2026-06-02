@@ -386,13 +386,14 @@ class FPGAEnv(gym.Env):
         return -10.0, eval_info
 
     def _compute_reward(self, wl: float, pw: float, dl: float) -> float:
-        """Applies the negative performance metric reward formula."""
+        """Applies the negative performance metric sum-based reward formula."""
         trad_wl = self.traditional_metrics["wirelength"]
         trad_pw = self.traditional_metrics["power_w"]
         trad_dl = self.traditional_metrics["delay_ns"]
         
-        # reward = -0.33 * (wirelength/traditional) * (power/traditional) * (delay/traditional)
-        reward = -0.33 * (wl / trad_wl) * (pw / trad_pw) * (dl / trad_dl)
+        # reward = -0.33 * (wire/trad_wl + power/trad_pw + delay/trad_dl) / 3
+        # Which simplifies to: -0.11 * (wire/trad_wl + power/trad_pw + delay/trad_dl)
+        reward = -0.11 * ((wl / trad_wl) + (pw / trad_pw) + (dl / trad_dl))
         return reward
 
     def _cleanup_temp_files(self, arch_file: Path, run_dir: Path):

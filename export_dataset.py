@@ -77,7 +77,8 @@ def export_dataset(db_file: str | None = None, output_file: str | None = None):
             trad_dl = 27.1504
             
             if success == 1:
-                reward = -0.33 * (wl / trad_wl) * (power / trad_pw) * (delay / trad_dl)
+                # Additive reward formula: -0.11 * (wire/trad_wl + power/trad_pw + delay/trad_dl)
+                reward = -0.11 * ((wl / trad_wl) + (power / trad_pw) + (delay / trad_dl))
                 success_count += 1
             else:
                 reward = -10.0

@@ -99,6 +99,7 @@ def main():
     parser.add_argument("--lr", type=float, default=3e-4, help="Learning rate for PPO agent")
     parser.add_argument("--batch_size", type=int, default=64, help="Minibatch size for PPO updates")
     parser.add_argument("--n_steps", type=int, default=80, help="Number of steps to run per environment per rollout")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for training")
     args = parser.parse_args()
 
     benchmark_name = args.benchmark
@@ -168,7 +169,7 @@ def main():
     env = make_vec_env(
         FPGAEnv,
         n_envs=n_envs,
-        seed=42,
+        seed=args.seed,
         vec_env_cls=SubprocVecEnv,
         env_kwargs=env_kwargs
     )
@@ -194,6 +195,7 @@ def main():
         batch_size=args.batch_size,
         n_epochs=10,
         gamma=0.99,
+        seed=args.seed,
         verbose=1,
         tensorboard_log=tb_log
     )
