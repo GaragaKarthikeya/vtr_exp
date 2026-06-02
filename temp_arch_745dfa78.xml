@@ -125,11 +125,11 @@
   <fill type="clb" priority="10"/>
 
   <!--DSP blocks from generated positions-->
-  <single type="mult_36" x="11" y="5" priority="20"/>
-  <single type="mult_36" x="9" y="2" priority="20"/>
-  <single type="mult_36" x="3" y="5" priority="20"/>
-  <single type="mult_36" x="4" y="10" priority="20"/>
-  <single type="mult_36" x="8" y="7" priority="20"/>
+  <single type="mult_36" x="6" y="9" priority="20"/>
+  <single type="mult_36" x="3" y="2" priority="20"/>
+  <single type="mult_36" x="11" y="1" priority="20"/>
+  <single type="mult_36" x="7" y="4" priority="20"/>
+  <single type="mult_36" x="3" y="10" priority="20"/>
 
   <!--BRAM blocks from generated positions-->
 </fixed_layout>
